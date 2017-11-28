@@ -1,7 +1,7 @@
 {
 	"_type": "Project",
 	"_id": "AAAAAAFF+h6SjaM2Hec=",
-	"name": "Untitled",
+	"name": "Vivarium",
 	"ownedElements": [
 		{
 			"_type": "UMLModel",
@@ -9,7 +9,7 @@
 			"_parent": {
 				"$ref": "AAAAAAFF+h6SjaM2Hec="
 			},
-			"name": "Model",
+			"name": "Models",
 			"ownedElements": [
 				{
 					"_type": "UMLUseCaseDiagram",
@@ -170,11 +170,11 @@
 											"containerExtending": false,
 											"left": -176,
 											"top": -16,
-											"width": 73.67724609375,
+											"width": 80.17724609375,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Model)",
+											"text": "(from Models)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -3590,6 +3590,18 @@
 									"isAbstract": false,
 									"isFinalSpecialization": false,
 									"isLeaf": false
+								},
+								{
+									"_type": "UMLUseCase",
+									"_id": "AAAAAAFfuvT+aqnJd1I=",
+									"_parent": {
+										"$ref": "AAAAAAFfurhw+4w61No="
+									},
+									"name": "Retirer un animal du Vivarium",
+									"visibility": "public",
+									"isAbstract": false,
+									"isFinalSpecialization": false,
+									"isLeaf": false
 								}
 							],
 							"visibility": "public"
@@ -3690,7 +3702,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Model)",
+											"text": "(from Models)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -9301,11 +9313,11 @@
 											"containerExtending": false,
 											"left": -80,
 											"top": 64,
-											"width": 73.67724609375,
+											"width": 153.47998046875,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Model)",
+											"text": "(from Vivarium)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -10506,24 +10518,12 @@
 					"isLeaf": false
 				},
 				{
-					"_type": "UMLUseCase",
-					"_id": "AAAAAAFfuvT+aqnJd1I=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Retirer un animal du Vivarium",
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false
-				},
-				{
 					"_type": "UMLClassDiagram",
 					"_id": "AAAAAAFgAo52SgoMAv4=",
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Main",
+					"name": "Diagramme de classe",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -11061,11 +11061,11 @@
 											"containerExtending": false,
 											"left": -48,
 											"top": 32,
-											"width": 73.67724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Main)",
+											"text": "(from Diagramme de classe)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -11438,11 +11438,11 @@
 											"containerExtending": false,
 											"left": 64,
 											"top": -128,
-											"width": 73.67724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Main)",
+											"text": "(from Diagramme de classe)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
