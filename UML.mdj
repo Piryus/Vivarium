@@ -1415,7 +1415,7 @@
 									"containerExtending": false,
 									"left": 452.5,
 									"top": 220.5,
-									"width": 137,
+									"width": 137.8671875,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -2151,7 +2151,7 @@
 									"containerExtending": false,
 									"left": 461.5,
 									"top": 332.5,
-									"width": 102,
+									"width": 103.208984375,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -2887,7 +2887,7 @@
 									"containerExtending": false,
 									"left": 418.5,
 									"top": 404.5,
-									"width": 89,
+									"width": 89.4599609375,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -4207,7 +4207,7 @@
 									"containerExtending": false,
 									"left": 382.5,
 									"top": 172.5,
-									"width": 108,
+									"width": 108.25537109375,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -4522,7 +4522,7 @@
 									"containerExtending": false,
 									"left": 389.5,
 									"top": 236.5,
-									"width": 101,
+									"width": 102.4599609375,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -4837,7 +4837,7 @@
 									"containerExtending": false,
 									"left": 379,
 									"top": 308.5,
-									"width": 128,
+									"width": 129.208984375,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -5152,7 +5152,7 @@
 									"containerExtending": false,
 									"left": 375.5,
 									"top": 364.5,
-									"width": 113,
+									"width": 113.2890625,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -5782,7 +5782,7 @@
 									"containerExtending": false,
 									"left": 442,
 									"top": 484.5,
-									"width": 124,
+									"width": 124.8544921875,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -8623,7 +8623,7 @@
 									"containerExtending": false,
 									"left": 382.5,
 									"top": 556.5,
-									"width": 145,
+									"width": 145.82080078125,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -9359,7 +9359,7 @@
 									"containerExtending": false,
 									"left": 352.5,
 									"top": 652.5,
-									"width": 193,
+									"width": 194.21533203125,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -10518,18 +10518,18 @@
 					"isLeaf": false
 				},
 				{
-					"_type": "UMLClassDiagram",
-					"_id": "AAAAAAFgAo52SgoMAv4=",
+					"_type": "UMLPackage",
+					"_id": "AAAAAAFgAxPOhBuatYo=",
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Diagramme de classe",
+					"name": "org.vivarium.game",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
 							"_id": "AAAAAAFgAo52TAoi8YU=",
 							"_parent": {
-								"$ref": "AAAAAAFgAo52SgoMAv4="
+								"$ref": "AAAAAAFgAxPOhBuatYo="
 							},
 							"name": "Vivarium",
 							"ownedElements": [
@@ -10706,7 +10706,7 @@
 							"_type": "UMLClass",
 							"_id": "AAAAAAFgAo52TQo0aoM=",
 							"_parent": {
-								"$ref": "AAAAAAFgAo52SgoMAv4="
+								"$ref": "AAAAAAFgAxPOhBuatYo="
 							},
 							"name": "Animal",
 							"ownedElements": [
@@ -10955,7 +10955,7 @@
 							"_type": "UMLClass",
 							"_id": "AAAAAAFgAqaDDK1NHYk=",
 							"_parent": {
-								"$ref": "AAAAAAFgAo52SgoMAv4="
+								"$ref": "AAAAAAFgAxPOhBuatYo="
 							},
 							"name": "Vegetal",
 							"ownedElements": [
@@ -11038,7 +11038,7 @@
 							"_type": "UMLClass",
 							"_id": "AAAAAAFgArgIN7YSS9A=",
 							"_parent": {
-								"$ref": "AAAAAAFgAo52SgoMAv4="
+								"$ref": "AAAAAAFgAxPOhBuatYo="
 							},
 							"name": "EtreVivant",
 							"ownedElements": [
@@ -11335,7 +11335,7 @@
 							"_type": "UMLClass",
 							"_id": "AAAAAAFgAsl+mbvdGn4=",
 							"_parent": {
-								"$ref": "AAAAAAFgAo52SgoMAv4="
+								"$ref": "AAAAAAFgAxPOhBuatYo="
 							},
 							"name": "Carnovore",
 							"ownedElements": [
@@ -11415,7 +11415,7 @@
 							"_type": "UMLClass",
 							"_id": "AAAAAAFgAspKQbyqP2g=",
 							"_parent": {
-								"$ref": "AAAAAAFgAo52SgoMAv4="
+								"$ref": "AAAAAAFgAxPOhBuatYo="
 							},
 							"name": "Herbivore",
 							"ownedElements": [
@@ -11495,7 +11495,7 @@
 							"_type": "UMLClass",
 							"_id": "AAAAAAFgAtQy+r/NhG0=",
 							"_parent": {
-								"$ref": "AAAAAAFgAo52SgoMAv4="
+								"$ref": "AAAAAAFgAxPOhBuatYo="
 							},
 							"name": "Coordinate",
 							"ownedElements": [
@@ -11818,7 +11818,7 @@
 							"_type": "UMLClass",
 							"_id": "AAAAAAFgAtolxMQcKeI=",
 							"_parent": {
-								"$ref": "AAAAAAFgAo52SgoMAv4="
+								"$ref": "AAAAAAFgAxPOhBuatYo="
 							},
 							"name": "Terrain",
 							"ownedElements": [
@@ -11933,7 +11933,7 @@
 							"_type": "UMLClass",
 							"_id": "AAAAAAFgAtdlp8HQGFs=",
 							"_parent": {
-								"$ref": "AAAAAAFgAo52SgoMAv4="
+								"$ref": "AAAAAAFgAxPOhBuatYo="
 							},
 							"name": "Zone",
 							"ownedElements": [
@@ -12062,7 +12062,7 @@
 							"_type": "UMLClass",
 							"_id": "AAAAAAFgAuV/v9ZjyLU=",
 							"_parent": {
-								"$ref": "AAAAAAFgAo52SgoMAv4="
+								"$ref": "AAAAAAFgAxPOhBuatYo="
 							},
 							"name": "Boucquettin",
 							"ownedElements": [
@@ -12089,11 +12089,549 @@
 						},
 						{
 							"_type": "UMLClass",
-							"_id": "AAAAAAFgAuZMu9jM3HI=",
+							"_id": "AAAAAAFgAuuYCOIMZ9M=",
 							"_parent": {
-								"$ref": "AAAAAAFgAo52SgoMAv4="
+								"$ref": "AAAAAAFgAxPOhBuatYo="
 							},
-							"name": "Rongeur",
+							"name": "Loup",
+							"ownedElements": [
+								{
+									"_type": "UMLGeneralization",
+									"_id": "AAAAAAFgAvKZbPvyPsI=",
+									"_parent": {
+										"$ref": "AAAAAAFgAuuYCOIMZ9M="
+									},
+									"source": {
+										"$ref": "AAAAAAFgAuuYCOIMZ9M="
+									},
+									"target": {
+										"$ref": "AAAAAAFgAsl+mbvdGn4="
+									},
+									"visibility": "public"
+								}
+							],
+							"visibility": "public",
+							"isAbstract": false,
+							"isFinalSpecialization": false,
+							"isLeaf": false,
+							"isActive": false
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAFgAuvZ6OPskZc=",
+							"_parent": {
+								"$ref": "AAAAAAFgAxPOhBuatYo="
+							},
+							"name": "Ours",
+							"ownedElements": [
+								{
+									"_type": "UMLGeneralization",
+									"_id": "AAAAAAFgAvKLQPuWArY=",
+									"_parent": {
+										"$ref": "AAAAAAFgAuvZ6OPskZc="
+									},
+									"source": {
+										"$ref": "AAAAAAFgAuvZ6OPskZc="
+									},
+									"target": {
+										"$ref": "AAAAAAFgAsl+mbvdGn4="
+									},
+									"visibility": "public"
+								}
+							],
+							"visibility": "public",
+							"isAbstract": false,
+							"isFinalSpecialization": false,
+							"isLeaf": false,
+							"isActive": false
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAFgAuxvBuXNaUc=",
+							"_parent": {
+								"$ref": "AAAAAAFgAxPOhBuatYo="
+							},
+							"name": "Renard",
+							"ownedElements": [
+								{
+									"_type": "UMLGeneralization",
+									"_id": "AAAAAAFgAvJ4avs6sFw=",
+									"_parent": {
+										"$ref": "AAAAAAFgAuxvBuXNaUc="
+									},
+									"source": {
+										"$ref": "AAAAAAFgAuxvBuXNaUc="
+									},
+									"target": {
+										"$ref": "AAAAAAFgAsl+mbvdGn4="
+									},
+									"visibility": "public"
+								}
+							],
+							"visibility": "public",
+							"isAbstract": false,
+							"isFinalSpecialization": false,
+							"isLeaf": false,
+							"isActive": false
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAFgAu1TKehkJdg=",
+							"_parent": {
+								"$ref": "AAAAAAFgAxPOhBuatYo="
+							},
+							"name": "Chien",
+							"ownedElements": [
+								{
+									"_type": "UMLGeneralization",
+									"_id": "AAAAAAFgAvJbNPqDckA=",
+									"_parent": {
+										"$ref": "AAAAAAFgAu1TKehkJdg="
+									},
+									"source": {
+										"$ref": "AAAAAAFgAu1TKehkJdg="
+									},
+									"target": {
+										"$ref": "AAAAAAFgAsl+mbvdGn4="
+									},
+									"visibility": "public"
+								}
+							],
+							"visibility": "public",
+							"isAbstract": false,
+							"isFinalSpecialization": false,
+							"isLeaf": false,
+							"isActive": false
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAFgAu2L6enLoVI=",
+							"_parent": {
+								"$ref": "AAAAAAFgAxPOhBuatYo="
+							},
+							"name": "Dragon",
+							"ownedElements": [
+								{
+									"_type": "UMLGeneralization",
+									"_id": "AAAAAAFgAvI4hvn6u6A=",
+									"_parent": {
+										"$ref": "AAAAAAFgAu2L6enLoVI="
+									},
+									"source": {
+										"$ref": "AAAAAAFgAu2L6enLoVI="
+									},
+									"target": {
+										"$ref": "AAAAAAFgAsl+mbvdGn4="
+									},
+									"visibility": "public"
+								}
+							],
+							"visibility": "public",
+							"isAbstract": false,
+							"isFinalSpecialization": false,
+							"isLeaf": false,
+							"isActive": false
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAFgAu4B0+tgkKw=",
+							"_parent": {
+								"$ref": "AAAAAAFgAxPOhBuatYo="
+							},
+							"name": "Aigle",
+							"ownedElements": [
+								{
+									"_type": "UMLGeneralization",
+									"_id": "AAAAAAFgAvKsAPxOVbo=",
+									"_parent": {
+										"$ref": "AAAAAAFgAu4B0+tgkKw="
+									},
+									"source": {
+										"$ref": "AAAAAAFgAu4B0+tgkKw="
+									},
+									"target": {
+										"$ref": "AAAAAAFgAsl+mbvdGn4="
+									},
+									"visibility": "public"
+								}
+							],
+							"visibility": "public",
+							"isAbstract": false,
+							"isFinalSpecialization": false,
+							"isLeaf": false,
+							"isActive": false
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAFgAvMuPP6tZeo=",
+							"_parent": {
+								"$ref": "AAAAAAFgAxPOhBuatYo="
+							},
+							"name": "Lapin",
+							"ownedElements": [
+								{
+									"_type": "UMLGeneralization",
+									"_id": "AAAAAAFgAvf70ArEOC0=",
+									"_parent": {
+										"$ref": "AAAAAAFgAvMuPP6tZeo="
+									},
+									"source": {
+										"$ref": "AAAAAAFgAvMuPP6tZeo="
+									},
+									"target": {
+										"$ref": "AAAAAAFgAspKQbyqP2g="
+									},
+									"visibility": "public"
+								}
+							],
+							"visibility": "public",
+							"isAbstract": false,
+							"isFinalSpecialization": false,
+							"isLeaf": false,
+							"isActive": false
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAFgAvN8Mv/2QC8=",
+							"_parent": {
+								"$ref": "AAAAAAFgAxPOhBuatYo="
+							},
+							"name": "Castore",
+							"ownedElements": [
+								{
+									"_type": "UMLGeneralization",
+									"_id": "AAAAAAFgAvgiEgt82NU=",
+									"_parent": {
+										"$ref": "AAAAAAFgAvN8Mv/2QC8="
+									},
+									"source": {
+										"$ref": "AAAAAAFgAvN8Mv/2QC8="
+									},
+									"target": {
+										"$ref": "AAAAAAFgAspKQbyqP2g="
+									},
+									"visibility": "public"
+								}
+							],
+							"visibility": "public",
+							"isAbstract": false,
+							"isFinalSpecialization": false,
+							"isLeaf": false,
+							"isActive": false
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAFgAvO6VwE/ZWs=",
+							"_parent": {
+								"$ref": "AAAAAAFgAxPOhBuatYo="
+							},
+							"name": "Bovin",
+							"ownedElements": [
+								{
+									"_type": "UMLGeneralization",
+									"_id": "AAAAAAFgAvgy6QvYdD8=",
+									"_parent": {
+										"$ref": "AAAAAAFgAvO6VwE/ZWs="
+									},
+									"source": {
+										"$ref": "AAAAAAFgAvO6VwE/ZWs="
+									},
+									"target": {
+										"$ref": "AAAAAAFgAspKQbyqP2g="
+									},
+									"visibility": "public"
+								}
+							],
+							"visibility": "public",
+							"isAbstract": false,
+							"isFinalSpecialization": false,
+							"isLeaf": false,
+							"isActive": false
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAFgAvSIqAK16gU=",
+							"_parent": {
+								"$ref": "AAAAAAFgAxPOhBuatYo="
+							},
+							"name": "Poisson",
+							"ownedElements": [
+								{
+									"_type": "UMLGeneralization",
+									"_id": "AAAAAAFgAvfWAgnvcAY=",
+									"_parent": {
+										"$ref": "AAAAAAFgAvSIqAK16gU="
+									},
+									"source": {
+										"$ref": "AAAAAAFgAvSIqAK16gU="
+									},
+									"target": {
+										"$ref": "AAAAAAFgAspKQbyqP2g="
+									},
+									"visibility": "public"
+								}
+							],
+							"visibility": "public",
+							"isAbstract": false,
+							"isFinalSpecialization": false,
+							"isLeaf": false,
+							"isActive": false
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAFgAvZo5gRLHy8=",
+							"_parent": {
+								"$ref": "AAAAAAFgAxPOhBuatYo="
+							},
+							"name": "Blowfish",
+							"ownedElements": [
+								{
+									"_type": "UMLGeneralization",
+									"_id": "AAAAAAFgAvhyvQyQ8/4=",
+									"_parent": {
+										"$ref": "AAAAAAFgAvZo5gRLHy8="
+									},
+									"source": {
+										"$ref": "AAAAAAFgAvZo5gRLHy8="
+									},
+									"target": {
+										"$ref": "AAAAAAFgAvSIqAK16gU="
+									},
+									"visibility": "public"
+								}
+							],
+							"visibility": "public",
+							"isAbstract": false,
+							"isFinalSpecialization": false,
+							"isLeaf": false,
+							"isActive": false
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAFgAvbxGAeH+ag=",
+							"_parent": {
+								"$ref": "AAAAAAFgAxPOhBuatYo="
+							},
+							"name": "Fish",
+							"ownedElements": [
+								{
+									"_type": "UMLGeneralization",
+									"_id": "AAAAAAFgAvhk7ww09/I=",
+									"_parent": {
+										"$ref": "AAAAAAFgAvbxGAeH+ag="
+									},
+									"source": {
+										"$ref": "AAAAAAFgAvbxGAeH+ag="
+									},
+									"target": {
+										"$ref": "AAAAAAFgAvSIqAK16gU="
+									},
+									"visibility": "public"
+								}
+							],
+							"visibility": "public",
+							"isAbstract": false,
+							"isFinalSpecialization": false,
+							"isLeaf": false,
+							"isActive": false
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAFgAvlz6BNxrbA=",
+							"_parent": {
+								"$ref": "AAAAAAFgAxPOhBuatYo="
+							},
+							"name": "Camel",
+							"ownedElements": [
+								{
+									"_type": "UMLGeneralization",
+									"_id": "AAAAAAFgAvmjMhSrfD0=",
+									"_parent": {
+										"$ref": "AAAAAAFgAvlz6BNxrbA="
+									},
+									"source": {
+										"$ref": "AAAAAAFgAvlz6BNxrbA="
+									},
+									"target": {
+										"$ref": "AAAAAAFgAspKQbyqP2g="
+									},
+									"visibility": "public"
+								}
+							],
+							"visibility": "public",
+							"isAbstract": false,
+							"isFinalSpecialization": false,
+							"isLeaf": false,
+							"isActive": false
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAFgAvnKkBXof5E=",
+							"_parent": {
+								"$ref": "AAAAAAFgAxPOhBuatYo="
+							},
+							"name": "Cactus",
+							"ownedElements": [
+								{
+									"_type": "UMLGeneralization",
+									"_id": "AAAAAAFgAv0UAiUP/Lc=",
+									"_parent": {
+										"$ref": "AAAAAAFgAvnKkBXof5E="
+									},
+									"source": {
+										"$ref": "AAAAAAFgAvnKkBXof5E="
+									},
+									"target": {
+										"$ref": "AAAAAAFgAqaDDK1NHYk="
+									},
+									"visibility": "public"
+								}
+							],
+							"visibility": "public",
+							"isAbstract": false,
+							"isFinalSpecialization": false,
+							"isLeaf": false,
+							"isActive": false
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAFgAvuKQBxnQEQ=",
+							"_parent": {
+								"$ref": "AAAAAAFgAxPOhBuatYo="
+							},
+							"name": "Herbe",
+							"ownedElements": [
+								{
+									"_type": "UMLGeneralization",
+									"_id": "AAAAAAFgAv3l0Cq+v34=",
+									"_parent": {
+										"$ref": "AAAAAAFgAvuKQBxnQEQ="
+									},
+									"source": {
+										"$ref": "AAAAAAFgAvuKQBxnQEQ="
+									},
+									"target": {
+										"$ref": "AAAAAAFgAqaDDK1NHYk="
+									},
+									"visibility": "public"
+								}
+							],
+							"visibility": "public",
+							"isAbstract": false,
+							"isFinalSpecialization": false,
+							"isLeaf": false,
+							"isActive": false
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAFgAvu1fR37lDU=",
+							"_parent": {
+								"$ref": "AAAAAAFgAxPOhBuatYo="
+							},
+							"name": "Arbre",
+							"ownedElements": [
+								{
+									"_type": "UMLGeneralization",
+									"_id": "AAAAAAFgAv352isa6lA=",
+									"_parent": {
+										"$ref": "AAAAAAFgAvu1fR37lDU="
+									},
+									"source": {
+										"$ref": "AAAAAAFgAvu1fR37lDU="
+									},
+									"target": {
+										"$ref": "AAAAAAFgAqaDDK1NHYk="
+									},
+									"visibility": "public"
+								}
+							],
+							"visibility": "public",
+							"isAbstract": false,
+							"isFinalSpecialization": false,
+							"isLeaf": false,
+							"isActive": false
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAFgAvwmxSEG+m8=",
+							"_parent": {
+								"$ref": "AAAAAAFgAxPOhBuatYo="
+							},
+							"name": "TREX",
+							"ownedElements": [
+								{
+									"_type": "UMLGeneralization",
+									"_id": "AAAAAAFgAwESGDh+mo0=",
+									"_parent": {
+										"$ref": "AAAAAAFgAvwmxSEG+m8="
+									},
+									"source": {
+										"$ref": "AAAAAAFgAvwmxSEG+m8="
+									},
+									"target": {
+										"$ref": "AAAAAAFgAsl+mbvdGn4="
+									},
+									"visibility": "public"
+								}
+							],
+							"visibility": "public",
+							"isAbstract": false,
+							"isFinalSpecialization": false,
+							"isLeaf": false,
+							"isActive": false
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAFgAvy9ZSNsO5c=",
+							"_parent": {
+								"$ref": "AAAAAAFgAxPOhBuatYo="
+							},
+							"name": "Mushroom",
+							"ownedElements": [
+								{
+									"_type": "UMLGeneralization",
+									"_id": "AAAAAAFgAv0w7SW2ZwI=",
+									"_parent": {
+										"$ref": "AAAAAAFgAvy9ZSNsO5c="
+									},
+									"source": {
+										"$ref": "AAAAAAFgAvy9ZSNsO5c="
+									},
+									"target": {
+										"$ref": "AAAAAAFgAqaDDK1NHYk="
+									},
+									"visibility": "public"
+								}
+							],
+							"visibility": "public",
+							"isAbstract": false,
+							"isFinalSpecialization": false,
+							"isLeaf": false,
+							"isActive": false
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAFgAvn1ERdeCEs=",
+							"_parent": {
+								"$ref": "AAAAAAFgAxPOhBuatYo="
+							},
+							"name": "Aubergine",
+							"ownedElements": [
+								{
+									"_type": "UMLGeneralization",
+									"_id": "AAAAAAFgAv1zOCYwIcA=",
+									"_parent": {
+										"$ref": "AAAAAAFgAvn1ERdeCEs="
+									},
+									"source": {
+										"$ref": "AAAAAAFgAvn1ERdeCEs="
+									},
+									"target": {
+										"$ref": "AAAAAAFgAqaDDK1NHYk="
+									},
+									"visibility": "public"
+								}
+							],
 							"visibility": "public",
 							"isAbstract": false,
 							"isFinalSpecialization": false,
@@ -12104,7 +12642,7 @@
 							"_type": "UMLEnumeration",
 							"_id": "AAAAAAFgAtfCNcI9+nA=",
 							"_parent": {
-								"$ref": "AAAAAAFgAo52SgoMAv4="
+								"$ref": "AAAAAAFgAxPOhBuatYo="
 							},
 							"name": "TypeZone",
 							"visibility": "public",
@@ -12178,8 +12716,49 @@
 									"visibility": "public"
 								}
 							]
+						},
+						{
+							"_type": "UMLEnumeration",
+							"_id": "AAAAAAFgAu++pO8LmRw=",
+							"_parent": {
+								"$ref": "AAAAAAFgAxPOhBuatYo="
+							},
+							"name": "Sexe",
+							"visibility": "public",
+							"isAbstract": false,
+							"isFinalSpecialization": false,
+							"isLeaf": false,
+							"literals": [
+								{
+									"_type": "UMLEnumerationLiteral",
+									"_id": "AAAAAAFgAvAhsPArPKw=",
+									"_parent": {
+										"$ref": "AAAAAAFgAu++pO8LmRw="
+									},
+									"name": "Male",
+									"visibility": "public"
+								},
+								{
+									"_type": "UMLEnumerationLiteral",
+									"_id": "AAAAAAFgAvBE/PEj4fQ=",
+									"_parent": {
+										"$ref": "AAAAAAFgAu++pO8LmRw="
+									},
+									"name": "Femelle",
+									"visibility": "public"
+								}
+							]
 						}
 					],
+					"visibility": "public"
+				},
+				{
+					"_type": "UMLClassDiagram",
+					"_id": "AAAAAAFgAo52SgoMAv4=",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "Diagramme de classe",
 					"visible": true,
 					"defaultDiagram": true,
 					"ownedViews": [
@@ -12275,7 +12854,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Diagramme de classe)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -12681,7 +13260,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Diagramme de classe)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -13205,7 +13784,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Diagramme de classe)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -13584,7 +14163,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Diagramme de classe)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -14788,7 +15367,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Diagramme de classe)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -15250,7 +15829,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Diagramme de classe)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -15712,7 +16291,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Diagramme de classe)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -16207,7 +16786,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Diagramme de classe)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -16527,7 +17106,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Diagramme de classe)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -17021,7 +17600,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Diagramme de classe)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -19032,7 +19611,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Diagramme de classe)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -19316,11 +19895,11 @@
 											"containerExtending": false,
 											"left": -432,
 											"top": 768,
-											"width": 80.17724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Models)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -19604,11 +20183,11 @@
 											"containerExtending": false,
 											"left": -704,
 											"top": 304,
-											"width": 80.17724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Models)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -19892,11 +20471,11 @@
 											"containerExtending": false,
 											"left": -320,
 											"top": 528,
-											"width": 80.17724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Models)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -20180,11 +20759,11 @@
 											"containerExtending": false,
 											"left": -816,
 											"top": 16,
-											"width": 80.17724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Models)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -20468,11 +21047,11 @@
 											"containerExtending": false,
 											"left": -432,
 											"top": -416,
-											"width": 80.17724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Models)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -20756,11 +21335,11 @@
 											"containerExtending": false,
 											"left": -944,
 											"top": -544,
-											"width": 80.17724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Models)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -21045,11 +21624,11 @@
 											"containerExtending": false,
 											"left": -192,
 											"top": -160,
-											"width": 80.17724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Models)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -22279,11 +22858,11 @@
 											"containerExtending": false,
 											"left": 1040,
 											"top": 400,
-											"width": 80.17724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Models)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -22567,11 +23146,11 @@
 											"containerExtending": false,
 											"left": 1392,
 											"top": 592,
-											"width": 80.17724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Models)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -22855,11 +23434,11 @@
 											"containerExtending": false,
 											"left": 1200,
 											"top": 624,
-											"width": 80.17724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Models)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -23143,11 +23722,11 @@
 											"containerExtending": false,
 											"left": 720,
 											"top": 256,
-											"width": 80.17724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Models)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -23431,11 +24010,11 @@
 											"containerExtending": false,
 											"left": 752,
 											"top": 320,
-											"width": 80.17724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Models)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -23719,11 +24298,11 @@
 											"containerExtending": false,
 											"left": 1120,
 											"top": 528,
-											"width": 80.17724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Models)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -25008,11 +25587,11 @@
 											"containerExtending": false,
 											"left": 208,
 											"top": -96,
-											"width": 80.17724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Models)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -25439,11 +26018,11 @@
 											"containerExtending": false,
 											"left": -80,
 											"top": 256,
-											"width": 80.17724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Models)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -25727,11 +26306,11 @@
 											"containerExtending": false,
 											"left": -304,
 											"top": -368,
-											"width": 80.17724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Models)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -26015,11 +26594,11 @@
 											"containerExtending": false,
 											"left": -80,
 											"top": -480,
-											"width": 80.17724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Models)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -26303,11 +26882,11 @@
 											"containerExtending": false,
 											"left": 176,
 											"top": -352,
-											"width": 80.17724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Models)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -26591,11 +27170,11 @@
 											"containerExtending": false,
 											"left": -208,
 											"top": -144,
-											"width": 80.17724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Models)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -26879,11 +27458,11 @@
 											"containerExtending": false,
 											"left": 16,
 											"top": 224,
-											"width": 80.17724609375,
+											"width": 163.9853515625,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "(from Models)",
+											"text": "(from org.vivarium.game)",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -27936,591 +28515,183 @@
 							"propertyLabel": {
 								"$ref": "AAAAAAFgAwESGTiDX9M="
 							}
-						}
-					]
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFgAuuYCOIMZ9M=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Loup",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFgAvKZbPvyPsI=",
-							"_parent": {
-								"$ref": "AAAAAAFgAuuYCOIMZ9M="
-							},
-							"source": {
-								"$ref": "AAAAAAFgAuuYCOIMZ9M="
-							},
-							"target": {
-								"$ref": "AAAAAAFgAsl+mbvdGn4="
-							},
-							"visibility": "public"
-						}
-					],
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"isActive": false
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFgAuvZ6OPskZc=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Ours",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFgAvKLQPuWArY=",
-							"_parent": {
-								"$ref": "AAAAAAFgAuvZ6OPskZc="
-							},
-							"source": {
-								"$ref": "AAAAAAFgAuvZ6OPskZc="
-							},
-							"target": {
-								"$ref": "AAAAAAFgAsl+mbvdGn4="
-							},
-							"visibility": "public"
-						}
-					],
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"isActive": false
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFgAuxvBuXNaUc=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Renard",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFgAvJ4avs6sFw=",
-							"_parent": {
-								"$ref": "AAAAAAFgAuxvBuXNaUc="
-							},
-							"source": {
-								"$ref": "AAAAAAFgAuxvBuXNaUc="
-							},
-							"target": {
-								"$ref": "AAAAAAFgAsl+mbvdGn4="
-							},
-							"visibility": "public"
-						}
-					],
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"isActive": false
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFgAu1TKehkJdg=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Chien",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFgAvJbNPqDckA=",
-							"_parent": {
-								"$ref": "AAAAAAFgAu1TKehkJdg="
-							},
-							"source": {
-								"$ref": "AAAAAAFgAu1TKehkJdg="
-							},
-							"target": {
-								"$ref": "AAAAAAFgAsl+mbvdGn4="
-							},
-							"visibility": "public"
-						}
-					],
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"isActive": false
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFgAu2L6enLoVI=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Dragon",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFgAvI4hvn6u6A=",
-							"_parent": {
-								"$ref": "AAAAAAFgAu2L6enLoVI="
-							},
-							"source": {
-								"$ref": "AAAAAAFgAu2L6enLoVI="
-							},
-							"target": {
-								"$ref": "AAAAAAFgAsl+mbvdGn4="
-							},
-							"visibility": "public"
-						}
-					],
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"isActive": false
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFgAu4B0+tgkKw=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Aigle",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFgAvKsAPxOVbo=",
-							"_parent": {
-								"$ref": "AAAAAAFgAu4B0+tgkKw="
-							},
-							"source": {
-								"$ref": "AAAAAAFgAu4B0+tgkKw="
-							},
-							"target": {
-								"$ref": "AAAAAAFgAsl+mbvdGn4="
-							},
-							"visibility": "public"
-						}
-					],
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"isActive": false
-				},
-				{
-					"_type": "UMLEnumeration",
-					"_id": "AAAAAAFgAu++pO8LmRw=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Sexe",
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"literals": [
-						{
-							"_type": "UMLEnumerationLiteral",
-							"_id": "AAAAAAFgAvAhsPArPKw=",
-							"_parent": {
-								"$ref": "AAAAAAFgAu++pO8LmRw="
-							},
-							"name": "Male",
-							"visibility": "public"
 						},
 						{
-							"_type": "UMLEnumerationLiteral",
-							"_id": "AAAAAAFgAvBE/PEj4fQ=",
+							"_type": "UMLPackageView",
+							"_id": "AAAAAAFgAxPOhBucb5c=",
 							"_parent": {
-								"$ref": "AAAAAAFgAu++pO8LmRw="
+								"$ref": "AAAAAAFgAo52SgoMAv4="
 							},
-							"name": "Femelle",
-							"visibility": "public"
+							"model": {
+								"$ref": "AAAAAAFgAxPOhBuatYo="
+							},
+							"subViews": [
+								{
+									"_type": "UMLNameCompartmentView",
+									"_id": "AAAAAAFgAxPOhRudLvU=",
+									"_parent": {
+										"$ref": "AAAAAAFgAxPOhBucb5c="
+									},
+									"model": {
+										"$ref": "AAAAAAFgAxPOhBuatYo="
+									},
+									"subViews": [
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAFgAxPOhRue3PI=",
+											"_parent": {
+												"$ref": "AAAAAAFgAxPOhRudLvU="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 0,
+											"top": 0,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"underline": false,
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAFgAxPOhRuf4sk=",
+											"_parent": {
+												"$ref": "AAAAAAFgAxPOhRudLvU="
+											},
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;1",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 5,
+											"top": 22,
+											"width": 115.59716796875,
+											"height": 13,
+											"autoResize": false,
+											"underline": false,
+											"text": "org.vivarium.game",
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAFgAxPOhRug6sM=",
+											"_parent": {
+												"$ref": "AAAAAAFgAxPOhRudLvU="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 0,
+											"top": 0,
+											"width": 80.17724609375,
+											"height": 13,
+											"autoResize": false,
+											"underline": false,
+											"text": "(from Models)",
+											"horizontalAlignment": 2,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAFgAxPOhRuhSB4=",
+											"_parent": {
+												"$ref": "AAAAAAFgAxPOhRudLvU="
+											},
+											"visible": false,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 0,
+											"top": 0,
+											"width": 0,
+											"height": 13,
+											"autoResize": false,
+											"underline": false,
+											"horizontalAlignment": 1,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										}
+									],
+									"visible": true,
+									"enabled": true,
+									"lineColor": "#000000",
+									"fillColor": "#ffffff",
+									"fontColor": "#000000",
+									"font": "Arial;13;0",
+									"showShadow": true,
+									"containerChangeable": false,
+									"containerExtending": false,
+									"left": 0,
+									"top": 15,
+									"width": 125.59716796875,
+									"height": 25,
+									"autoResize": false,
+									"stereotypeLabel": {
+										"$ref": "AAAAAAFgAxPOhRue3PI="
+									},
+									"nameLabel": {
+										"$ref": "AAAAAAFgAxPOhRuf4sk="
+									},
+									"namespaceLabel": {
+										"$ref": "AAAAAAFgAxPOhRug6sM="
+									},
+									"propertyLabel": {
+										"$ref": "AAAAAAFgAxPOhRuhSB4="
+									}
+								}
+							],
+							"visible": true,
+							"enabled": true,
+							"lineColor": "#000000",
+							"fillColor": "#ffffff",
+							"fontColor": "#000000",
+							"font": "Arial;13;0",
+							"showShadow": true,
+							"containerChangeable": true,
+							"containerExtending": false,
+							"left": 0,
+							"top": 0,
+							"width": 125.59716796875,
+							"height": 40,
+							"autoResize": false,
+							"stereotypeDisplay": "label",
+							"showVisibility": true,
+							"showNamespace": false,
+							"showProperty": true,
+							"showType": true,
+							"nameCompartment": {
+								"$ref": "AAAAAAFgAxPOhRudLvU="
+							},
+							"wordWrap": false
 						}
 					]
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFgAvMuPP6tZeo=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Lapin",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFgAvf70ArEOC0=",
-							"_parent": {
-								"$ref": "AAAAAAFgAvMuPP6tZeo="
-							},
-							"source": {
-								"$ref": "AAAAAAFgAvMuPP6tZeo="
-							},
-							"target": {
-								"$ref": "AAAAAAFgAspKQbyqP2g="
-							},
-							"visibility": "public"
-						}
-					],
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"isActive": false
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFgAvN8Mv/2QC8=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Castore",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFgAvgiEgt82NU=",
-							"_parent": {
-								"$ref": "AAAAAAFgAvN8Mv/2QC8="
-							},
-							"source": {
-								"$ref": "AAAAAAFgAvN8Mv/2QC8="
-							},
-							"target": {
-								"$ref": "AAAAAAFgAspKQbyqP2g="
-							},
-							"visibility": "public"
-						}
-					],
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"isActive": false
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFgAvO6VwE/ZWs=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Bovin",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFgAvgy6QvYdD8=",
-							"_parent": {
-								"$ref": "AAAAAAFgAvO6VwE/ZWs="
-							},
-							"source": {
-								"$ref": "AAAAAAFgAvO6VwE/ZWs="
-							},
-							"target": {
-								"$ref": "AAAAAAFgAspKQbyqP2g="
-							},
-							"visibility": "public"
-						}
-					],
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"isActive": false
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFgAvSIqAK16gU=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Poisson",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFgAvfWAgnvcAY=",
-							"_parent": {
-								"$ref": "AAAAAAFgAvSIqAK16gU="
-							},
-							"source": {
-								"$ref": "AAAAAAFgAvSIqAK16gU="
-							},
-							"target": {
-								"$ref": "AAAAAAFgAspKQbyqP2g="
-							},
-							"visibility": "public"
-						}
-					],
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"isActive": false
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFgAvZo5gRLHy8=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Blowfish",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFgAvhyvQyQ8/4=",
-							"_parent": {
-								"$ref": "AAAAAAFgAvZo5gRLHy8="
-							},
-							"source": {
-								"$ref": "AAAAAAFgAvZo5gRLHy8="
-							},
-							"target": {
-								"$ref": "AAAAAAFgAvSIqAK16gU="
-							},
-							"visibility": "public"
-						}
-					],
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"isActive": false
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFgAvbxGAeH+ag=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Fish",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFgAvhk7ww09/I=",
-							"_parent": {
-								"$ref": "AAAAAAFgAvbxGAeH+ag="
-							},
-							"source": {
-								"$ref": "AAAAAAFgAvbxGAeH+ag="
-							},
-							"target": {
-								"$ref": "AAAAAAFgAvSIqAK16gU="
-							},
-							"visibility": "public"
-						}
-					],
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"isActive": false
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFgAvlz6BNxrbA=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Camel",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFgAvmjMhSrfD0=",
-							"_parent": {
-								"$ref": "AAAAAAFgAvlz6BNxrbA="
-							},
-							"source": {
-								"$ref": "AAAAAAFgAvlz6BNxrbA="
-							},
-							"target": {
-								"$ref": "AAAAAAFgAspKQbyqP2g="
-							},
-							"visibility": "public"
-						}
-					],
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"isActive": false
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFgAvnKkBXof5E=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Cactus",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFgAv0UAiUP/Lc=",
-							"_parent": {
-								"$ref": "AAAAAAFgAvnKkBXof5E="
-							},
-							"source": {
-								"$ref": "AAAAAAFgAvnKkBXof5E="
-							},
-							"target": {
-								"$ref": "AAAAAAFgAqaDDK1NHYk="
-							},
-							"visibility": "public"
-						}
-					],
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"isActive": false
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFgAvn1ERdeCEs=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Aubergine",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFgAv1zOCYwIcA=",
-							"_parent": {
-								"$ref": "AAAAAAFgAvn1ERdeCEs="
-							},
-							"source": {
-								"$ref": "AAAAAAFgAvn1ERdeCEs="
-							},
-							"target": {
-								"$ref": "AAAAAAFgAqaDDK1NHYk="
-							},
-							"visibility": "public"
-						}
-					],
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"isActive": false
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFgAvuKQBxnQEQ=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Herbe",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFgAv3l0Cq+v34=",
-							"_parent": {
-								"$ref": "AAAAAAFgAvuKQBxnQEQ="
-							},
-							"source": {
-								"$ref": "AAAAAAFgAvuKQBxnQEQ="
-							},
-							"target": {
-								"$ref": "AAAAAAFgAqaDDK1NHYk="
-							},
-							"visibility": "public"
-						}
-					],
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"isActive": false
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFgAvu1fR37lDU=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Arbre",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFgAv352isa6lA=",
-							"_parent": {
-								"$ref": "AAAAAAFgAvu1fR37lDU="
-							},
-							"source": {
-								"$ref": "AAAAAAFgAvu1fR37lDU="
-							},
-							"target": {
-								"$ref": "AAAAAAFgAqaDDK1NHYk="
-							},
-							"visibility": "public"
-						}
-					],
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"isActive": false
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFgAvwmxSEG+m8=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "TREX",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFgAwESGDh+mo0=",
-							"_parent": {
-								"$ref": "AAAAAAFgAvwmxSEG+m8="
-							},
-							"source": {
-								"$ref": "AAAAAAFgAvwmxSEG+m8="
-							},
-							"target": {
-								"$ref": "AAAAAAFgAsl+mbvdGn4="
-							},
-							"visibility": "public"
-						}
-					],
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"isActive": false
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFgAvy9ZSNsO5c=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Mushroom",
-					"ownedElements": [
-						{
-							"_type": "UMLGeneralization",
-							"_id": "AAAAAAFgAv0w7SW2ZwI=",
-							"_parent": {
-								"$ref": "AAAAAAFgAvy9ZSNsO5c="
-							},
-							"source": {
-								"$ref": "AAAAAAFgAvy9ZSNsO5c="
-							},
-							"target": {
-								"$ref": "AAAAAAFgAqaDDK1NHYk="
-							},
-							"visibility": "public"
-						}
-					],
-					"visibility": "public",
-					"isAbstract": false,
-					"isFinalSpecialization": false,
-					"isLeaf": false,
-					"isActive": false
 				}
 			],
 			"visibility": "public"
