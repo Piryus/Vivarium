@@ -1,0 +1,4 @@
+#User specific settings
+.idea/workspace.xml
+#Out folder
+/out/*
