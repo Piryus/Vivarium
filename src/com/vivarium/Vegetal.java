@@ -15,7 +15,7 @@ public abstract class Vegetal extends Organism {
     /**
      * 
      */
-    private bool isEdible;
+    private Boolean isEdible;
 
     /**
      * 

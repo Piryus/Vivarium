@@ -1,4 +1,5 @@
 package com.vivarium;
+import java.awt.image.BufferedImage;
 import java.util.*;
 
 /**
