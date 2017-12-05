@@ -19,7 +19,6 @@ public class Coordinates {
      * @param y
      */
     public void Coordinate(int x, int y) {
-        // TODO implement here
         this.x=x;
         this.y=y;
     }
@@ -28,7 +27,6 @@ public class Coordinates {
      * @param x
      */
     public void setX(int x) {
-        // TODO implement here
         this.x=x;
     }
 
@@ -36,7 +34,6 @@ public class Coordinates {
      * @param y
      */
     public void setY(int y) {
-        // TODO implement here
         this.y=y;
     }
 
@@ -44,7 +41,6 @@ public class Coordinates {
      * @return
      */
     public int getX() {
-        // TODO implement here
         return this.x;
     }
 
@@ -52,7 +48,6 @@ public class Coordinates {
      * @return
      */
     public int getY() {
-        // TODO implement here
         return this.y;
     }
 

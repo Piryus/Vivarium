@@ -9,6 +9,7 @@ import java.util.*;
 public class Area {
     private AreaType type;
     private AreaView view;
+    private Coordinates coords;
     /**
      * Default constructor
      */
