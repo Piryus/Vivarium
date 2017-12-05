@@ -12,4 +12,9 @@ public class Blowfish extends Fish {
     public Blowfish() {
     }
 
+    @Override
+    void evoluate(long dt) {
+        
+    }
+
 }

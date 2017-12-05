@@ -12,4 +12,9 @@ public class FreshwaterFish extends Fish {
     public FreshwaterFish() {
     }
 
+    @Override
+    void evoluate(long dt) {
+
+    }
+
 }

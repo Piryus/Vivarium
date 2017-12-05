@@ -1,15 +1,26 @@
 package com.vivarium;
+import java.awt.image.BufferedImage;
 import java.util.*;
 
 /**
  * 
  */
-public class Fish extends Herbivore {
+public abstract class Fish extends Herbivore {
 
     /**
      * Default constructor
      */
     public Fish() {
+    }
+
+    @Override
+    void setArea(AreaType a) {
+
+    }
+
+    @Override
+    void setPicture(BufferedImage image) {
+
     }
 
 }
