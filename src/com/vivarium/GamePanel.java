@@ -7,8 +7,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class GamePanel extends JPanel {
-    private int doggoPosX; //For testing purpose only /!\
-    private int doggoPosY; //For testing purpose only /!\
+    //private int doggoPosX; //For testing purpose only /!\
+    //private int doggoPosY; //For testing purpose only /!\
 
     public void paintComponent(Graphics g) {
         try {
@@ -19,14 +19,14 @@ public class GamePanel extends JPanel {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        try {
+        /*try {
             Image dog = ImageIO.read(new File("resources/dog.png"));
             doggoPosX++;
             doggoPosY++;
             g.drawImage(dog, doggoPosX, doggoPosY, 50,50, this);
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
 }
