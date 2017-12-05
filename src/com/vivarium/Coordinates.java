@@ -9,7 +9,12 @@ public class Coordinates {
     /**
      * Default constructor
      */
-    public Coordinates() {
+    public Coordinates() {}
+
+    public Coordinates(Coordinates otherCoords)
+    {
+        this.x=otherCoords.x;
+        this.y=otherCoords.y;
     }
 
     private int x;
@@ -22,7 +27,10 @@ public class Coordinates {
         this.x=x;
         this.y=y;
     }
-
+    public Coordinates(int x, int y) {
+        this.x=x;
+        this.y=y;
+    }
     /**
      * @param x
      */

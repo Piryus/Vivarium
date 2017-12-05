@@ -1,15 +1,12 @@
 package com.vivarium;
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+
 import java.util.*;
 
 
 public class Area {
     private AreaType type;
     private AreaView view;
-    private Coordinates coords;
+    private ArrayList<Coordinates> coords = new ArrayList<Coordinates>();
     /**
      * Default constructor
      */
@@ -18,9 +15,12 @@ public class Area {
     /**
      * Constructor with parameters
      */
-    public Area(AreaType type) {
+    public Area(AreaType type, Coordinates[] coords) {
         this.type = type;
         this.view = new AreaView(type);
+        for(int i=0;i < coords.length; i++) {
+            this.coords.add(new Coordinates(coords[i]));
+        }
     }
 
     /**
@@ -29,5 +29,13 @@ public class Area {
      */
     public AreaType getAreaType() {
         return type;
+    }
+
+    public AreaView getAreaView() {
+        return view;
+    }
+
+    public ArrayList<Coordinates> getCoords() {
+        return coords;
     }
 }
