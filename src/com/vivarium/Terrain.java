@@ -13,12 +13,6 @@ public class Terrain {
     public Terrain() {
     }
 
-    /**
-     * 
-     */
-    private BufferedImage texture;
-
-
 
     /**
      * @param a 

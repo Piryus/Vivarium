@@ -1,23 +1,32 @@
 package com.vivarium;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.*;
 
-/**
- * 
- */
-public class Area {
 
+public class Area {
+    private AreaType type;
+    private AreaView view;
     /**
      * Default constructor
      */
-    public Area() {
+    public Area() {}
+
+    /**
+     * Constructor with parameters
+     */
+    public Area(AreaType type) {
+        this.type = type;
+        this.view = new AreaView(type);
     }
 
     /**
-     * 
+     * Accessor to type
+     * @return
      */
-    private AreaType type;
-
-
-
-
+    public AreaType getAreaType() {
+        return type;
+    }
 }
