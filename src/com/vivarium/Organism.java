@@ -4,6 +4,7 @@ import java.awt.image.BufferedImage;
 import java.util.*;
 
 
+
 /**
  * 
  */
@@ -13,59 +14,43 @@ public abstract class Organism {
      * Default constructor
      */
     public Organism() {
+        id = nextid;
+        nextid++;
     }
-
-    /**
-     * 
-     */
     private int id;
-
-    /**
-     * 
-     */
-    private static int nextid;
-
-    /**
-     * 
-     */
+    private Coordinates coord ;
+    private static int nextid = 0;
     private String name;
-
-    /**
-     * 
-     */
     private AreaType area;
 
     /**
-     * 
-     */
-    private BufferedImage picture;
-
-
-
-
-
-    /**
-     * @param int x 
-     * @param int y
+     * constructeur
+     * @param
+     * @param
      */
     public void Organism(int x,int y) {
-        // TODO implement here
+        //
+        id = nextid;
+        nextid++;
+        coord.Coordinate(x,y);
+        name ="Unnamed Organism";
     }
 
     /**
      * @return
      */
     public int getID() {
-        // TODO implement here
-        return 0;
+        // Return object's id
+        return id ;
     }
 
     /**
      * @return
      */
     public Coordinates getPos() {
-        // TODO implement here
-        return null;
+        // Return the position
+        return coord;
     }
-
+    abstract void setArea(AreaType a);
+    abstract void evoluate (long dt);
 }
