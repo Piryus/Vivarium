@@ -31,6 +31,8 @@ public class Coordinates {
      */
     public void Coordinate(int x, int y) {
         // TODO implement here
+        this.x=x;
+        this.y=y;
     }
 
     /**

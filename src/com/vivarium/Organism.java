@@ -22,12 +22,11 @@ public abstract class Organism {
     private static int nextid = 0;
     private String name;
     private AreaType area;
-    private BufferedImage picture;
 
     /**
      * constructeur
-     * @param int x
-     * @param int y
+     * @param
+     * @param
      */
     public void Organism(int x,int y) {
         //
@@ -53,6 +52,5 @@ public abstract class Organism {
         return coord;
     }
     abstract void setArea(AreaType a);
-    abstract void setPicture(BufferedImage image);
     abstract void evoluate (long dt);
 }

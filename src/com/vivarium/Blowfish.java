@@ -14,7 +14,7 @@ public class Blowfish extends Fish {
 
     @Override
     void evoluate(long dt) {
-        
+
     }
 
 }

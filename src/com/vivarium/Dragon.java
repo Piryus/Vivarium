@@ -18,10 +18,7 @@ public class Dragon extends Carnivore {
 
     }
 
-    @Override
-    void setPicture(BufferedImage image) {
 
-    }
 
     @Override
     void evoluate(long dt) {

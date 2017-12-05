@@ -18,10 +18,7 @@ public class Mushroom extends Vegetal {
 
     }
 
-    @Override
-    void setPicture(BufferedImage image) {
 
-    }
 
     @Override
     void evoluate(long dt) {

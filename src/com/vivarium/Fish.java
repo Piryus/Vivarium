@@ -18,9 +18,6 @@ public abstract class Fish extends Herbivore {
 
     }
 
-    @Override
-    void setPicture(BufferedImage image) {
 
-    }
 
 }

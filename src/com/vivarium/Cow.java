@@ -18,10 +18,7 @@ public class Cow extends Herbivore {
 
     }
 
-    @Override
-    void setPicture(BufferedImage image) {
 
-    }
 
     @Override
     void evoluate(long dt) {

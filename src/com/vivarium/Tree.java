@@ -18,10 +18,7 @@ public class Tree extends Vegetal {
 
     }
 
-    @Override
-    void setPicture(BufferedImage image) {
 
-    }
 
     @Override
     void evoluate(long dt) {
