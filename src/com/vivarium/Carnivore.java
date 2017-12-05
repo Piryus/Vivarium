@@ -16,9 +16,9 @@ public abstract class Carnivore extends Animal {
      * @param a 
      * @return
      */
-    public bool eat(Herbivore a) {
+    public Boolean eat(Herbivore a) {
         // TODO implement here
-        return null;
+        return true;
     }
 
 }
