@@ -1,5 +1,8 @@
+package com.vivarium;
 
+import java.awt.image.BufferedImage;
 import java.util.*;
+
 
 /**
  * 
@@ -25,7 +28,7 @@ public abstract class Organism {
     /**
      * 
      */
-    private string name;
+    private String name;
 
     /**
      * 
@@ -45,7 +48,7 @@ public abstract class Organism {
      * @param int x 
      * @param int y
      */
-    public void Organism(void int x, void int y) {
+    public void Organism(int x,int y) {
         // TODO implement here
     }
 
