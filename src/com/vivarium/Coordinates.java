@@ -12,19 +12,8 @@ public class Coordinates {
     public Coordinates() {
     }
 
-    /**
-     * 
-     */
     private int x;
-
-    /**
-     * 
-     */
     private int y;
-
-
-
-
     /**
      * @param x 
      * @param y
@@ -40,6 +29,7 @@ public class Coordinates {
      */
     public void setX(int x) {
         // TODO implement here
+        this.x=x;
     }
 
     /**
@@ -47,6 +37,7 @@ public class Coordinates {
      */
     public void setY(int y) {
         // TODO implement here
+        this.y=y;
     }
 
     /**
@@ -54,7 +45,7 @@ public class Coordinates {
      */
     public int getX() {
         // TODO implement here
-        return 0;
+        return this.x;
     }
 
     /**
@@ -62,7 +53,7 @@ public class Coordinates {
      */
     public int getY() {
         // TODO implement here
-        return 0;
+        return this.y;
     }
 
 }

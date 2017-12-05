@@ -10,6 +10,7 @@ public abstract class Vegetal extends Organism {
      * Default constructor
      */
     public Vegetal() {
+        super();
     }
 
     /**
