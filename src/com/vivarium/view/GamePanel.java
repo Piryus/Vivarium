@@ -9,9 +9,11 @@ import static com.vivarium.view.TerrainView.drawTerrain;
 
 public class GamePanel extends JPanel {
     private Terrain terr=new Terrain();
-    public void paintComponent(Graphics g) {
-        drawTerrain(g, terr);
 
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        drawTerrain(g, terr);
     }
 
 }

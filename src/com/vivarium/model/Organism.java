@@ -28,7 +28,7 @@ public abstract class Organism {
         //
         id = nextid;
         nextid++;
-        coord.Coordinate(x,y);
+        this.coord=new Coordinates(x,y);
         name ="Unnamed Organism";
     }
 

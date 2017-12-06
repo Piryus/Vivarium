@@ -22,10 +22,7 @@ public class Coordinates {
      * @param x 
      * @param y
      */
-    public void Coordinate(int x, int y) {
-        this.x=x;
-        this.y=y;
-    }
+
     public Coordinates(int x, int y) {
         this.x=x;
         this.y=y;
