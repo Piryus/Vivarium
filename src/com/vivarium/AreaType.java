@@ -6,5 +6,9 @@ public enum AreaType {
     Desert,
     Plain,
     Water,
-    Mountain
+    Mountain;
+
+    public static AreaType getRandom() {
+        return values()[(int) (Math.random() * values().length)];
+    }
 }

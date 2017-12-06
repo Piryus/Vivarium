@@ -15,9 +15,7 @@ public class AreaView {
 
     // TODO Hack passer coords pour des cases -> à corriger, créer class square
     public static void drawArea(Graphics g, Area area) {
-        for (int i = 0; i < area.getCoords().size(); i++) {
-            g.drawImage(area.getAreaView().texture, area.getCoords().get(i).getX(), area.getCoords().get(i).getY(), null);
-        }
+        g.drawImage(area.getAreaView().texture, area.getCoords().getX(), area.getCoords().getY(), null);
     }
 
     /**
