@@ -16,4 +16,8 @@ public class GamePanel extends JPanel {
         drawTerrain(g, terr);
     }
 
+    @Override
+    public Dimension getPreferredSize() {
+        return new Dimension(2000,2000);
+    }
 }
