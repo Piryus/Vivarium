@@ -2,7 +2,8 @@ package com.vivarium.model;
 import java.util.*;
 
 public class Terrain {
-    private Coordinates rightDownCorner = new Coordinates(2000,2000);
+    private final int width=2000;
+    private final int height=2000;
     private ArrayList<Area> areasList;
     /**
      * Default constructor
@@ -13,8 +14,8 @@ public class Terrain {
     }
 
     private void generateAreas() {
-        for(int i=0;i<rightDownCorner.getX();i+=80) {
-            for(int j=0;j<rightDownCorner.getY();j+=80) {
+        for(int i=0;i<this.width;i+=80) {
+            for(int j=0;j<this.height;j+=80) {
                 areasList.add(new Area(AreaType.getRandom(),new Coordinates(i,j)));
             }
         }
