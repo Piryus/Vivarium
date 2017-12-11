@@ -5,7 +5,11 @@ package com.vivarium.model;
  * 
  */
 public abstract class Organism {
-
+    private int id;
+    private Coordinates position ;
+    private static int nextid = 0;
+    private String name;
+    private AreaType area;
     /**
      * Default constructor
      */
@@ -13,23 +17,18 @@ public abstract class Organism {
         id = nextid;
         nextid++;
     }
-    private int id;
-    private Coordinates coord ;
-    private static int nextid = 0;
-    private String name;
-    private AreaType area;
 
     /**
      * constructeur
      * @param
      * @param
      */
-    public void Organism(int x,int y) {
+    public Organism(int x,int y) {
         //
-        id = nextid;
+        this.id = nextid;
         nextid++;
-        this.coord=new Coordinates(x,y);
-        name ="Unnamed Organism";
+        this.position=new Coordinates(x,y);
+        this.name ="Unnamed Organism";
     }
 
     /**
@@ -45,7 +44,7 @@ public abstract class Organism {
      */
     public Coordinates getPos() {
         // Return the position
-        return coord;
+        return position;
     }
     abstract void setArea(AreaType a);
     abstract void evoluate (long dt);
