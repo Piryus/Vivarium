@@ -8,7 +8,7 @@ import java.awt.*;
 import static com.vivarium.view.TerrainView.drawTerrain;
 
 public class GamePanel extends JPanel {
-    private Terrain terr=new Terrain();
+    private Terrain terr=new Terrain();//TODO Hack here, please correct, should be placed somewhere
 
     @Override
     public void paintComponent(Graphics g) {
