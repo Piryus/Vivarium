@@ -15,6 +15,7 @@ abstract class Carnivore extends Animal
 			other.setHP(0);
 			return  true;
 		}
+		return false;
 	}
 	abstract public void evoluate(long deltaTime);
 }
