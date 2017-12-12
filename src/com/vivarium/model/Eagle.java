@@ -19,10 +19,13 @@ public class Eagle extends Carnivore {
 
     public boolean isHungry()
     {
-        return getHunger()>5;
+        return getHunger()>=5;
     }
 
-    public void lookForFood(){}
+    public void lookForFood()
+    {
+
+    }
 
     public void lookForMate(){}
 

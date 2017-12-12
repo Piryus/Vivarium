@@ -5,10 +5,11 @@ package com.vivarium.model;
  */
 public class Dog extends Carnivore {
 
-    /**
-     * Default constructor
-     */
-    public Dog() {
+    private AreaType area;
+    public Dog(int posX,int posY,float health, float hunger, float vitality,float speed, Sex type,AreaType a)
+    {
+        super(posX,posY,health,hunger,vitality,speed,type);
+        this.area = a;
     }
 
     @Override
@@ -19,7 +20,8 @@ public class Dog extends Carnivore {
 
 
     @Override
-    void evoluate(long dt) {
+    public void evoluate(long dt)
+    {
 
     }
 

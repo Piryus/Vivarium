@@ -19,7 +19,7 @@ public class Aubergine extends Vegetal {
 
 
     @Override
-    void evoluate(long dt) {
+    public svoid evoluate(long dt) {
 
     }
 
