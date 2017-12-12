@@ -16,11 +16,4 @@ public class Tree extends Vegetal {
 
     }
 
-
-
-    @Override
-    void evoluate(long dt) {
-
-    }
-
 }
