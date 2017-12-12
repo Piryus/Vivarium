@@ -12,6 +12,9 @@ public abstract class Vegetal extends Organism {
         super();
     }
 
+    private float timeSinceEaten;
+
+
     /**
      * 
      */
@@ -28,6 +31,17 @@ public abstract class Vegetal extends Organism {
     }
     public void setEdible(boolean b){
         this.isEdible=b;
+    }
+
+    @Override
+    public void evoluate (long dt){
+        if (!isEdible){
+            timeSinceEaten+= dt;
+            if (timeSinceEaten > respawnTime) {
+                isEdible = true;
+                timeSinceEaten = 0;
+            }
+        }
     }
 
 
