@@ -1,23 +1,12 @@
-package com.vivarium.model;
+include Herbivore;
+include Animal
+class Carnivore extends Animal
+{
+	public Carnivore(int posX,int posY,float health, float hunger, float vitality,float speed, Sex type)
+	{
+		super(posX,posY,health,hunger,vitality,speed,type);
+	}
 
-/**
- * 
- */
-public abstract class Carnivore extends Animal {
-
-    /**
-     * Default constructor
-     */
-    public Carnivore() {
-    }
-
-    /**
-     * @param a 
-     * @return
-     */
-    public Boolean eat(Herbivore a) {
-        // TODO implement here
-        return true;
-    }
-
+	public boolean eat(Herbivore other);
+	public void evoluate(float deltaTime);
 }
