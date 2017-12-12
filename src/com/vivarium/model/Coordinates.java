@@ -18,6 +18,22 @@ public class Coordinates {
 
     private double x;
     private double y;
+
+    /*
+    * Renvoie true si other est plus proche que repere
+    * */
+    public boolean isCloser(Coordinates other,Coordinates repere)
+    {
+        double repereX = (double) repere.getX();
+        double repereY = (double) repere.getY();
+        double otherX = (double) other.getX();
+        double otherY = (double) other.getY();
+        double thisX = (double) this.getX();
+        double thisY = (double) this.getY();
+
+        return (Math.sqrt(Math.pow((otherX-thisX),2)+Math.pow(otherY+thisY,2))) < (Math.sqrt(Math.pow((repereX-thisX),2)+Math.pow((repereY-thisY),2)));
+    }
+
     /**
      * @param x 
      * @param y

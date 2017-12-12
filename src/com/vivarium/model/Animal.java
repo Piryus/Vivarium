@@ -1,15 +1,19 @@
 package com.vivarium.model;
 
 
+import java.util.ArrayList;
+
 abstract class Animal extends Organism
 {
 	protected float health;
 	protected float hunger;
 	protected float vitality;
 	protected float speed;
+	protected ArrayList<AreaType> availableArea;
+	protected AreaType currArea;
 	protected Sex type;
 
-	public Animal(int posX,int posY,float health, float hunger, float vitality,float speed, Sex type)
+	public Animal(int posX,int posY,float health, float hunger, float vitality,float speed, Sex type,ArrayList<AreaType> avArea)
 	{
 		super(posX,posY);
 		this.health = health;
@@ -17,6 +21,8 @@ abstract class Animal extends Organism
 		this.vitality = vitality;
 		this.speed = speed;
 		this.type = type;
+		availableArea = new ArrayList<>();
+
 	}
 
 	abstract public void evoluate(long dt); // Fonction à redéfinir dans chaque classe fille pour définir le comportement de l'animal

@@ -9,7 +9,7 @@ public abstract class Herbivore extends Animal {
      * Default constructor
      */
     public Herbivore(int posX,int posY,float health, float hunger, float vitality,float speed, Sex type) {
-        super( posX, posY, health,  hunger,  vitality, speed, type);
+        super( posX, posY, health,  hunger,  vitality, speed, type, null);
     }
 
     /**

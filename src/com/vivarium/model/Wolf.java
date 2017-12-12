@@ -10,10 +10,11 @@ public class Wolf extends Carnivore {
 
     private ArrayList<AreaType> suitableAreas = new ArrayList<>();
     private AreaType currentArea;
+
     public Wolf(int posX,int posY,float health, float hunger, float vitality, Sex type)
     {
 
-        super(posX,posY,health,hunger,vitality,0.05f,type);
+        super(posX,posY,health,hunger,vitality,0.05f,type, null);
         suitableAreas.add(AreaType.Plain);
         suitableAreas.add(AreaType.Mountain);
         currentArea = AreaType.Plain;
