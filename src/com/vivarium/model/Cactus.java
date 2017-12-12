@@ -16,11 +16,4 @@ public class Cactus extends Vegetal {
 
     }
 
-
-
-    @Override
-    void evoluate(long dt) {
-
-    }
-
 }
