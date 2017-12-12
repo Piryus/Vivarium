@@ -1,13 +1,14 @@
 package com.vivarium;
 
-import com.vivarium.controller.GameEngine;
 import com.vivarium.model.Vivarium;
 import com.vivarium.view.GamePanel;
 
 import javax.swing.*;
 
 public class Main {
-    private GameEngine engine = new GameEngine();
+
+    //private GameEngine engine = new GameEngine();
+
     public static void main(String[] args) {
         JFrame window = new JFrame("Vivarium");
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -19,8 +20,8 @@ public class Main {
         window.setContentPane(sp);
         window.pack();
         window.setVisible(true);
-        /*while(true) {
+        /* while(true) {
         //game loop
-        }*/
+        } */
     }
 }
