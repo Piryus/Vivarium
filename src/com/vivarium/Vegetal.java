@@ -17,17 +17,13 @@ public abstract class Vegetal extends Organism {
      * 
      */
     private Boolean isEdible;
-
     /**
      * 
      */
     private int respawnTime;
-
     /**
      * 
      */
-    public void Vegetal() {
-        // TODO implement here
-    }
+
 
 }
