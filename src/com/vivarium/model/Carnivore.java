@@ -16,5 +16,5 @@ abstract class Carnivore extends Animal
 			return  true;
 		}
 	}
-	abstract public void evoluate(float deltaTime);
+	abstract public void evoluate(long deltaTime);
 }
