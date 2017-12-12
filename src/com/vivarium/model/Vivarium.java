@@ -9,6 +9,7 @@ public class Vivarium {
     private ArrayList<Organism> organisms;
     private Terrain terrain;
     private HashMap<Integer, Long> lastCall;
+
     /**
      * Default constructor
      */
@@ -17,10 +18,6 @@ public class Vivarium {
         terrain = new Terrain();
         lastCall = new HashMap<>();
     }
-
-
-
-
 
     /**
      * 
@@ -33,7 +30,6 @@ public class Vivarium {
             o.evoluate(t-lastCall.get(o.getID()));
             lastCall.replace(o.getID(),t);
         }
-
     }
 
     /**
@@ -58,4 +54,7 @@ public class Vivarium {
         return terrain;
     }
 
+    public ArrayList<Organism> getOrganisms() {
+        return organisms;
+    }
 }

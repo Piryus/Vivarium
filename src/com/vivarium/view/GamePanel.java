@@ -1,19 +1,22 @@
 package com.vivarium.view;
 
-import com.vivarium.model.Terrain;
+import com.vivarium.model.Vivarium;
 
 import javax.swing.*;
 import java.awt.*;
 
-import static com.vivarium.view.TerrainView.drawTerrain;
-
 public class GamePanel extends JPanel {
-    private Terrain terr=new Terrain();//TODO Hack here, please correct, should be placed somewhere
+
+    private VivariumRenderer vivariumRenderer;
+
+    public GamePanel(Vivarium vivarium) {
+        vivariumRenderer = new VivariumRenderer(vivarium);
+    }
 
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        drawTerrain(g, terr);
+        vivariumRenderer.render(g);
     }
 
     @Override

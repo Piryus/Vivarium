@@ -10,15 +10,18 @@ import java.io.File;
 import java.io.IOException;
 
 public class AreaView {
-    private BufferedImage texture;
 
-    public AreaView(AreaType type) {
-        assignTexture(type);
+    private BufferedImage texture;
+    private Area area;
+
+    public AreaView(Area area) {
+        this.area = area;
+        assignTexture(this.area.getAreaType());
     }
 
     // TODO Hack passer coords pour des cases -> à corriger, créer class square
-    public static void drawArea(Graphics g, Area area) {
-        g.drawImage(area.getAreaView().texture, area.getCoords().getX(), area.getCoords().getY(), null);
+    public void draw(Graphics g) {
+        g.drawImage(this.texture, area.getCoords().getX(), this.area.getCoords().getY(), null);
     }
 
     /**
