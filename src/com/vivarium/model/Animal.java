@@ -36,7 +36,7 @@ abstract class Animal extends Organism
 	{
 		this.hunger = hunger;
 	}
-	public float setHunger()
+	public float getHunger()
 	{
 		return this.hunger;
 	}
@@ -69,5 +69,16 @@ abstract class Animal extends Organism
 	}
 
 	/*** /ACCESSEURS ***/
+
+	/*** Deplacement ***/
+
+	public void move(int dx, int dy)
+	{
+		this.getPos().setX(dx);
+		this.getPos().setY(dy);
+	}
+
+
+	/*** /Deplacement ***/
 
 }
