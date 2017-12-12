@@ -8,7 +8,8 @@ public class Castore extends Herbivore {
     /**
      * Default constructor
      */
-    public Castore() {
+    public Castore(int posX,int posY,float health, float hunger, float vitality,float speed, Sex type) {
+        super(posX,posY,health, hunger,vitality, speed, type);
     }
 
     @Override
@@ -19,7 +20,7 @@ public class Castore extends Herbivore {
 
 
     @Override
-    void evoluate(long dt) {
+    public void evoluate(long dt) {
 
     }
 

@@ -20,7 +20,7 @@ public class Rabbit extends Herbivore {
 
 
     @Override
-    void evoluate(long dt) {
+    public void evoluate(long dt) {
 
     }
 
