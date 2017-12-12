@@ -8,7 +8,8 @@ public class Rabbit extends Herbivore {
     /**
      * Default constructor
      */
-    public Rabbit() {
+    public Rabbit(int posX,int posY,float health, float hunger, float vitality,float speed, Sex type) {
+        super(posX, posY,health,hunger,vitality,speed,type);
     }
 
     @Override
