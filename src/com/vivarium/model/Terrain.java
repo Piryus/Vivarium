@@ -42,11 +42,47 @@ public class Terrain {
         //generateAreasFromMap();
     }
 
-    /* Generates random AreaType for each tile (80*80) */
+    /* Generates random AreaType for each tile (80*80) then run cellular automata rules x times */
     private void generateAreas() {
-        for(int i=0;i<this.width;i+=80) {
-            for(int j=0;j<this.height;j+=80) {
-                areasList.add(new Area(AreaType.getRandom(),new Coordinates(i,j)));
+        boolean letAlive = false;
+        for (int i = 0; i < this.width; i += 80) {
+            for (int j = 0; j < this.height; j += 80) {
+                areasList.add(new Area(AreaType.getRandom(), new Coordinates(i, j)));
+            }
+        }
+        for (int i = 0; i < areasList.size(); i++) {
+            letAlive = false;
+            switch (areasList.get(i).getAreaType()) {
+                case Water:
+                    for (int j = 0; j < areasList.get(i).getSurroundingAreas(areasList).size(); j++) {
+                        if (areasList.get(i).getSurroundingAreas(areasList).get(j).getAreaType() == AreaType.Water) {
+                            letAlive = true;
+                        }
+                    }
+                    if (!letAlive) {
+                        areasList.get(i).setAreaType(AreaType.Plain);
+                    }
+                    break;
+                case Mountain:
+                    for (int j = 0; j < areasList.get(i).getSurroundingAreas(areasList).size(); j++) {
+                        if (areasList.get(i).getSurroundingAreas(areasList).get(j).getAreaType() == AreaType.Mountain) {
+                            letAlive = true;
+                        }
+                    }
+                    if (!letAlive) {
+                        areasList.get(i).setAreaType(AreaType.Plain);
+                    }
+                    break;
+                case Desert:
+                    for (int j = 0; j < areasList.get(i).getSurroundingAreas(areasList).size(); j++) {
+                        if (areasList.get(i).getSurroundingAreas(areasList).get(j).getAreaType() == AreaType.Desert) {
+                            letAlive = true;
+                        }
+                    }
+                    if (!letAlive) {
+                        areasList.get(i).setAreaType(AreaType.Plain);
+                    }
+                    break;
             }
         }
     }
