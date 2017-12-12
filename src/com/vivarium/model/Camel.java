@@ -8,7 +8,8 @@ public class Camel extends Herbivore {
     /**
      * Default constructor
      */
-    public Camel() {
+    public Camel(int posX,int posY,float health, float hunger, float vitality,float speed, Sex type) {
+        super(posX,posY,health,hunger,vitality,speed,type);
     }
 
     @Override
@@ -18,7 +19,7 @@ public class Camel extends Herbivore {
 
 
     @Override
-    void evoluate(long dt) {
+    public void evoluate(long dt) {
 
     }
 

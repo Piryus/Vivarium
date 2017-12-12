@@ -8,7 +8,8 @@ public class Cow extends Herbivore {
     /**
      * Default constructor
      */
-    public Cow() {
+    public Cow(int posX,int posY,float health, float hunger, float vitality,float speed, Sex type) {
+        super(posX,posY,health,hunger,vitality,speed,type);
     }
 
     @Override
@@ -19,7 +20,7 @@ public class Cow extends Herbivore {
 
 
     @Override
-    void evoluate(long dt) {
+    public void evoluate(long dt) {
 
     }
 
