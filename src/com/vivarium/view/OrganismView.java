@@ -9,7 +9,13 @@ import java.io.File;
 import java.io.IOException;
 
 public class OrganismView {
-    private BufferedImage icon;
+
+    private BufferedImage icon; // TODO Load only one images for each organism
+    private Organism organism;
+
+    public OrganismView(Organism organism) {
+        this.organism = organism;
+    }
 
     private void assignIcon() {
         try {
@@ -19,7 +25,7 @@ public class OrganismView {
         }
     }
 
-    public void drawAnimal(Graphics g, Organism organism) {
-        g.drawImage(icon,organism.getPos().getX(),organism.getPos().getY(),20,20,null);
+    public void draw(Graphics g) {
+        g.drawImage(icon,this.organism.getPos().getX(),this.organism.getPos().getY(),20,20,null);
     }
 }

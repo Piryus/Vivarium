@@ -8,11 +8,12 @@ public class FreshwaterFish extends Fish {
     /**
      * Default constructor
      */
-    public FreshwaterFish() {
+    public FreshwaterFish(int posX,int posY,float health, float hunger, float vitality,float speed, Sex type) {
+        super(posX,posY,health,hunger,vitality,speed,type);
     }
 
     @Override
-    void evoluate(long dt) {
+    public void evoluate(long dt) {
 
     }
 

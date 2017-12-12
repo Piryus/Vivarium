@@ -57,4 +57,8 @@ public class Vivarium {
     public ArrayList<Organism> getOrganisms() {
         return organisms;
     }
+    public static Organism scanCarnivore (Organism src){return null;}
+    public static Organism scanHerbivore (Organism src){return null;}
+    public static Organism scanVegetal (Organism src){return null;}
+
 }
