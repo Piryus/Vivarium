@@ -19,7 +19,7 @@ abstract class Animal extends Organism
 		this.type = type;
 	}
 
-	abstract public void evoluate(long deltaTime); // Fonction à redéfinir dans chaque classe fille pour définir le comportement de l'animal
+	abstract public void evoluate(long dt); // Fonction à redéfinir dans chaque classe fille pour définir le comportement de l'animal
 
 	/*** ACCESSEURS ***/
 
@@ -36,7 +36,7 @@ abstract class Animal extends Organism
 	{
 		this.hunger = hunger;
 	}
-	public float setHunger()
+	public float getHunger()
 	{
 		return this.hunger;
 	}
@@ -69,5 +69,16 @@ abstract class Animal extends Organism
 	}
 
 	/*** /ACCESSEURS ***/
+
+	/*** Deplacement ***/
+
+	public void move(int dx, int dy)
+	{
+		this.getPos().setX(dx);
+		this.getPos().setY(dy);
+	}
+
+
+	/*** /Deplacement ***/
 
 }

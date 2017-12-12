@@ -8,7 +8,8 @@ public class Bouquetin extends Herbivore {
     /**
      * Default constructor
      */
-    public Bouquetin() {
+    public Bouquetin(int posX,int posY,float health, float hunger, float vitality,float speed, Sex type) {
+        super(posX, posY, health,hunger,vitality,speed,type);
     }
 
     @Override
@@ -19,7 +20,7 @@ public class Bouquetin extends Herbivore {
 
 
     @Override
-    void evoluate(long dt) {
+    public void evoluate(long dt) {
 
     }
 
