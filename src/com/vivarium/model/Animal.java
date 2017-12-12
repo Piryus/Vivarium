@@ -19,7 +19,7 @@ abstract class Animal extends Organism
 		this.type = type;
 	}
 
-	abstract public void evoluate(long deltaTime); // Fonction à redéfinir dans chaque classe fille pour définir le comportement de l'animal
+	abstract public void evoluate(long dt); // Fonction à redéfinir dans chaque classe fille pour définir le comportement de l'animal
 
 	/*** ACCESSEURS ***/
 
