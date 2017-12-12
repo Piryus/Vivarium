@@ -16,11 +16,4 @@ public class Grass extends Vegetal {
 
     }
 
-
-
-    @Override
-    void evoluate(long dt) {
-
-    }
-
 }

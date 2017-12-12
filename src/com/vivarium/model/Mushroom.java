@@ -16,11 +16,4 @@ public class Mushroom extends Vegetal {
 
     }
 
-
-
-    @Override
-    void evoluate(long dt) {
-
-    }
-
 }
