@@ -6,10 +6,10 @@ import java.util.ArrayList;
  * 
  */
 public class Eagle extends Carnivore {
-    public Eagle(int posX,int posY,float health, float hunger, float vitality,float speed,Sex type, ArrayList<AreaType> availableArea)
+    public Eagle(int posX,int posY,Vivarium v, float health, float hunger, float vitality,float speed,Sex type, ArrayList<AreaType> availableArea)
     {
 
-        super(posX,posY,health,hunger,vitality,speed,type,availableArea);
+        super(posX,posY,v,health,hunger,vitality,speed,type,availableArea);
         this.currArea = AreaType.Mountain;
     }
 

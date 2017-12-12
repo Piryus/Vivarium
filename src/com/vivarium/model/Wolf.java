@@ -11,10 +11,10 @@ public class Wolf extends Carnivore {
     private ArrayList<AreaType> suitableAreas = new ArrayList<>();
     private AreaType currentArea;
 
-    public Wolf(int posX,int posY,float health, float hunger, float vitality, Sex type)
+    public Wolf(int posX,int posY,Vivarium v, float health, float hunger, float vitality, Sex type)
     {
 
-        super(posX,posY,health,hunger,vitality,0.05f,type, null);
+        super(posX,posY,v,health,hunger,vitality,0.05f,type, null);
         suitableAreas.add(AreaType.Plain);
         suitableAreas.add(AreaType.Mountain);
         currentArea = AreaType.Plain;
@@ -27,13 +27,23 @@ public class Wolf extends Carnivore {
     }
 
 
+    private int coefX = 1, coefY = 1; // pour debug
 
     @Override
     public void evoluate(long dt) {
-        this.move(dt*getSpeed(),dt*getSpeed());
-        if (this.getPos().getY()>1000){
-            this.getPos().setX(0);
-            this.getPos().setY(0);
+        this.move(dt*getSpeed()*coefX,dt*getSpeed()*coefY);
+
+        if (this.getPos().getX()+50> vivarium.getTerrain().getWidth() ){
+            coefX = -1;
+        }
+        else if (this.getPos().getX() <0){
+            coefX = 1;
+        }
+        if (this.getPos().getY()+50> vivarium.getTerrain().getHeight() ){
+            coefY = -1;
+        }
+        else if (this.getPos().getY()<0){
+            coefY = 1;
         }
     }
 

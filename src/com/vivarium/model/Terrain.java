@@ -123,4 +123,11 @@ public class Terrain {
         return areasList;
     }
 
+    public int getHeight() {
+        return height;
+    }
+
+    public int getWidth() {
+        return width;
+    }
 }

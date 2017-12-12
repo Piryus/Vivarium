@@ -10,6 +10,7 @@ public abstract class Organism {
     private static int nextid = 0;
     private String name;
     private AreaType area;
+    protected Vivarium vivarium;
     /**
      * Default constructor
      */
@@ -23,8 +24,8 @@ public abstract class Organism {
      * @param
      * @param
      */
-    public Organism(int x,int y) {
-        //
+    public Organism(int x,int y, Vivarium v) {
+        vivarium = v;
         this.id = nextid;
         nextid++;
         this.position=new Coordinates(x,y);

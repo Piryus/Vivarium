@@ -13,9 +13,9 @@ abstract class Animal extends Organism
 	protected AreaType currArea;
 	protected Sex type;
 
-	public Animal(int posX,int posY,float health, float hunger, float vitality,float speed, Sex type,ArrayList<AreaType> avArea)
+	public Animal(int posX,int posY, Vivarium v, float health, float hunger, float vitality,float speed, Sex type,ArrayList<AreaType> avArea)
 	{
-		super(posX,posY);
+		super(posX, posY, v);
 		this.health = health;
 		this.hunger = hunger;
 		this.vitality = vitality;

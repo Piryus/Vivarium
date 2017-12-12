@@ -6,6 +6,7 @@ import com.vivarium.model.Wolf;
 import com.vivarium.view.GamePanel;
 
 import javax.swing.*;
+import java.util.Random;
 
 public class Main {
 
@@ -15,7 +16,15 @@ public class Main {
         window.setExtendedState(JFrame.MAXIMIZED_BOTH);
         window.setLocationRelativeTo(null);
         Vivarium vivarium = new Vivarium();
-        vivarium.add(new Wolf(10,10,100,100,100, Sex.Female));
+
+        Random ran = new Random();
+
+        for (int i = 0; i < 50; i++){
+            vivarium.add(new Wolf(ran.nextInt(vivarium.getTerrain().getWidth()),ran.nextInt(vivarium.getTerrain().getHeight()), vivarium,100,100,100, Sex.Female));
+            vivarium.add(new Wolf(ran.nextInt(vivarium.getTerrain().getWidth()),ran.nextInt(vivarium.getTerrain().getHeight()), vivarium,100,100,100, Sex.Male));
+        }
+
+
         GamePanel gp = new GamePanel(vivarium);
         JScrollPane sp = new JScrollPane(gp,ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         window.setContentPane(sp);
@@ -24,6 +33,11 @@ public class Main {
         while (true){
             vivarium.loop();
             window.repaint();
+            try {
+                Thread.sleep(5);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
