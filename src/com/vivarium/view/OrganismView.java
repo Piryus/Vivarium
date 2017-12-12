@@ -19,7 +19,7 @@ public class OrganismView {
 
     private void assignIcon() {
         try {
-            icon = ImageIO.read(new File("resources/organism/"+getClass().toString()+".png"));
+            icon = ImageIO.read(new File("resources/organism/"+getClass().toString()+".png")); // TODO Sex type
         } catch (IOException e) {
             e.printStackTrace();
         }
