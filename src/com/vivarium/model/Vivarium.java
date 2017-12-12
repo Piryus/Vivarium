@@ -86,11 +86,11 @@ public class Vivarium {
             }
         }
         o=dispo.get(0);
-        /*for (int i=1;i<dispo.size();i++){
+        for (int i=1;i<dispo.size();i++){
             if (src.getPos().isCloser(dispo.get(i).getPos(),o.getPos())){
                 o=dispo.get(i);
             }
-        }*/
+        }
 
         return o;}
 
