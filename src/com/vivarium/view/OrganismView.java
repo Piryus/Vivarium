@@ -15,17 +15,19 @@ public class OrganismView {
 
     public OrganismView(Organism organism) {
         this.organism = organism;
+        assignIcon();
     }
 
     private void assignIcon() {
+        System.out.println("resources/organisms/"+organism.getClass().getSimpleName()+".png");
         try {
-            icon = ImageIO.read(new File("resources/organism/"+getClass().toString()+".png")); // TODO Sex type
+            icon = ImageIO.read(new File("resources/organisms/"+organism.getClass().getSimpleName()+".png")); // TODO Sex type
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void draw(Graphics g) {
-        g.drawImage(icon,this.organism.getPos().getX(),this.organism.getPos().getY(),20,20,null);
+        g.drawImage(icon,this.organism.getPos().getX(),this.organism.getPos().getY(),50,50,null);
     }
 }
