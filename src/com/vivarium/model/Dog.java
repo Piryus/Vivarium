@@ -1,15 +1,16 @@
 package com.vivarium.model;
 
+import java.util.ArrayList;
+
 /**
  * 
  */
 public class Dog extends Carnivore {
-
-    private AreaType area;
-    public Dog(int posX,int posY,float health, float hunger, float vitality,float speed, Sex type,AreaType a)
+    public Dog(int posX,int posY,float health, float hunger, float vitality,float speed, Sex type, ArrayList<AreaType> availableArea)
     {
-        super(posX,posY,health,hunger,vitality,speed,type);
-        this.area = a;
+
+        super(posX,posY,health,hunger,vitality,speed,type,availableArea);
+        this.currArea = AreaType.Plain;
     }
 
     @Override
