@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public class Wolf extends Carnivore {
 
-    private ArrayList<AreaType> suitableAreas;
+    private ArrayList<AreaType> suitableAreas = new ArrayList<>();
     private AreaType currentArea;
     public Wolf(int posX,int posY,float health, float hunger, float vitality,float speed, Sex type)
     {

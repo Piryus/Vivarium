@@ -18,7 +18,7 @@ public class Main {
         window.setExtendedState(JFrame.MAXIMIZED_BOTH);
         window.setLocationRelativeTo(null);
         Vivarium vivarium = new Vivarium();
-        vivarium.add(new Wolf(50,60,100,100,100,10, Sex.Female, AreaType.Mountain));
+        vivarium.add(new Wolf(50,60,100,100,100,10, Sex.Female));
         GamePanel gp = new GamePanel(vivarium);
         JScrollPane sp = new JScrollPane(gp,ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         window.setContentPane(sp);
