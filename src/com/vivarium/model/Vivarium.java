@@ -57,8 +57,41 @@ public class Vivarium {
     public ArrayList<Organism> getOrganisms() {
         return organisms;
     }
-    public static Organism scanCarnivore (Organism src){return null;}
-    public static Organism scanHerbivore (Organism src){return null;}
-    public static Organism scanVegetal (Organism src){return null;}
+
+    public  Organism scan (Organism src, char a){
+        Organism o= null;
+        ArrayList<Organism> dispo=null;
+        if (a=='h'){
+            for(int j=0;j<(getOrganisms().size()); j++){
+                if (getOrganisms().get(j) instanceof Herbivore){
+                    dispo.add(getOrganisms().get(j));
+
+                }
+            }
+        }
+        if (a=='c'){
+            for(int j=0;j<(getOrganisms().size()); j++){
+                if (getOrganisms().get(j) instanceof Carnivore){
+                    dispo.add(getOrganisms().get(j));
+
+                }
+            }
+        }
+        if (a=='v'){
+            for(int j=0;j<(getOrganisms().size()); j++){
+                if (getOrganisms().get(j) instanceof Vegetal){
+                    dispo.add(getOrganisms().get(j));
+
+                }
+            }
+        }
+        o=dispo.get(0);
+        /*for (int i=1;i<dispo.size();i++){
+            if (src.getPos().isCloser(dispo.get(i).getPos(),o.getPos())){
+                o=dispo.get(i);
+            }
+        }*/
+
+        return o;}
 
 }
