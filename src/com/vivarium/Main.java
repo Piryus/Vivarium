@@ -15,11 +15,15 @@ public class Main {
         window.setExtendedState(JFrame.MAXIMIZED_BOTH);
         window.setLocationRelativeTo(null);
         Vivarium vivarium = new Vivarium();
-        vivarium.add(new Wolf(10,10,100,100,100,10, Sex.Female));
+        vivarium.add(new Wolf(10,10,100,100,100, Sex.Female));
         GamePanel gp = new GamePanel(vivarium);
         JScrollPane sp = new JScrollPane(gp,ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         window.setContentPane(sp);
         window.pack();
         window.setVisible(true);
+        while (true){
+            vivarium.loop();
+            window.repaint();
+        }
     }
 }

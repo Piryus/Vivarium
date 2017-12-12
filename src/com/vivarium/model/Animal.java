@@ -72,10 +72,10 @@ abstract class Animal extends Organism
 
 	/*** Deplacement ***/
 
-	public void move(int dx, int dy)
+	public void move(double dx, double dy)
 	{
-		this.getPos().setX(dx);
-		this.getPos().setY(dy);
+		this.getPos().setX(dx+getPos().getX());
+		this.getPos().setY(dy+getPos().getY());
 	}
 
 
