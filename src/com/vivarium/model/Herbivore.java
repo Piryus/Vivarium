@@ -8,7 +8,8 @@ public abstract class Herbivore extends Animal {
     /**
      * Default constructor
      */
-    public Herbivore() {
+    public Herbivore(int posX,int posY,float health, float hunger, float vitality,float speed, Sex type) {
+        super( posX, posY, health,  hunger,  vitality, speed, type);
     }
 
     /**
@@ -16,8 +17,13 @@ public abstract class Herbivore extends Animal {
      * @return
      */
     public Boolean eat(Vegetal a) {
-        // TODO implement here
-        return null;
+            if (a.getEdible()){
+                a.setEdible(false);
+                this.setHunger(0);
+                return true;
+
+            }
+        return false;
     }
 
 }

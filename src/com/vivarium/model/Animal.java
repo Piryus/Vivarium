@@ -1,5 +1,7 @@
+package com.vivarium.model;
 
-class Animal extends Organism 
+
+abstract class Animal extends Organism
 {
 	protected float health;
 	protected float hunger;
@@ -17,7 +19,7 @@ class Animal extends Organism
 		this.type = type;
 	}
 
-	public void evoluate(float deltaTime); // Fonction à redéfinir dans chaque classe fille pour définir le comportement de l'animal
+	abstract public void evoluate(float deltaTime); // Fonction à redéfinir dans chaque classe fille pour définir le comportement de l'animal
 
 	/*** ACCESSEURS ***/
 
