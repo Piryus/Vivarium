@@ -1,6 +1,8 @@
 package com.vivarium.model;
 
 
+import java.util.ArrayList;
+
 /**
  * 
  */
@@ -9,7 +11,9 @@ public abstract class Organism {
     private Coordinates position ;
     private static int nextid = 0;
     private String name;
-    private AreaType area;
+    protected ArrayList<AreaType> availaibleArea;
+    protected Vivarium vivarium;
+    private int size;
     /**
      * Default constructor
      */
@@ -23,12 +27,18 @@ public abstract class Organism {
      * @param
      * @param
      */
-    public Organism(int x,int y) {
-        //
+    public Organism(int x,int y, int size,Vivarium v, ArrayList<AreaType> avArea) {
+        vivarium = v;
         this.id = nextid;
         nextid++;
         this.position=new Coordinates(x,y);
         this.name ="Unnamed Organism";
+        availaibleArea = avArea;
+        this.size = size;
+    }
+
+    public Organism(int x,int y, Vivarium v, ArrayList<AreaType> avArea) {
+        this(x,y,50,v,avArea);
     }
 
     /**
@@ -39,6 +49,8 @@ public abstract class Organism {
         return id ;
     }
 
+    public int getSize(){ return size;}
+
     /**
      * @return
      */
@@ -46,6 +58,6 @@ public abstract class Organism {
         // Return the position
         return position;
     }
-    abstract void setArea(AreaType a);
+
     abstract void evoluate (long dt);
 }

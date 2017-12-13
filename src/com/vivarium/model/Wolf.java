@@ -2,34 +2,43 @@
 package com.vivarium.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * 
  */
 public class Wolf extends Carnivore {
 
-    private ArrayList<AreaType> suitableAreas = new ArrayList<>();
-    private AreaType currentArea;
-    public Wolf(int posX,int posY,float health, float hunger, float vitality,float speed, Sex type)
-    {
+    //private ArrayList<AreaType> suitableAreas = new ArrayList<>();
+    //private AreaType currentArea;
 
-        super(posX,posY,health,hunger,vitality,speed,type);
-        suitableAreas.add(AreaType.Plain);
-        suitableAreas.add(AreaType.Mountain);
-        currentArea = AreaType.Plain;
-    }
+    public Wolf(int posX,int posY,Vivarium v, Sex type) {
 
-    @Override
-    void setArea(AreaType a)
-    {
-        this.currentArea = a;
+        super(posX, posY, v, 100, 0, 0.05f, 0.05f, type,
+                new ArrayList<>(Arrays.asList(new AreaType[]{AreaType.Mountain, AreaType.Plain, AreaType.Desert})),
+                new ArrayList<>(Arrays.asList(new AreaType[]{AreaType.Mountain, AreaType.Desert})));
+        currArea = AreaType.Plain;
     }
 
 
+    private int coefX = 1, coefY = 1; // pour debug
 
     @Override
     public void evoluate(long dt) {
+        this.move(dt*getSpeed()*coefX,dt*getSpeed()*coefY);
 
+        if (this.getPos().getX()+getSize()> vivarium.getTerrain().getWidth() ){
+            coefX = -1;
+        }
+        else if (this.getPos().getX() <0){
+            coefX = 1;
+        }
+        if (this.getPos().getY()+getSize()> vivarium.getTerrain().getHeight() ){
+            coefY = -1;
+        }
+        else if (this.getPos().getY()<0){
+            coefY = 1;
+        }
     }
 
 }

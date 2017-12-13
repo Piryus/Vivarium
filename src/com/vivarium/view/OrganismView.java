@@ -28,6 +28,6 @@ public class OrganismView {
     }
 
     public void draw(Graphics g) {
-        g.drawImage(icon,this.organism.getPos().getX(),this.organism.getPos().getY(),50,50,null);
+        g.drawImage(icon,(int)this.organism.getPos().getX(),(int)this.organism.getPos().getY(),50,50,null);
     }
 }

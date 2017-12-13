@@ -16,42 +16,58 @@ public class Coordinates {
         this.y=otherCoords.y;
     }
 
-    private int x;
-    private int y;
+    private double x;
+    private double y;
+
+    /*
+    * Renvoie true si other est plus proche que repere
+    * */
+    public boolean isCloser(Coordinates other,Coordinates repere)
+    {
+        double repereX = (double) repere.getX();
+        double repereY = (double) repere.getY();
+        double otherX = (double) other.getX();
+        double otherY = (double) other.getY();
+        double thisX = (double) this.getX();
+        double thisY = (double) this.getY();
+
+        return (Math.sqrt(Math.pow((otherX-thisX),2)+Math.pow(otherY+thisY,2))) < (Math.sqrt(Math.pow((repereX-thisX),2)+Math.pow((repereY-thisY),2)));
+    }
+
     /**
      * @param x 
      * @param y
      */
 
-    public Coordinates(int x, int y) {
+    public Coordinates(double x, double y) {
         this.x=x;
         this.y=y;
     }
     /**
      * @param x
      */
-    public void setX(int x) {
+    public void setX(double x) {
         this.x=x;
     }
 
     /**
      * @param y
      */
-    public void setY(int y) {
+    public void setY(double y) {
         this.y=y;
     }
 
     /**
      * @return
      */
-    public int getX() {
+    public double getX() {
         return this.x;
     }
 
     /**
      * @return
      */
-    public int getY() {
+    public double getY() {
         return this.y;
     }
 

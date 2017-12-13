@@ -1,23 +1,18 @@
 package com.vivarium.model;
 
+import java.util.ArrayList;
+
 /**
  * 
  */
 public class Dragon extends Carnivore {
 
-    private AreaType area;
-    public Dragon(int posX,int posY,float health, float hunger, float vitality,float speed, Sex type,AreaType a)
+    public Dragon(int posX,int posY,Vivarium v, float health, float hunger, float vitality,float speed, Sex type)
     {
-        super(posX,posY,health,hunger,vitality,speed,type);
-        this.area = a;
+
+        super(posX,posY,v,health,hunger,vitality,speed,type,null, null);
+        this.currArea = AreaType.Mountain;
     }
-
-    @Override
-    void setArea(AreaType a) {
-
-    }
-
-
 
     @Override
     public void evoluate(long dt) {

@@ -1,24 +1,18 @@
 package com.vivarium.model;
 
+import java.util.ArrayList;
+
 /**
  * 
  */
 public class Bear extends Carnivore {
 
 
-    private AreaType area;
-    /**
-     * Default constructor
-     */
-    public Bear(int posX,int posY,float health, float hunger, float vitality,float speed, Sex type,AreaType a)
+    public Bear(int posX,int posY,Vivarium v, float health, float hunger, float vitality,float speed, Sex type) // TODO
     {
-        super(posX,posY,health,hunger,vitality,speed,type);
-        this.area = a;
-    }
 
-    @Override
-    void setArea(AreaType a) {
-
+        super(posX,posY,v,health,hunger,vitality,speed,type,null,null);
+        this.currArea = AreaType.Mountain;
     }
 
 
