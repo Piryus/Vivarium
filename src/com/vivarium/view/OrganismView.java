@@ -11,6 +11,7 @@ import java.io.IOException;
 public class OrganismView {
 
     private BufferedImage icon; // TODO Load only one images for each organism
+    private final int iconSize = 50;
     private Organism organism;
 
     public OrganismView(Organism organism) {
@@ -28,6 +29,6 @@ public class OrganismView {
     }
 
     public void draw(Graphics g) {
-        g.drawImage(icon,(int)this.organism.getPos().getX(),(int)this.organism.getPos().getY(),50,50,null);
+        g.drawImage(icon,(int)this.organism.getPos().getX()-iconSize/2,(int)this.organism.getPos().getY()-iconSize/2,iconSize, iconSize,null);
     }
 }
