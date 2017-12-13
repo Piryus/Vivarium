@@ -63,11 +63,9 @@ abstract class Animal extends Organism
 	}
 	public float getSpeed() // TODO décommenter ce code une fois que Terrain.getArea a été implémenté
 	{
-		/*
-		AreaType area = vivarium.getTerrain().getArea(this).getAreaType();
+		AreaType area = this.getCurrentAreaType();
 		if ( difficultArea.contains(area)) return this.speed/2;
 		else if (!availaibleArea.contains(area)) return 0;
-		*/
 		return this.speed;
 	}
 

@@ -60,4 +60,15 @@ public abstract class Organism {
     }
 
     abstract void evoluate (long dt);
+
+    public AreaType getCurrentAreaType() {
+        AreaType CurrentAreaType = null;
+        for(int i=0;i<vivarium.getTerrain().getAreasList().size();i++) {
+            if((this.getPos().getX()>vivarium.getTerrain().getAreasList().get(i).getCoords().getX()&&this.getPos().getX()<vivarium.getTerrain().getAreasList().get(i).getCoords().getX()+80)&&
+                    (this.getPos().getY()>vivarium.getTerrain().getAreasList().get(i).getCoords().getY()&&this.getPos().getY()<vivarium.getTerrain().getAreasList().get(i).getCoords().getY()+80)) {
+                CurrentAreaType = vivarium.getTerrain().getAreasList().get(i).getAreaType();
+            }
+        }
+        return CurrentAreaType;
+    }
 }

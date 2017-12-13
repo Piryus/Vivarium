@@ -110,14 +110,6 @@ public class Terrain {
         }
     }
 
-    /**
-     * @param a 
-     * @return
-     */
-    public Area getArea(Organism a) {
-        // TODO implement here
-        return null;
-    }
 
     public ArrayList<Area> getAreasList() {
         return areasList;
