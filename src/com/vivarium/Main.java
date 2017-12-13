@@ -19,9 +19,9 @@ public class Main {
 
         Random ran = new Random();
 
-        for (int i = 0; i < 50; i++){
-            vivarium.add(new Wolf(ran.nextInt(vivarium.getTerrain().getWidth()),ran.nextInt(vivarium.getTerrain().getHeight()), vivarium,100,100,100, Sex.Female));
-            vivarium.add(new Wolf(ran.nextInt(vivarium.getTerrain().getWidth()),ran.nextInt(vivarium.getTerrain().getHeight()), vivarium,100,100,100, Sex.Male));
+        for (int i = 0; i < 500; i++){
+            vivarium.add(new Wolf(ran.nextInt(vivarium.getTerrain().getWidth()),ran.nextInt(vivarium.getTerrain().getHeight()), vivarium, Sex.Female));
+            vivarium.add(new Wolf(ran.nextInt(vivarium.getTerrain().getWidth()),ran.nextInt(vivarium.getTerrain().getHeight()), vivarium, Sex.Male));
         }
 
 

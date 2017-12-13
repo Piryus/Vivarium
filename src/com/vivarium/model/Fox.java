@@ -7,19 +7,12 @@ import java.util.ArrayList;
  */
 public class Fox extends Carnivore {
 
-    public Fox(int posX,int posY,Vivarium v, float health, float hunger, float vitality,float speed, Sex type, ArrayList<AreaType> availableArea)
+    public Fox(int posX,int posY,Vivarium v, float health, float hunger, float vitality,float speed, Sex type)
     {
 
-        super(posX,posY,v,health,hunger,vitality,speed,type,availableArea);
+        super(posX,posY,v,health,hunger,vitality,speed,type,null, null);
         this.currArea = AreaType.Mountain;
     }
-
-    @Override
-    void setArea(AreaType a) {
-
-    }
-
-
 
     @Override
     public void evoluate(long dt) {
