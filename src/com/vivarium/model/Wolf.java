@@ -27,13 +27,13 @@ public class Wolf extends Carnivore {
     public void evoluate(long dt) {
         this.move(dt*getSpeed()*coefX,dt*getSpeed()*coefY);
 
-        if (this.getPos().getX()+getSize()> vivarium.getTerrain().getWidth() ){
+        if (this.getPos().getX()+getSize()/2> vivarium.getTerrain().getWidth() ){
             coefX = -1;
         }
         else if (this.getPos().getX() <0){
             coefX = 1;
         }
-        if (this.getPos().getY()+getSize()> vivarium.getTerrain().getHeight() ){
+        if (this.getPos().getY()+getSize()/2> vivarium.getTerrain().getHeight() ){
             coefY = -1;
         }
         else if (this.getPos().getY()<0){
