@@ -34,6 +34,7 @@ public abstract class Organism {
         this.position=new Coordinates(x,y);
         this.name ="Unnamed Organism";
         availaibleArea = avArea;
+        this.size = size;
     }
 
     public Organism(int x,int y, Vivarium v, ArrayList<AreaType> avArea) {

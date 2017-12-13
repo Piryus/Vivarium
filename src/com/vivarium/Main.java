@@ -1,8 +1,6 @@
 package com.vivarium;
 
-import com.vivarium.model.Sex;
-import com.vivarium.model.Vivarium;
-import com.vivarium.model.Wolf;
+import com.vivarium.model.*;
 import com.vivarium.view.GamePanel;
 
 import javax.swing.*;
@@ -22,6 +20,11 @@ public class Main {
         for (int i = 0; i < 500; i++){
             vivarium.add(new Wolf(ran.nextInt(vivarium.getTerrain().getWidth()),ran.nextInt(vivarium.getTerrain().getHeight()), vivarium, Sex.Female));
             vivarium.add(new Wolf(ran.nextInt(vivarium.getTerrain().getWidth()),ran.nextInt(vivarium.getTerrain().getHeight()), vivarium, Sex.Male));
+        }
+
+        for (int i = 0; i < 20; i++){
+            vivarium.add(new Aubergine(ran.nextInt(vivarium.getTerrain().getWidth()),ran.nextInt(vivarium.getTerrain().getHeight()), vivarium));
+            vivarium.add(new Cactus(ran.nextInt(vivarium.getTerrain().getWidth()),ran.nextInt(vivarium.getTerrain().getHeight()), vivarium));
         }
 
 
