@@ -20,7 +20,6 @@ public class OrganismView {
     }
 
     private void assignIcon() {
-        System.out.println("resources/organisms/"+organism.getClass().getSimpleName()+".png");
         try {
             icon = ImageIO.read(new File("resources/organisms/"+organism.getClass().getSimpleName()+".png")); // TODO Sex type
         } catch (IOException e) {

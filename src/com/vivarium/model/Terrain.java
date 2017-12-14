@@ -33,6 +33,7 @@ public class Terrain {
             {0,0,0,0,1,1,1,1,2,2,2,2,2,1,1,1,3,3,3,1,2,3,3,3,3},
             {0,0,0,0,1,1,1,1,2,2,2,2,2,1,1,1,3,3,3,1,2,3,3,3,3}
     };
+
     /**
      * Default constructor
      */
@@ -121,5 +122,15 @@ public class Terrain {
 
     public int getWidth() {
         return width;
+    }
+
+    public Area getRandomAreaOfType(AreaType areaType) {
+        Random rand =  new Random();
+        int pickedRandomInt = rand.nextInt(areasList.size());
+        while(areasList.get(pickedRandomInt).getAreaType()!=areaType) {
+            pickedRandomInt = rand.nextInt(areasList.size());
+        }
+        System.out.println(areasList.get(pickedRandomInt).getAreaType().toString()); //TODO Rm
+        return areasList.get(pickedRandomInt);
     }
 }
