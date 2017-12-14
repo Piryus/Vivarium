@@ -22,6 +22,7 @@ public class Vivarium {
     /**
      * 
      */
+    /*
     public void loop() {
         long t;
         for (Organism o: organisms)
@@ -31,7 +32,7 @@ public class Vivarium {
             lastCall.replace(o.getID(),t);
         }
     }
-
+    */
     /**
      * @param o
      */

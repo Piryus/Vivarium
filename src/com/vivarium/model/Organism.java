@@ -59,7 +59,7 @@ public abstract class Organism {
         return position;
     }
 
-    abstract void evoluate (long dt);
+    public abstract void evoluate (long dt);
 
     public AreaType getCurrentAreaType() {
         AreaType CurrentAreaType = null;

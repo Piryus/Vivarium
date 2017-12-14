@@ -1,5 +1,6 @@
 package com.vivarium.view;
 
+import com.vivarium.controller.VivariumController;
 import com.vivarium.model.Vivarium;
 
 import javax.swing.*;
@@ -9,7 +10,7 @@ public class GamePanel extends JPanel {
 
     private VivariumRenderer vivariumRenderer;
 
-    public GamePanel(Vivarium vivarium) {
+    public GamePanel(VivariumController vivarium) {
         vivariumRenderer = new VivariumRenderer(vivarium);
     }
 

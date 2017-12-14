@@ -4,7 +4,7 @@ package com.vivarium.model;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-abstract class Animal extends Organism
+public abstract class Animal extends Organism
 {
 	protected float health;
 	protected float hunger;
