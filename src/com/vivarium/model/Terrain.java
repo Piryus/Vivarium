@@ -130,7 +130,6 @@ public class Terrain {
         while(areasList.get(pickedRandomInt).getAreaType()!=areaType) {
             pickedRandomInt = rand.nextInt(areasList.size());
         }
-        System.out.println(areasList.get(pickedRandomInt).getAreaType().toString()); //TODO Rm
         return areasList.get(pickedRandomInt);
     }
 }

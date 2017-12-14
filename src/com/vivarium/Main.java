@@ -2,8 +2,10 @@ package com.vivarium;
 
 import com.vivarium.model.*;
 import com.vivarium.view.GamePanel;
+import com.vivarium.view.SidePanel;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.Random;
 
 public class Main {
@@ -35,8 +37,10 @@ public class Main {
 
 
         GamePanel gp = new GamePanel(vivarium);
+        SidePanel sidePanel = new SidePanel();
         JScrollPane sp = new JScrollPane(gp,ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-        window.setContentPane(sp);
+        window.add(sp, BorderLayout.CENTER);
+        window.add(sidePanel,BorderLayout.EAST);
         window.pack();
         window.setVisible(true);
         while (true){
