@@ -61,7 +61,7 @@ abstract class Animal extends Organism
 	{
 		this.speed = speed;
 	}
-	public float getSpeed() // TODO décommenter ce code une fois que Terrain.getArea a été implémenté
+	public float getSpeed()
 	{
 		AreaType area = this.getCurrentAreaType();
 		if ( difficultArea.contains(area)) return this.speed/2;
