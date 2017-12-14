@@ -28,23 +28,8 @@ public class AreaView {
      * Assign texture to this (Area)
      */
     private void assignTexture(AreaType type) {
-        File imgFile = null;
-        switch (type) {
-            case Desert:
-                imgFile = new File("resources/sand.jpg");
-                break;
-            case Plain:
-                imgFile = new File("resources/grass.jpg");
-                break;
-            case Water:
-                imgFile = new File("resources/water.jpg");
-                break;
-            case Mountain:
-                imgFile = new File("resources/mountain.jpg");
-                break;
-        }
         try {
-            this.texture = ImageIO.read(imgFile);
+            texture = ImageIO.read(new File("resources/areas/"+area.getAreaType().toString()+".jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
