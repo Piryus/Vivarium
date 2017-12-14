@@ -1,6 +1,8 @@
 package com.vivarium.model;
 import java.util.*;
 
+import static com.vivarium.model.Area.areaSize;
+
 public class Terrain {
     private final int width=2000;
     private final int height=2000;
@@ -46,8 +48,8 @@ public class Terrain {
     /* Generates random AreaType for each tile (80*80) then run cellular automata rules x times */
     private void generateAreas() {
         boolean letAlive = false;
-        for (int i = 0; i < this.width; i += 80) {
-            for (int j = 0; j < this.height; j += 80) {
+        for (int i = 0; i < this.width; i += areaSize) {
+            for (int j = 0; j < this.height; j += areaSize) {
                 areasList.add(new Area(AreaType.getRandom(), new Coordinates(i, j)));
             }
         }
@@ -106,7 +108,7 @@ public class Terrain {
                         areaType= AreaType.Desert;
                         break;
                 }
-                areasList.add(new Area(areaType,new Coordinates(i*80,j*80)));
+                areasList.add(new Area(areaType,new Coordinates(i*areaSize,j*areaSize)));
             }
         }
     }

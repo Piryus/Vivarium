@@ -19,7 +19,6 @@ public class AreaView {
         assignTexture(this.area.getAreaType());
     }
 
-    // TODO Hack passer coords pour des cases -> à corriger, créer class square
     public void draw(Graphics g) {
         g.drawImage(this.texture, (int)area.getCoords().getX(), (int)this.area.getCoords().getY(), null);
     }

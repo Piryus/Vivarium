@@ -6,20 +6,17 @@ import com.vivarium.view.AreaView;
 import java.util.ArrayList;
 
 public class Area {
+
     private AreaType type;
-    private Coordinates coords = new Coordinates();
-    /**
-     * Default constructor
-     */
-    public Area() {}
+    private Coordinates topLeftCornerCoords;
+    public static final int areaSize = 80;
 
     /**
      * Constructor with parameters
      */
     public Area(AreaType type, Coordinates coords) {
         this.type = type;
-        this.coords = new Coordinates(coords);
-
+        this.topLeftCornerCoords = new Coordinates(coords);
     }
 
     /**
@@ -35,16 +32,16 @@ public class Area {
     }
 
     public Coordinates getCoords() {
-        return coords;
+        return topLeftCornerCoords;
     }
 
     public ArrayList<Area> getSurroundingAreas(ArrayList<Area> areaList) {
         ArrayList<Area> surroundingAreasList = new ArrayList<>();
         for(int i=0;i<areaList.size();i++) {
-            if ((((areaList.get(i).getCoords().getX() == this.getCoords().getX() - 80) ||
-                            (areaList.get(i).getCoords().getX() == this.getCoords().getX() + 80)) && (areaList.get(i).getCoords().getY() == this.getCoords().getY())) ||
-                            (((areaList.get(i).getCoords().getY() == this.getCoords().getY() - 80) ||
-                                    (areaList.get(i).getCoords().getY() == this.getCoords().getY() + 80)) && (areaList.get(i).getCoords().getX() == this.getCoords().getX()))) {
+            if ((((areaList.get(i).getCoords().getX() == this.getCoords().getX() - areaSize) ||
+                            (areaList.get(i).getCoords().getX() == this.getCoords().getX() + areaSize)) && (areaList.get(i).getCoords().getY() == this.getCoords().getY())) ||
+                            (((areaList.get(i).getCoords().getY() == this.getCoords().getY() - areaSize) ||
+                                    (areaList.get(i).getCoords().getY() == this.getCoords().getY() + areaSize)) && (areaList.get(i).getCoords().getX() == this.getCoords().getX()))) {
                 surroundingAreasList.add(areaList.get(i));
             }
         }
