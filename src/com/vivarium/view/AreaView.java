@@ -34,8 +34,4 @@ public class AreaView {
             e.printStackTrace();
         }
     }
-
-    private void loadTextures() {
-
-    }
 }
