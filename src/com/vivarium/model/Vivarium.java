@@ -191,9 +191,9 @@ public class Vivarium {
     }
 
     /**
-     * Scan les environs d'un Organism quelconque, à la recheche d'un autre Organism
+     * Scan les environs d'un Organism quelconque, à la recheche d'autre Organism_s et renvoie la list des organism de cette class
      * */
-    public  Organism scan (Organism src, char a){
+    public  ArrayList<Organism> scan (Organism src, char a){
         Organism o= null;
         ArrayList<Organism> dispo=null;
         if (a=='h')
@@ -229,16 +229,19 @@ public class Vivarium {
                 }
             }
         }
-        o=dispo.get(0);
-        for (int i=1;i<dispo.size();i++)
-        {
-            if (src.getPos().isCloser(dispo.get(i).getPos(),o.getPos()))
-            {
-                o=dispo.get(i);
+
+        return dispo;
+    }
+    public  Organism getCloser (Organism src, char a) {
+        ArrayList<Organism> dispo = scan(src,a);
+        Organism o= null;
+        o = dispo.get(0);
+        for (int i = 1; i < dispo.size(); i++) {
+            if (src.getPos().isCloser(dispo.get(i).getPos(), o.getPos())) {
+                o = dispo.get(i);
             }
         }
 
         return o;
     }
-
 }
