@@ -1,17 +1,20 @@
 package com.vivarium.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * 
  */
 public class Trex extends Carnivore {
 
-    public Trex(int posX,int posY,Vivarium v, float health, float hunger, float vitality,float speed, Sex type)
-    {
+    public Trex(int posX,int posY,Vivarium v, Sex type) {
 
-        super(posX,posY,v,health,hunger,vitality,speed,type,null, null);
-        this.currArea = AreaType.Mountain;
+        super(posX, posY, v, 2500, 0, 0.15f, 0.05f, type,
+                new ArrayList<>(Arrays.asList(new AreaType[]{AreaType.Mountain, AreaType.Plain, AreaType.Desert})),
+                new ArrayList<>(Arrays.asList(new AreaType[]{AreaType.Mountain, AreaType.Desert})));
+        currArea = AreaType.Plain;
+
     }
 
     @Override

@@ -20,7 +20,6 @@ public class Wolf extends Carnivore {
         currArea = AreaType.Plain;
     }
 
-
     private int coefX = 1, coefY = 1; // pour debug
 
     @Override

@@ -1,17 +1,20 @@
 package com.vivarium.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * 
  */
 public class Fox extends Carnivore {
 
-    public Fox(int posX,int posY,Vivarium v, float health, float hunger, float vitality,float speed, Sex type)
-    {
+    public Fox(int posX,int posY,Vivarium v, Sex type) {
 
-        super(posX,posY,v,health,hunger,vitality,speed,type,null, null);
-        this.currArea = AreaType.Mountain;
+        super(posX, posY, v, 70, 0, 0.05f, 0.07f, type,
+                new ArrayList<>(Arrays.asList(new AreaType[]{AreaType.Mountain, AreaType.Plain, AreaType.Desert})),
+                new ArrayList<>(Arrays.asList(new AreaType[]{AreaType.Desert})));
+        currArea = AreaType.Plain;
+
     }
 
     @Override

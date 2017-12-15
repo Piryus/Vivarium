@@ -1,6 +1,7 @@
 package com.vivarium.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * 
@@ -8,11 +9,12 @@ import java.util.ArrayList;
 public class Bear extends Carnivore {
 
 
-    public Bear(int posX,int posY,Vivarium v, float health, float hunger, float vitality,float speed, Sex type) // TODO
-    {
+    public Bear(int posX,int posY,Vivarium v, Sex type) {
 
-        super(posX,posY,v,health,hunger,vitality,speed,type,null,null);
-        this.currArea = AreaType.Mountain;
+        super(posX, posY, v, 200, 0, 0.10f, 0.025f, type,
+                new ArrayList<>(Arrays.asList(new AreaType[]{AreaType.Mountain, AreaType.Plain})),
+                new ArrayList<>(Arrays.asList(new AreaType[]{AreaType.Mountain})));
+        currArea = AreaType.Mountain;
     }
 
 

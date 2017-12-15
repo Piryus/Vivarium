@@ -29,9 +29,9 @@ public class Main {
         window.pack();
         window.setVisible(true);
 
-        for (int i = 0; i < 250; i++){
-            vc.add(new Wolf(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, Sex.Female));
-            vc.add(new Wolf(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, Sex.Male));
+        for (int i = 0; i < 5; i++){
+            vc.add(new Eagle(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, Sex.Female));
+            vc.add(new Eagle(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, Sex.Male));
         }
 
         for (int i = 0; i < 20; i++){

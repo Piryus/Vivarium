@@ -1,15 +1,22 @@
 package com.vivarium.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * 
  */
-public class Eagle extends Carnivore {
-    public Eagle(int posX,int posY,Vivarium v, float health, float hunger, float vitality,float speed,Sex type) {
+public class Eagle extends Carnivore
+{
 
-        super(posX, posY, v, health, hunger, vitality, speed, type, null, null);
-        this.currArea = AreaType.Mountain;
+
+    private int coefX = 1, coefY = 1; // pour debug
+    public Eagle(int posX,int posY,Vivarium v, Sex type) {
+
+        super(posX, posY, v, 50, 0, 0.05f, 0.10f, type,
+                new ArrayList<>(Arrays.asList(new AreaType[]{AreaType.Mountain, AreaType.Plain, AreaType.Desert,AreaType.Water})),
+                new ArrayList<>(Arrays.asList(new AreaType[]{AreaType.Desert})));
+        currArea = AreaType.Mountain;
     }
 
     public boolean isHungry()
@@ -19,7 +26,7 @@ public class Eagle extends Carnivore {
 
     public void lookForFood()
     {
-
+        //this.vivarium.scan
     }
 
     public void lookForMate(){}
