@@ -14,7 +14,8 @@ public class SidePanelActionListener implements ActionListener {
 
     private SidePanel sidePanel;
     private VivariumController vc;
-    private String organismNameComboBox = null;
+    private String organismNameComboBox = "Bear";
+    private Sex organismSexComboBox = Sex.Male;
 
     public SidePanelActionListener(SidePanel sidePanel, VivariumController vc)
     {
@@ -24,17 +25,27 @@ public class SidePanelActionListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
         if("Choice".equals(e.getActionCommand())) {
             JComboBox cb = (JComboBox)e.getSource();
             organismNameComboBox = (String)cb.getSelectedItem();
         }
-        System.out.println(organismNameComboBox);
+
+        if("Sex".equals(e.getActionCommand())) {
+            JComboBox cb = (JComboBox)e.getSource();
+            // TODO Less dirty code
+            if("Male".equals(cb.getSelectedItem())) {
+                organismSexComboBox = Sex.Male;
+            }
+            else organismSexComboBox = Sex.Female;
+        }
+
         if("Spawn".equals(e.getActionCommand())) {
             synchronized(vc) {
                 try {
                     Class organism = Class.forName("com.vivarium.model."+organismNameComboBox);
                     Constructor constructor = organism.getConstructor(int.class,int.class,Vivarium.class,Sex.class);
-                    vc.add((Organism)constructor.newInstance(new Object[]{100,100,vc.getVivarium(),Sex.Male}));
+                    vc.add((Organism)constructor.newInstance(new Object[]{100,100,vc.getVivarium(),organismSexComboBox}));
                 } catch (ClassNotFoundException e1) {
                     e1.printStackTrace();
                 } catch (NoSuchMethodException e1) {
