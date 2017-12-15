@@ -27,5 +27,17 @@ public abstract class Herbivore extends Animal {
             }
         return false;
     }
+    public boolean isDanger (double dist){
+        Organism o =null;
+        // o=scan(this,'c');
+        double oX = (double) o.getPos().getX();
+        double oY = (double) o.getPos().getY();
+        double thisX = (double) this.getPos().getX();
+        double thisY = (double) this.getPos().getY();
+        if((Math.sqrt(Math.pow((oX-thisX),2)+Math.pow(oY+thisY,2)))>dist){
+            return true;
+        }
+        return false;
+    }
 
 }

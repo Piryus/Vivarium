@@ -12,9 +12,40 @@ public class Camel extends Herbivore { // TODO
         super(posX,posY,v,health,hunger,vitality,speed,type, null, null);
     }
 
-    @Override
-    public void evoluate(long dt) {
+    public boolean isHungry()
+    {
+        return getHunger()>=5;
+    }
+
+    public void lookForFood()
+    {
+        Organism o =null;
+        //o=scan(this,v);
 
     }
+
+    public void lookForMate(){}
+
+
+
+
+    public void evoluate(long dt)
+    {
+        if (isDanger(100)){
+
+
+        return;
+        }
+        if(this.isHungry())
+        {
+            this.lookForFood();
+        }
+        else
+        {
+            this.lookForMate();
+        }
+    }
+
+
 
 }
