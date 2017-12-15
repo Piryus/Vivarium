@@ -6,6 +6,7 @@ import com.vivarium.model.Vivarium;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.function.Predicate;
 
 public class VivariumRenderer implements Renderer {
 
@@ -28,10 +29,17 @@ public class VivariumRenderer implements Renderer {
         for (Organism o : vivarium.getNewOrganisms()){
             organismView.add(new OrganismView(o));
         }
-        /* TODO : retirer les vieux organismes de organismView
-        for (Organism o : vivarium.getOldOrganisms()){
+        // TODO : retirer les vieux organismes de organismView
 
-        }*/
+        for (Organism o : vivarium.getOldOrganisms()){
+            Predicate<OrganismView> test = new Predicate<OrganismView>() {
+                @Override
+                public boolean test(OrganismView ov) {
+                    return ov.getOrganism().equals(o);
+                }
+            };
+            organismView.removeIf(test);
+        }
         vivarium.clearOldNew();
         for(int i=0;i<this.organismView.size();i++) {
             organismView.get(i).draw(g);
