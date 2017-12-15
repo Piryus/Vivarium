@@ -10,6 +10,15 @@ public class Coordinates {
      */
     public Coordinates() {}
 
+    /**
+     * Constructeur paramétré
+     * */
+    public Coordinates(double x, double y)
+    {
+        this.x=x;
+        this.y=y;
+    }
+
     public Coordinates(Coordinates otherCoords)
     {
         this.x=otherCoords.x;
@@ -24,12 +33,12 @@ public class Coordinates {
     * */
     public boolean isCloser(Coordinates other,Coordinates repere)
     {
-        double repereX = (double) repere.getX();
-        double repereY = (double) repere.getY();
-        double otherX = (double) other.getX();
-        double otherY = (double) other.getY();
-        double thisX = (double) this.getX();
-        double thisY = (double) this.getY();
+        double repereX =  repere.getX();
+        double repereY =  repere.getY();
+        double otherX = other.getX();
+        double otherY = other.getY();
+        double thisX =  this.getX();
+        double thisY = this.getY();
 
         return (Math.sqrt(Math.pow((otherX-thisX),2)+Math.pow(otherY+thisY,2))) < (Math.sqrt(Math.pow((repereX-thisX),2)+Math.pow((repereY-thisY),2)));
     }
@@ -39,10 +48,7 @@ public class Coordinates {
      * @param y
      */
 
-    public Coordinates(double x, double y) {
-        this.x=x;
-        this.y=y;
-    }
+
     /**
      * @param x
      */
@@ -69,6 +75,12 @@ public class Coordinates {
      */
     public double getY() {
         return this.y;
+    }
+
+
+    public boolean equals(Coordinates other)
+    {
+        return this.x == other.getX() && this.y == other.getY();
     }
 
 }
