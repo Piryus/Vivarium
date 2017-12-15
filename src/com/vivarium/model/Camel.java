@@ -1,5 +1,8 @@
 package com.vivarium.model;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * 
  */
@@ -8,8 +11,11 @@ public class Camel extends Herbivore { // TODO
     /**
      * Default constructor
      */
-    public Camel(int posX,int posY,Vivarium v, float health, float hunger, float vitality,float speed, Sex type) {
-        super(posX,posY,v,health,hunger,vitality,speed,type, null, null);
+    public Camel(int posX,int posY,Vivarium v, Sex type) {
+        super(posX, posY, v, 100, 0, 0.05f, 0.05f, type,
+                new ArrayList<>(Arrays.asList(new AreaType[]{ AreaType.Plain, AreaType.Desert})),
+                new ArrayList<>(Arrays.asList(new AreaType[]{ AreaType.Plain})));
+        currArea = AreaType.Desert;
     }
 
     public boolean isHungry()
@@ -31,6 +37,7 @@ public class Camel extends Herbivore { // TODO
 
     public void evoluate(long dt)
     {
+        /*
         if (isDanger(100)){
 
 
@@ -43,7 +50,7 @@ public class Camel extends Herbivore { // TODO
         else
         {
             this.lookForMate();
-        }
+        }*/
     }
 
 
