@@ -6,10 +6,10 @@ import java.util.Arrays;
 /**
  * 
  */
-public class Camel extends Herbivore { // TODO
+public class Camel extends Herbivore {
 
     /**
-     * Default constructor
+     *  constructor
      */
     public Camel(int posX,int posY,Vivarium v, Sex type) {
         super(posX, posY, v, 100, 0, 0.05f, 0.05f, type,
@@ -17,12 +17,14 @@ public class Camel extends Herbivore { // TODO
                 new ArrayList<>(Arrays.asList(new AreaType[]{ AreaType.Plain})));
         currArea = AreaType.Desert;
     }
-
+    /** Méthode qui renvoie true si hunger et inf a 5 et false sinon **/
     public boolean isHungry()
     {
         return getHunger()>=5;
     }
 
+
+    /** Méthode qui  gere la recherche de nourrture ici de vegetal **/
     public void lookForFood(long dt)
     {
         double coefX=0;
@@ -72,7 +74,7 @@ public class Camel extends Herbivore { // TODO
 
 
     }
-
+    /** Méthode qui gere la recherche  d' animeux de la meme espéce dans un but de reproduction **/
     public void lookForMate(long dt) {
         double coefX = 0;
         double coefY = 0;
@@ -110,13 +112,13 @@ public class Camel extends Herbivore { // TODO
         }
     }
 
-
-
+    /** Méthode qui gere le comportement de camel**/
 
 
 
     public void evoluate(long dt)
     {
+        this.setHunger(this.hunger+0.005f);
         Coordinates c0 = new Coordinates(0,0);
         Coordinates c=isDanger(100);
         if (c.getX() != c0.getX() & c.getY() != c0.getY() ){

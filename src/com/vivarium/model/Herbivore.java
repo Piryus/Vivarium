@@ -27,9 +27,15 @@ public abstract class Herbivore extends Animal {
             }
         return false;
     }
+
+
+    /**  *renvoie la position du pradateur le plus proche dans un rayon dist et sinon (0,0)  (de toute facon si le prédateur
+     *à la même position l'herbivore sera mangé
+     **/
     public Coordinates isDanger (double dist){
         Organism o =null;
         Coordinates c=new Coordinates(0,0);
+        if (this.vivarium.getCloser(this,'c')==null) return c ;
         o= this.vivarium.getCloser(this,'c');
         double oX = (double) o.getPos().getX();
         double oY = (double) o.getPos().getY();
