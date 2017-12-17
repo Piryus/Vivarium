@@ -108,6 +108,7 @@ public abstract class Animal extends Organism
 	{
 		this.getPos().setX(dx+getPos().getX());
 		this.getPos().setY(dy+getPos().getY());
+		this.currArea = getCurrentAreaType();
 	}
 
 

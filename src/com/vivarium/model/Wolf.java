@@ -14,7 +14,7 @@ public class Wolf extends Carnivore {
 
     public Wolf(int posX,int posY,Vivarium v, Sex type) {
 
-        super(posX, posY, v, 100, 0, 0.05f, 0.05f, type,
+        super(posX, posY, v, 1, 0, 0.05f, 0.05f, type,
                 new ArrayList<>(Arrays.asList(new AreaType[]{AreaType.Mountain, AreaType.Plain, AreaType.Desert,AreaType.Water})),
                 new ArrayList<>(Arrays.asList(new AreaType[]{AreaType.Mountain, AreaType.Desert})));
         currArea = AreaType.Plain;
@@ -136,7 +136,19 @@ public class Wolf extends Carnivore {
         {
             lookForMate();
         }
+        if(this.currArea.equals(AreaType.Water))
+        {
+            if(this.health >0)
+            {
+                this.setHP(this.health-0.005f );
+                //System.out.println("Wooooooolf on the waaaaater ...");
+            }
+            else
+            {
 
+                //System.out.println("Dead Wooooooolf on the waaaaater ...");
+            }
+        }
         this.setHunger(this.hunger+0.005f);
     }
 
