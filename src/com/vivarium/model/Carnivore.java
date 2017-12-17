@@ -19,5 +19,18 @@ abstract class Carnivore extends Animal
 		}
 		return false;
 	}
+
+	public Animal lookForFood(Carnivore predator)
+	{
+		Animal prey = this.vivarium.scanForPrey(predator);
+		return prey;
+	}
+
+	public Animal lookForMate(Carnivore c)
+	{
+		Animal mate = this.vivarium.scanOtherGender(c);
+		return mate;
+	}
+
 	abstract public void evoluate(long dt);
 }

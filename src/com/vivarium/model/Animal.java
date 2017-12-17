@@ -30,18 +30,40 @@ public abstract class Animal extends Organism
 
 	/*** ACCESSEURS ***/
 
+
+	/**
+	 * Vérification de la valeur de d"HP (ne peut pas être négative)
+	 * */
 	public void setHP(float hp)
 	{
-		this.health = hp;
+		if(hp <0)
+		{
+			this.health = 0.0f;
+		}
+		else
+		{
+			this.health = hp;
+		}
 	}
 	public float getHP()
 	{
 		return this.health;
 	}
 
+
+	/**
+	 * Vérification de la valeur de d'hunger (ne peut pas être négative)
+	 * */
 	public void setHunger(float hunger)
 	{
-		this.hunger = hunger;
+		if(this.hunger <0)
+		{
+			this.hunger = 0.0f;
+		}
+		else
+		{
+			this.hunger = hunger;
+		}
 	}
 	public float getHunger()
 	{

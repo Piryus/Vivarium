@@ -78,8 +78,6 @@ public class Vivarium {
         return ret;
     }
 
-
-
     /**
      * renvoie l'organisme qui est à la position X,Y
      * Rq : peut renvoyer null, faire attention

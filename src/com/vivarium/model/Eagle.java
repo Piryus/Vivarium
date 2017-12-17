@@ -1,5 +1,6 @@
 package com.vivarium.model;
 
+import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -23,9 +24,16 @@ public class Eagle extends Carnivore
         return getHunger()>=5;
     }
 
+    public Animal hunt(Carnivore c)
+    {
+        return super.lookForFood(c);
+    }
+
+    public Animal findMate(Carnivore c) { return super.lookForMate(c);}
+
     public void lookForFood()
     {
-        Animal prey = this.vivarium.scanForPrey(this  );
+        Animal prey = hunt(this);
         if(prey != null)
         {
             if(prey.getPos().getX()<this.getPos().getX())
@@ -47,6 +55,7 @@ public class Eagle extends Carnivore
             if(this.getPos().equals(prey.getPos()))
             {
                 this.eat((Herbivore)prey);
+                this.setHunger(this.hunger-5.0f);
             }
         }
         else
@@ -68,7 +77,7 @@ public class Eagle extends Carnivore
 
     public void lookForMate()
     {
-        Animal mate = this.vivarium.scanOtherGender(this);
+        Animal mate = findMate(this);
         if(mate != null)
         {
             if(mate.getPos().getX()<this.getPos().getX())
@@ -125,6 +134,7 @@ public class Eagle extends Carnivore
         {
             lookForMate();
         }
+        this.setHunger(this.hunger+0.005f);
     }
 
 }
