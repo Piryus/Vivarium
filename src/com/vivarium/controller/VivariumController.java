@@ -21,56 +21,53 @@ public class VivariumController {
         oldOrganisms = new ArrayList<>();
     }
 
-    public void add(Organism o){
+    public synchronized void add(Organism o){
         vivarium.add(o);
         lastCall.put(o.getID(),System.currentTimeMillis());
         newOrganisms.add(o);
     }
 
-    public void delete(Organism o){
+    public synchronized void delete(Organism o){
         vivarium.delete(o);
         oldOrganisms.add(o);
     }
 
-    public Terrain getTerrain(){
+    public synchronized Terrain getTerrain(){
         return vivarium.getTerrain();
     }
 
-    public ArrayList<Organism> getOrganisms(){
+    public synchronized ArrayList<Organism> getOrganisms(){
         return vivarium.getOrganisms();
     }
 
-    public void loop(){
+    public synchronized void loop(){
         long t;
-        synchronized(this){
-            for (Organism o: vivarium.getOrganisms()){
-                t = System.currentTimeMillis();
-                if (o instanceof Animal){
-                    if (((Animal)o).getHP() == 0){
-                        delete(o);
-                    }
+        for (Organism o: vivarium.getOrganisms()) {
+            t = System.currentTimeMillis();
+            if (o instanceof Animal) {
+                if (((Animal) o).getHP() == 0) {
+                    delete(o);
                 }
-                o.evoluate(t-lastCall.get(o.getID()));
-                lastCall.replace(o.getID(), t);
             }
+            o.evoluate(t - lastCall.get(o.getID()));
+            lastCall.replace(o.getID(), t);
         }
-
     }
 
-    public ArrayList<Organism> getNewOrganisms() {
+    public synchronized ArrayList<Organism> getNewOrganisms() {
         return newOrganisms;
     }
 
-    public ArrayList<Organism> getOldOrganisms() {
+    public synchronized ArrayList<Organism> getOldOrganisms() {
         return oldOrganisms;
     }
 
-    public void clearOldNew(){
+    public synchronized void clearOldNew(){
         newOrganisms.clear();
         oldOrganisms.clear();
     }
 
-    public Vivarium getVivarium() {
+    public synchronized Vivarium getVivarium() {
         return vivarium;
     }
 }

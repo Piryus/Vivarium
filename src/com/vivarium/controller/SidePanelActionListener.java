@@ -41,22 +41,20 @@ public class SidePanelActionListener implements ActionListener {
         }
 
         if("Spawn".equals(e.getActionCommand())) {
-            synchronized(vc) {
-                try {
-                    Class organism = Class.forName("com.vivarium.model."+organismNameComboBox);
-                    Constructor constructor = organism.getConstructor(int.class,int.class,Vivarium.class,Sex.class);
-                    vc.add((Organism)constructor.newInstance(new Object[]{100,100,vc.getVivarium(),organismSexComboBox}));
-                } catch (ClassNotFoundException e1) {
-                    e1.printStackTrace();
-                } catch (NoSuchMethodException e1) {
-                    e1.printStackTrace();
-                } catch (IllegalAccessException e1) {
-                    e1.printStackTrace();
-                } catch (InstantiationException e1) {
-                    e1.printStackTrace();
-                } catch (InvocationTargetException e1) {
-                    e1.printStackTrace();
-                }
+            try {
+                Class organism = Class.forName("com.vivarium.model."+organismNameComboBox);
+                Constructor constructor = organism.getConstructor(int.class,int.class,Vivarium.class,Sex.class);
+                vc.add((Organism)constructor.newInstance(new Object[]{100,100,vc.getVivarium(),organismSexComboBox}));
+            } catch (ClassNotFoundException e1) {
+                e1.printStackTrace();
+            } catch (NoSuchMethodException e1) {
+                e1.printStackTrace();
+            } catch (IllegalAccessException e1) {
+                e1.printStackTrace();
+            } catch (InstantiationException e1) {
+                e1.printStackTrace();
+            } catch (InvocationTargetException e1) {
+                e1.printStackTrace();
             }
         }
     }
