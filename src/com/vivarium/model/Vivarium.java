@@ -9,38 +9,19 @@ public class Vivarium {
 
     private ArrayList<Organism> organisms;
     private Terrain terrain;
-    private HashMap<Integer, Long> lastCall;
-    private ArrayList<String> animalClasses = new ArrayList<>(Arrays.asList(new String[]{"class com.vivarium.model.Bear","class com.vivarium.model.Blowfish","class com.vivarium.model.Bouquetin","class com.vivarium.model.Camel","class com.vivarium.model.Cow","class com.vivarium.model.Dog","class com.vivarium.model.Dragon","class com.vivarium.model.Eagle","class com.vivarium.model.Fish","class com.vivarium.model.Fox","class com.vivarium.model.FreshwaterFish","class com.vivarium.model.Rabbit","class com.vivarium.model.Trex","class com.vivarium.model.Wolf"}));
-    private ArrayList<String> herbivoreClasses = new ArrayList<>(Arrays.asList(new String[]{"class com.vivarium.model.Bouquetin","class com.vivarium.model.Camel","class com.vivarium.model.Cow","class com.vivarium.model.Rabbit"}));
     /**
      * Default constructor
      */
     public Vivarium() {
         organisms = new ArrayList<>();
         terrain = new Terrain();
-        lastCall = new HashMap<>();
     }
 
-    /**
-     * 
-     */
-    /*
-    public void loop() {
-        long t;
-        for (Organism o: organisms)
-        {
-            t = System.currentTimeMillis();
-            o.evoluate(t-lastCall.get(o.getID()));
-            lastCall.replace(o.getID(),t);
-        }
-    }
-    */
     /**
      * @param o
      */
     public void add(Organism o) {
         organisms.add(o);
-        lastCall.put(o.getID(),System.currentTimeMillis());
     }
 
     /**
@@ -70,7 +51,7 @@ public class Vivarium {
         ArrayList<Animal> ret = new ArrayList<>();
         for (Organism o: getOrganisms())
         {
-            if(animalClasses.contains(o.getClass().toString()))
+            if(o instanceof Animal)
             {
                 ret.add((Animal)o);
             }
@@ -138,7 +119,7 @@ public class Vivarium {
             ArrayList<Animal> preys = new ArrayList<>();
             for (Animal a: getAnimals())
             {
-                if(herbivoreClasses.contains(a.getClass().toString()))
+                if (a instanceof Herbivore)
                 {
                     preys.add(a);
                 }
