@@ -42,8 +42,21 @@ public class VivariumController {
 
     public synchronized void loop(){
         long t;
+        /*
         for (Organism o: vivarium.getOrganisms()) {
             t = System.currentTimeMillis();
+            if (o instanceof Animal) {
+                if (((Animal) o).getHP() == 0) {
+                    delete(o);
+                }
+            }
+            o.evoluate(t - lastCall.get(o.getID()));
+            lastCall.replace(o.getID(), t);
+        }*/
+
+        for (int i = vivarium.getOrganisms().size()-1;i>=0;i--){
+            t = System.currentTimeMillis();
+            Organism o = vivarium.getOrganisms().get(i);
             if (o instanceof Animal) {
                 if (((Animal) o).getHP() == 0) {
                     delete(o);
