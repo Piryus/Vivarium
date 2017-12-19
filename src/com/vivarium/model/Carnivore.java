@@ -2,8 +2,11 @@ package com.vivarium.model;
 
 import java.util.ArrayList;
 
-abstract class Carnivore extends Animal
+class Carnivore extends Animal
 {
+
+
+	private int coefX = 1, coefY = 1; // pour debug
 
 	public Carnivore(int posX, int posY, Vivarium v, float health, float hunger, float vitality, float speed, Sex type, ArrayList<AreaType> availableArea, ArrayList<AreaType> dfArea)
 	{
@@ -20,17 +23,120 @@ abstract class Carnivore extends Animal
 		return false;
 	}
 
-	public Animal lookForFood(Carnivore predator)
+	public void lookForFood(Carnivore predator)
 	{
 		Animal prey = this.vivarium.scanForPrey(predator);
-		return prey;
+
+		if(prey != null)
+		{
+			if(prey.getPos().getX()<this.getPos().getX())
+			{
+				coefX = -1;
+			}
+			else
+			{
+				coefX =1;
+			}
+			if(prey.getPos().getY()<this.getPos().getY())
+			{
+				coefY =-1;
+			}
+			else
+			{
+				coefY=1;
+			}
+			if(this.getPos().equals(prey.getPos()))
+			{
+				this.eat((Herbivore)prey);
+				this.setHunger(this.hunger-5.0f);
+			}
+		}
+		else
+		{
+			if (this.getPos().getX()+getSize()/2> vivarium.getTerrain().getWidth() ){
+				coefX = -1;
+			}
+			else if (this.getPos().getX()-getSize()/2  <0){
+				coefX = 1;
+			}
+			if (this.getPos().getY()+getSize()/2> vivarium.getTerrain().getHeight() ){
+				coefY = -1;
+			}
+			else if (this.getPos().getY()-getSize()/2 <0){
+				coefY = 1;
+			}
+		}
+
 	}
 
-	public Animal lookForMate(Carnivore c)
+	public void lookForMate(Carnivore c)
 	{
 		Animal mate = this.vivarium.scanOtherGender(c);
-		return mate;
+
+		if(mate != null)
+		{
+			if(mate.getPos().getX()<this.getPos().getX())
+			{
+				coefX = -1;
+			}
+			else
+			{
+				coefX =1;
+			}
+			if(mate.getPos().getY()<this.getPos().getY())
+			{
+				coefY =-1;
+			}
+			else
+			{
+				coefY=1;
+			}
+
+			// todo : accouplement
+		}
+		else
+		{
+			if (this.getPos().getX()+getSize()/2> vivarium.getTerrain().getWidth() )
+			{
+				coefX = -1;
+			}
+			else if (this.getPos().getX()-getSize()/2 <0)
+			{
+				coefX = 1;
+			}
+			if (this.getPos().getY()+getSize()/2> vivarium.getTerrain().getHeight() )
+			{
+				coefY = -1;
+			}
+			else if (this.getPos().getY()-getSize()/2<0)
+			{
+				coefY = 1;
+			}
+		}
+
 	}
 
-	abstract public void evoluate(long dt);
+
+	public boolean isHungry()
+	{
+		return getHunger()>=5;
+	}
+
+	@Override
+	public void evoluate(long dt)
+	{
+
+		this.move(dt*getSpeed()*coefX,dt*getSpeed()*coefY);
+
+		if(isHungry())
+		{
+			lookForFood(this);
+		}
+		else
+		{
+			lookForMate(this);
+		}
+		this.setHunger(this.hunger+(0.005f * dt ));
+	}
+
 }
