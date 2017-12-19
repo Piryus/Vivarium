@@ -32,7 +32,7 @@ public abstract class Herbivore extends Animal {
     /**  *renvoie la position du pradateur le plus proche dans un rayon dist et sinon (0,0)  (de toute facon si le prédateur
      *à la même position l'herbivore sera mangé
      **/
-    public Coordinates isDanger (double dist){
+    public Coordinates getCoordDanger (double dist){
         Organism o =null;
         Coordinates c=new Coordinates(0,0);
         if (this.vivarium.getCloser(this,'c')==null) return c ;
@@ -42,11 +42,15 @@ public abstract class Herbivore extends Animal {
         double thisX = (double) this.getPos().getX();
         double thisY = (double) this.getPos().getY();
         if((Math.sqrt(Math.pow((oX-thisX),2)+Math.pow(oY+thisY,2)))>dist){
-            if(thisX>oX) c.setX(-1);
-            else c.setX(1);
+            if(thisX>oX) {
+                c.setX(1);
+            }
+            else {c.setX(-1);}
 
-            if(thisY>oY) c.setX(-1);
-            else c.setX(1);
+            if(thisY>oY) {
+                c.setX(1);
+            }
+            else {c.setX(-1);}
             return c;
         }
         return c;
