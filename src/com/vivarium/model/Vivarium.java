@@ -174,13 +174,12 @@ public class Vivarium {
      * cette class
      * */
     public  ArrayList<Organism> scan (Organism src, char a){
-        Organism o= null;
-        ArrayList<Organism> dispo=null;
+        ArrayList<Organism> dispo= new ArrayList<>();
         try {
             if (a == 'h') {
-                for (int j = 0; j < (getOrganisms().size()); j++) {
-                    if (getOrganisms().get(j) instanceof Herbivore) {
-                        dispo.add(getOrganisms().get(j));
+                for (Animal an: getAnimals()) {
+                    if (an instanceof Herbivore) {
+                        dispo.add(an);
 
                     }
                 }
@@ -188,13 +187,13 @@ public class Vivarium {
         }
         catch (NullPointerException e)
         {
-            System.out.println("Attention, aucun carnivore trouvée ! "+e.getMessage());
+            System.out.println("Attention, aucun herbivore trouvée ! "+e.getMessage());
         }
         try {
             if (a == 'c') {
-                for (int j = 0; j < (getOrganisms().size()); j++) {
-                    if (getOrganisms().get(j) instanceof Carnivore) {
-                        dispo.add(getOrganisms().get(j));
+                for (Animal an: getAnimals()) {
+                    if (an instanceof Carnivore) {
+                        dispo.add(an);
 
                     }
                 }
@@ -202,7 +201,7 @@ public class Vivarium {
         }
         catch (NullPointerException e)
         {
-            System.out.println("Attention, aucune carnivore trouvé ! "+e.getMessage());
+            System.out.println("Attention, aucun carnivore trouvé ! "+e.getMessage());
         }
         try {
             if (a == 'v') {
@@ -216,7 +215,7 @@ public class Vivarium {
         }
         catch (NullPointerException e)
         {
-            System.out.println("Attention, aucune vegetal trouvée ! "+e.getMessage());
+            System.out.println("Attention, aucun vegetal trouvée ! "+e.getMessage());
         }
 
         return dispo;
@@ -227,7 +226,7 @@ public class Vivarium {
     public  Organism getCloser (Organism src, char a) {
         ArrayList<Organism> dispo = scan(src,a);
         Organism o= null;
-        if (dispo== null) return null ;
+        if (dispo.size()==0) return null ;
         o = dispo.get(0);
         for (int i = 1; i < dispo.size(); i++) {
             if (src.getPos().isCloser(dispo.get(i).getPos(), o.getPos())) {

@@ -47,7 +47,6 @@ public abstract class Herbivore extends Animal {
 
             if(thisY>oY) c.setX(-1);
             else c.setX(1);
-
             return c;
         }
         return c;

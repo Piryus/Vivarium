@@ -116,12 +116,12 @@ public class Camel extends Herbivore {
 
 
 
-    public void evoluate(long dt) // methode expérimental a tester pour implémentation ultérieur dans les autre class
+    public void evoluate(long dt) // methode expérimental a tester pour implémentation ultérieur dans les autres class
     {
         this.setHunger(this.hunger+0.005f);
         Coordinates c0 = new Coordinates(0,0);
         Coordinates c=isDanger(100);
-        if (c.getX() != c0.getX() & c.getY() != c0.getY() ){
+        if (c.getX() != c0.getX() || c.getY() != c0.getY() ){
             this.move(dt*getSpeed()*c.getX(),dt*getSpeed()*c.getY());
         return;
         }
