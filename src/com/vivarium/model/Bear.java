@@ -18,10 +18,4 @@ public class Bear extends Carnivore {
     }
 
 
-
-    @Override
-    public void evoluate(long dt) {
-
-    }
-
 }
