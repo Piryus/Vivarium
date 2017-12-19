@@ -116,7 +116,7 @@ public class Herbivore extends Animal {
         double coefY = 0;
         Animal mate = this.vivarium.scanOtherGender(this);
         if (mate != null) {
-            if (mate.getPos().getX() == this.getPos().getX() & mate.getPos().getY() == this.getPos().getY()) {
+            if (mate.getPos().getX() == this.getPos().getX() && mate.getPos().getY() == this.getPos().getY()) {
                 System.out.print("se reproduit \n");
             }// todo : accouplement
             if (mate.getPos().getX() < this.getPos().getX()) {
@@ -131,18 +131,28 @@ public class Herbivore extends Animal {
             }
 
 
-        } else {
-            if (this.getPos().getX() + getSize() / 2 > vivarium.getTerrain().getWidth()) {
+        }
+        else
+        {
+            if (this.getPos().getX()+getSize()/2> vivarium.getTerrain().getWidth() )
+            {
                 coefX = -1;
-            } else if (this.getPos().getX() - getSize() / 2 < 0) {
+            }
+            else if (this.getPos().getX()-getSize()/2 <0)
+            {
                 coefX = 1;
             }
-            if (this.getPos().getY() + getSize() / 2 > vivarium.getTerrain().getHeight()) {
+            if (this.getPos().getY()+getSize()/2> vivarium.getTerrain().getHeight() )
+            {
                 coefY = -1;
-            } else if (this.getPos().getY() - getSize() / 2 < 0) {
+            }
+            else if (this.getPos().getY()-getSize()/2<0)
+            {
                 coefY = 1;
             }
         }
+
+        
 
         if (coefX != 0 & coefY != 0) {
             this.move(dt * getSpeed() * coefX, dt * getSpeed() * coefY);
