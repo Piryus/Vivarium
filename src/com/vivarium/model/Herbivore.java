@@ -112,7 +112,6 @@ public class Herbivore extends Animal {
      * Méthode qui gere la recherche  d' animeux de la meme espéce mais d'un autre sex dans un but de reproduction
      **/
     public void lookForMate(long dt) {
-        System.out.print("cherche a se reproduire \n");
         double coefX = 0;
         double coefY = 0;
         Animal mate = this.vivarium.scanOtherGender(this);

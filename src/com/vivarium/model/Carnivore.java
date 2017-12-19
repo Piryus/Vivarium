@@ -125,12 +125,10 @@ class Carnivore extends Animal
 	@Override
 	public void evoluate(long dt)
 	{
-		
 		AreaType area = this.getCurrentAreaType();
 		if(!availaibleArea.contains(area)) setHP(getHP()-getVitality()*dt);
 		if(getHunger()>= 10) setHP(getHP()-getVitality()*dt);
 		if(getHunger()<=4) setHP(getHP()+getVitality()*dt);
-
 		if(isHungry())
 		{
 			lookForFood(this);
