@@ -60,8 +60,8 @@ public class VivariumController {
                 }
             }
             if (o instanceof Herbivore) evoluateH((Herbivore)o,t - lastCall.get(o.getID()));
-            if (o instanceof Carnivore) evoluateC((Carnivore) o,t - lastCall.get(o.getID()));
-            if (o instanceof Vegetal) evoluateV((Vegetal) o,t - lastCall.get(o.getID()));
+            else if (o instanceof Carnivore) evoluateC((Carnivore) o,t - lastCall.get(o.getID()));
+            else if (o instanceof Vegetal) evoluateV((Vegetal) o,t - lastCall.get(o.getID()));
             lastCall.replace(o.getID(), t);
         }
     }
@@ -111,13 +111,15 @@ public class VivariumController {
         }
     }
     public void evoluateC(Carnivore c,long dt)
-    {
+    {   c.move(dt * c.getSpeed() * c.getCoefX(), dt * c.getSpeed() * c.getCoefY());
+        System.out.print("evoluateC");
         AreaType area = c.getCurrentAreaType();
         if(!c.getAvailaibleArea().contains(area)) c.setHP(c.getHP()-c.getVitality()*dt);
         if(c.getHunger()>= 10) c.setHP(c.getHP()-c.getVitality()*dt);
         if(c.getHunger()<=4) c.setHP(c.getHP()+c.getVitality()*dt);
         if(c.isHungry())
         {
+            System.out.print("lookForfood");
             c.lookForFood(c);
         }
         else

@@ -122,7 +122,12 @@ public class  Carnivore extends Animal
 		return getHunger()>=5;
 	}
 
+	public int getCoefX() {
+		return coefX;
 
+	}
 
-
+	public int getCoefY() {
+		return coefY;
+	}
 }
