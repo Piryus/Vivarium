@@ -163,6 +163,8 @@ public class Herbivore extends Animal {
         this.setHunger(this.hunger+0.005f);
         Coordinates c0 = new Coordinates(0,0);
         Coordinates c=getCoordDanger(100);
+        AreaType area = this.getCurrentAreaType();
+        if(!availaibleArea.contains(area)) setVitality(getVitality()-1*dt);
         if (c.getX() != c0.getX() || c.getY() != c0.getY() ){
             this.move(dt*getSpeed()*c.getX(),dt*getSpeed()*c.getY());
             return;

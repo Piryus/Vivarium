@@ -15,7 +15,7 @@ public class Wolf extends Carnivore {
     public Wolf(int posX,int posY,Vivarium v, Sex type) {
 
         super(posX, posY, v, 1, 0, 0.05f, 0.05f, type,
-                new ArrayList<>(Arrays.asList(new AreaType[]{AreaType.Mountain, AreaType.Plain, AreaType.Desert,AreaType.Water})),
+                new ArrayList<>(Arrays.asList(new AreaType[]{AreaType.Mountain, AreaType.Plain, AreaType.Desert})),
                 new ArrayList<>(Arrays.asList(new AreaType[]{AreaType.Mountain, AreaType.Desert})));
         currArea = AreaType.Plain;
     }
@@ -23,8 +23,7 @@ public class Wolf extends Carnivore {
     private int coefX = 1, coefY = 1; // pour debug
 
     public void evoluate(long dt) {
-        AreaType area = this.getCurrentAreaType();
         super.evoluate(dt);
-        if(!availaibleArea.contains(area)) setVitality(getVitality()-1*dt);
+
     }
 }

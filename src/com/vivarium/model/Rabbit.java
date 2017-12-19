@@ -20,9 +20,8 @@ public class Rabbit extends Herbivore {
 
     @Override
     public void evoluate(long dt) {
-        AreaType area = this.getCurrentAreaType();
         super.evoluate(dt);
-        if(!availaibleArea.contains(area)) setVitality(getVitality()-1*dt);
+
     }
 
 }
