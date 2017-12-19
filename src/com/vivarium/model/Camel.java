@@ -18,11 +18,9 @@ public class Camel extends Herbivore {
         currArea = AreaType.Desert;
     }
     public void evoluate(long dt) {
-        AreaType area = this.getCurrentAreaType();
         super.evoluate(dt);
-        if(!availaibleArea.contains(area)) setVitality(getVitality()-1*dt);
-    }
 
+    }
 
 
 }

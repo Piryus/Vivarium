@@ -23,8 +23,7 @@ public class Wolf extends Carnivore {
     private int coefX = 1, coefY = 1; // pour debug
 
     public void evoluate(long dt) {
-        AreaType area = this.getCurrentAreaType();
         super.evoluate(dt);
-        if(!availaibleArea.contains(area)) setVitality(getVitality()-1*dt);
+
     }
 }

@@ -93,21 +93,21 @@ public abstract class Animal extends Organism {
 
 	public void move(double dx, double dy) {
 		if (this.getPos().getX() >= this.vivarium.getTerrain().getWidth() && dx > 0) {
-			this.getPos().setX(-dx + getPos().getX());
+			this.getPos().setX(-2*dx + getPos().getX());
 			//evite la sortie de l'organisme a droite
 		}
 		else if (this.getPos().getX() <= 0 && dx < 0) {
-			this.getPos().setX(-dx + getPos().getX());
+			this.getPos().setX(-2*dx + getPos().getX());
 			//evite la sortie de l'organisme a gauche
 		}
 		else this.getPos().setX(dx + getPos().getX()); // déplacment normal suivant x
 
 		if (this.getPos().getY() >= this.vivarium.getTerrain().getWidth() && dy > 0) {
-			this.getPos().setY(-dy + getPos().getY());
+			this.getPos().setY(-2*dy + getPos().getY());
 			//evite la sortie de l'organisme en bas
 		}
 		else if (this.getPos().getY() <= 0 && dy < 0) {
-			this.getPos().setY(-dy + getPos().getY());
+			this.getPos().setY(-2*dy + getPos().getY());
 			//evite la sortie de l'rganisme en haut
 		}
 
