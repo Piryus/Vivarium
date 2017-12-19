@@ -74,7 +74,7 @@ public class Camel extends Herbivore {
 
 
     }
-    /** Méthode qui gere la recherche  d' animeux de la meme espéce dans un but de reproduction **/
+    /** Méthode qui gere la recherche  d' animeux de la meme espéce mais d'un autre sex dans un but de reproduction **/
     public void lookForMate(long dt) {
         double coefX = 0;
         double coefY = 0;
@@ -116,7 +116,7 @@ public class Camel extends Herbivore {
 
 
 
-    public void evoluate(long dt)
+    public void evoluate(long dt) // methode expérimental a tester pour implémentation ultérieur dans les autre class
     {
         this.setHunger(this.hunger+0.005f);
         Coordinates c0 = new Coordinates(0,0);
