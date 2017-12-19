@@ -7,8 +7,8 @@ import javax.swing.*;
 
 public class SidePanel extends JPanel{
 
-    String[] organismStrings = {"Bear","Blowfish","Bouquetin","Cactus","Camel","Cow","Dog","Dragon","Eagle","Fish","FreshwaterFish","Grass","Mushroom","Rabbit","Tree","Trex","Wolf"};
-    String[] organismSex = {"Male","Female"};
+    private String[] animalStrings = {"Bear","Blowfish","Bouquetin","Camel","Cow","Dog","Dragon","Eagle","Fish","FreshwaterFish","Rabbit","Trex","Wolf"};
+    private String[] animalSex = {"Male","Female"};
     private SidePanelActionListener listener;
 
     public SidePanel(VivariumController vc) {
@@ -16,18 +16,18 @@ public class SidePanel extends JPanel{
         listener = new SidePanelActionListener(this, vc);
 
         // Create ComboBox to select organism to spawn
-        JComboBox organismList = new JComboBox(organismStrings);
+        JComboBox organismList = new JComboBox(animalStrings);
         organismList.setSelectedIndex(0);
         organismList.setActionCommand("Choice");
         organismList.addActionListener(listener);
         add(organismList);
 
         // Create ComboBox to select sex
-        JComboBox organismSexList = new JComboBox(organismSex);
-        organismSexList.setSelectedIndex(0);
-        organismSexList.setActionCommand("Sex");
-        organismSexList.addActionListener(listener);
-        add(organismSexList);
+        JComboBox animalSexList = new JComboBox(animalSex);
+        animalSexList.setSelectedIndex(0);
+        animalSexList.setActionCommand("Sex");
+        animalSexList.addActionListener(listener);
+        add(animalSexList);
 
         // Create spawn button
         JButton spawnButton = new JButton("Spawn");
