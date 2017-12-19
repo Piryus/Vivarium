@@ -20,7 +20,7 @@ public class Cow extends Herbivore { //TODO
 
     @Override
     public void evoluate(long dt) {
-
+        super.evoluate(dt);
     }
 
 }

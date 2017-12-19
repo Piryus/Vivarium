@@ -14,7 +14,7 @@ public class Blowfish extends Fish {
 
     @Override
     public void evoluate(long dt) {
-
+        super.evoluate(dt);
     }
 
 }

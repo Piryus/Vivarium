@@ -15,9 +15,8 @@ public class Dog extends Carnivore { // TODO
 
 
     @Override
-    public void evoluate(long dt)
-    {
-
+    public void evoluate(long dt) {
+        super.evoluate(dt);
     }
 
 }

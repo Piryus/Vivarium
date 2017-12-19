@@ -16,6 +16,8 @@ public class Bear extends Carnivore {
                 new ArrayList<>(Arrays.asList(new AreaType[]{AreaType.Mountain})));
         currArea = AreaType.Mountain;
     }
-
+    public void evoluate(long dt) {
+        super.evoluate(dt);
+    }
 
 }
