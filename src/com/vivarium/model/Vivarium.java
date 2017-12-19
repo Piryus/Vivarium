@@ -176,38 +176,47 @@ public class Vivarium {
     public  ArrayList<Organism> scan (Organism src, char a){
         Organism o= null;
         ArrayList<Organism> dispo=null;
-        if (a=='h')
-        {
-            for(int j=0;j<(getOrganisms().size()); j++)
-            {
-                if (getOrganisms().get(j) instanceof Herbivore)
-                {
-                    dispo.add(getOrganisms().get(j));
+        try {
+            if (a == 'h') {
+                for (int j = 0; j < (getOrganisms().size()); j++) {
+                    if (getOrganisms().get(j) instanceof Herbivore) {
+                        dispo.add(getOrganisms().get(j));
 
+                    }
                 }
             }
         }
-        if (a=='c')
+        catch (NullPointerException e)
         {
-            for(int j=0;j<(getOrganisms().size()); j++)
-            {
-                if (getOrganisms().get(j) instanceof Carnivore)
-                {
-                    dispo.add(getOrganisms().get(j));
+            System.out.println("Attention, aucun carnivore trouvée ! "+e.getMessage());
+        }
+        try {
+            if (a == 'c') {
+                for (int j = 0; j < (getOrganisms().size()); j++) {
+                    if (getOrganisms().get(j) instanceof Carnivore) {
+                        dispo.add(getOrganisms().get(j));
 
+                    }
                 }
             }
         }
-        if (a=='v')
+        catch (NullPointerException e)
         {
-            for(int j=0;j<(getOrganisms().size()); j++)
-            {
-                if (getOrganisms().get(j) instanceof Vegetal)
-                {
-                    dispo.add(getOrganisms().get(j));
+            System.out.println("Attention, aucune carnivore trouvé ! "+e.getMessage());
+        }
+        try {
+            if (a == 'v') {
+                for (int j = 0; j < (getOrganisms().size()); j++) {
+                    if (getOrganisms().get(j) instanceof Vegetal) {
+                        dispo.add(getOrganisms().get(j));
 
+                    }
                 }
             }
+        }
+        catch (NullPointerException e)
+        {
+            System.out.println("Attention, aucune vegetal trouvée ! "+e.getMessage());
         }
 
         return dispo;
