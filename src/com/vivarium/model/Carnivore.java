@@ -47,7 +47,6 @@ class Carnivore extends Animal
 			}
 			if(this.getPos().equals(prey.getPos()))
 			{
-				System.out.println("Bite");
 				this.eat((Herbivore)prey);
 				this.setHunger(this.hunger-5.0f);
 			}

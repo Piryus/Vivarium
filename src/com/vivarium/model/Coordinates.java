@@ -80,7 +80,7 @@ public class Coordinates {
 
     public boolean equals(Coordinates other)
     {
-        return this.x == other.getX() && this.y == other.getY();
+        return (int)this.x == (int)other.getX() && (int)this.y == (int)other.getY();
     }
 
 }
