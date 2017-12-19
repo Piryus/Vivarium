@@ -17,10 +17,7 @@ public class Camel extends Herbivore {
                 new ArrayList<>(Arrays.asList(new AreaType[]{ AreaType.Plain})));
         currArea = AreaType.Desert;
     }
-    public void evoluate(long dt) {
-        super.evoluate(dt);
 
-    }
 
 
 }

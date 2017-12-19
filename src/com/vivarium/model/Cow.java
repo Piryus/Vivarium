@@ -18,10 +18,6 @@ public class Cow extends Herbivore { //TODO
         currArea = AreaType.Plain;
     }
 
-    @Override
-    public void evoluate(long dt) {
-        super.evoluate(dt);
 
-    }
 
 }

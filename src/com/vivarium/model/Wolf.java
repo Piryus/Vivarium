@@ -22,8 +22,5 @@ public class Wolf extends Carnivore {
 
     private int coefX = 1, coefY = 1; // pour debug
 
-    public void evoluate(long dt) {
-        super.evoluate(dt);
 
-    }
 }

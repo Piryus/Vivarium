@@ -20,8 +20,5 @@ public class Eagle extends Carnivore
     }
 
 
-    public void evoluate(long dt) {
-        super.evoluate(dt);
 
-    }
 }

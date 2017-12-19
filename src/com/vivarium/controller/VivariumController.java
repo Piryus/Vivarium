@@ -59,7 +59,9 @@ public class VivariumController {
                     delete(o);
                 }
             }
-            //o.evoluate(t - lastCall.get(o.getID()));
+            if (o instanceof Herbivore) evoluateH((Herbivore)o,t - lastCall.get(o.getID()));
+            if (o instanceof Carnivore) evoluateC((Carnivore) o,t - lastCall.get(o.getID()));
+            if (o instanceof Vegetal) evoluateV((Vegetal) o,t - lastCall.get(o.getID()));
             lastCall.replace(o.getID(), t);
         }
     }

@@ -17,10 +17,6 @@ public class Dragon extends Carnivore {
     }
 
 
-    @Override
-    public void evoluate(long dt) {
-        super.evoluate(dt);
 
-    }
 
 }

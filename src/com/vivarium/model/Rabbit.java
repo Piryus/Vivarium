@@ -18,10 +18,6 @@ public class Rabbit extends Herbivore {
         currArea = AreaType.Plain;
     }
 
-    @Override
-    public void evoluate(long dt) {
-        super.evoluate(dt);
 
-    }
 
 }
