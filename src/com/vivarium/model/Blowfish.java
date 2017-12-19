@@ -14,7 +14,9 @@ public class Blowfish extends Fish {
 
     @Override
     public void evoluate(long dt) {
+        AreaType area = this.getCurrentAreaType();
         super.evoluate(dt);
+        if(!availaibleArea.contains(area)) setVitality(getVitality()-1*dt);
     }
 
 }

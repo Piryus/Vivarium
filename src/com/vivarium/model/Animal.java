@@ -87,7 +87,7 @@ public abstract class Animal extends Organism
 	{
 		AreaType area = this.getCurrentAreaType();
 		if ( difficultArea.contains(area)) return this.speed/2;
-		else if (!availaibleArea.contains(area)) return 0;
+		else if (!availaibleArea.contains(area)) return this.speed/8;
 		return this.speed;
 	}
 
