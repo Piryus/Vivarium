@@ -1,9 +1,6 @@
 package com.vivarium.controller;
 
-import com.vivarium.model.Organism;
-import com.vivarium.model.Terrain;
-import com.vivarium.model.Vivarium;
-import com.vivarium.model.Animal;
+import com.vivarium.model.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -62,7 +59,7 @@ public class VivariumController {
                     delete(o);
                 }
             }
-            o.evoluate(t - lastCall.get(o.getID()));
+            //o.evoluate(t - lastCall.get(o.getID()));
             lastCall.replace(o.getID(), t);
         }
     }
@@ -82,5 +79,58 @@ public class VivariumController {
 
     public synchronized Vivarium getVivarium() {
         return vivarium;
+    }
+
+    /** Méthode qui gere le comportement des herbivore**/
+
+
+
+    public void evoluateH(Herbivore h,long dt) // methode expérimental a tester pour implémentation ultérieur dans les autres class
+    {
+        h.setHunger(h.getHunger()+0.005f);
+        Coordinates c0 = new Coordinates(0,0);
+        Coordinates c=h.getCoordDanger(100);
+        AreaType area = h.getCurrentAreaType();
+        if(!h.getAvailaibleArea().contains(area)) h.setHP(h.getHP()-h.getVitality()*dt);
+        if(h.getHunger()>= 10) h.setHP(h.getHP()-h.getVitality()*dt);
+        if(h.getHunger()<=4) h.setHP(h.getHP()+h.getVitality()*dt);
+
+        if (c.getX() != c0.getX() || c.getY() != c0.getY() ){
+            h.move(dt*h.getSpeed()*c.getX(),dt*h.getSpeed()*c.getY());
+            return;
+        }
+        if(h.isHungry())
+        {
+          h.lookForFood(dt);
+        }
+        else
+        {
+            h.lookForMate(dt);
+        }
+    }
+    public void evoluateC(Carnivore c,long dt)
+    {
+        AreaType area = c.getCurrentAreaType();
+        if(!c.getAvailaibleArea().contains(area)) c.setHP(c.getHP()-c.getVitality()*dt);
+        if(c.getHunger()>= 10) c.setHP(c.getHP()-c.getVitality()*dt);
+        if(c.getHunger()<=4) c.setHP(c.getHP()+c.getVitality()*dt);
+        if(c.isHungry())
+        {
+            c.lookForFood(c);
+        }
+        else
+        {
+            c.lookForMate(c);
+        }
+        c.setHunger(c.getHunger()+(0.005f * dt ));
+    }
+    public void evoluateV (Vegetal v ,long dt){
+        if (!v.getEdible()){
+            v.setTimeSinceEaten(v.getTimeSinceEaten()+ dt);
+            if (v.getTimeSinceEaten() > v.getRespawnTime()) {
+                v.setEdible(true);
+                v.setTimeSinceEaten(0);
+            }
+        }
     }
 }

@@ -2,7 +2,7 @@ package com.vivarium.model;
 
 import java.util.ArrayList;
 
-class Carnivore extends Animal
+public class  Carnivore extends Animal
 {
 
 
@@ -122,22 +122,7 @@ class Carnivore extends Animal
 		return getHunger()>=5;
 	}
 
-	@Override
-	public void evoluate(long dt)
-	{
-		AreaType area = this.getCurrentAreaType();
-		if(!availaibleArea.contains(area)) setHP(getHP()-getVitality()*dt);
-		if(getHunger()>= 10) setHP(getHP()-getVitality()*dt);
-		if(getHunger()<=4) setHP(getHP()+getVitality()*dt);
-		if(isHungry())
-		{
-			lookForFood(this);
-		}
-		else
-		{
-			lookForMate(this);
-		}
-		this.setHunger(this.hunger+(0.005f * dt ));
-	}
+
+
 
 }

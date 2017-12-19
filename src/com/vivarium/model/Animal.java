@@ -24,7 +24,7 @@ public abstract class Animal extends Organism {
 
 	}
 
-	abstract public void evoluate(long dt); // Fonction à redéfinir dans chaque classe fille pour définir le comportement de l'animal
+
 
 	/*** ACCESSEURS ***/
 

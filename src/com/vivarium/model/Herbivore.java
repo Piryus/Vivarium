@@ -152,32 +152,6 @@ public class Herbivore extends Animal {
 
 
 
-    /** Méthode qui gere le comportement de camel**/
 
-
-
-    public void evoluate(long dt) // methode expérimental a tester pour implémentation ultérieur dans les autres class
-    {
-        this.setHunger(this.hunger+0.005f);
-        Coordinates c0 = new Coordinates(0,0);
-        Coordinates c=getCoordDanger(100);
-        AreaType area = this.getCurrentAreaType();
-        if(!availaibleArea.contains(area)) setHP(getHP()-getVitality()*dt);
-        if(getHunger()>= 10) setHP(getHP()-getVitality()*dt);
-        if(getHunger()<=4) setHP(getHP()+getVitality()*dt);
-
-        if (c.getX() != c0.getX() || c.getY() != c0.getY() ){
-            this.move(dt*getSpeed()*c.getX(),dt*getSpeed()*c.getY());
-            return;
-        }
-        if(this.isHungry())
-        {
-            this.lookForFood(dt);
-        }
-        else
-        {
-            this.lookForMate(dt);
-        }
-    }
 
 }
