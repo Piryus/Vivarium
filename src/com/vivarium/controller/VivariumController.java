@@ -39,18 +39,6 @@ public class VivariumController {
 
     public synchronized void loop(){
         long t;
-        /*
-        for (Organism o: vivarium.getOrganisms()) {
-            t = System.currentTimeMillis();
-            if (o instanceof Animal) {
-                if (((Animal) o).getHP() == 0) {
-                    delete(o);
-                }
-            }
-            o.evoluate(t - lastCall.get(o.getID()));
-            lastCall.replace(o.getID(), t);
-        }*/
-
         for (int i = vivarium.getOrganisms().size()-1;i>=0;i--){
             t = System.currentTimeMillis();
             Organism o = vivarium.getOrganisms().get(i);
@@ -89,7 +77,7 @@ public class VivariumController {
 
     public void evoluateH(Herbivore h,long dt) // methode expérimental a tester pour implémentation ultérieur dans les autres class
     {
-        h.setHunger(h.getHunger()+0.005f);
+        h.setHunger(h.getHunger()+0.001f);
         Coordinates c0 = new Coordinates(0,0);
         Coordinates c=h.getCoordDanger(100);
         AreaType area = h.getCurrentAreaType();
@@ -126,7 +114,7 @@ public class VivariumController {
         {
             c.lookForMate(c);
         }
-        c.setHunger(c.getHunger()+(0.005f * dt ));
+        c.setHunger(c.getHunger()+(0.001f * dt ));
     }
     public void evoluateV (Vegetal v ,long dt){
         if (!v.getEdible()){

@@ -29,7 +29,6 @@ public class VivariumRenderer implements Renderer {
         for (Organism o : vivarium.getNewOrganisms()){
             organismView.add(new OrganismView(o));
         }
-        // TODO : retirer les vieux organismes de organismView
 
         for (Organism o : vivarium.getOldOrganisms()){
             Predicate<OrganismView> test = new Predicate<OrganismView>() {
