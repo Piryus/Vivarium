@@ -1,12 +1,9 @@
 package com.vivarium.model;
 
-
 import java.util.ArrayList;
 
-/**
- * 
- */
 public abstract class Organism {
+
     private int id;
     private Coordinates position ;
     private static int nextid = 0;
@@ -14,6 +11,7 @@ public abstract class Organism {
     protected ArrayList<AreaType> availaibleArea;
     protected Vivarium vivarium;
     private int size;
+
     /**
      * Default constructor
      */
@@ -23,9 +21,12 @@ public abstract class Organism {
     }
 
     /**
-     * constructeur
-     * @param
-     * @param
+     * Constructor with parameters
+     * @param x the abscissa of the organism's position
+     * @param y the ordinate of the organism's position
+     * @param size the organism's size
+     * @param v the vivarium in which the organism will evolve
+     * @param avArea ?? //TODO Comment
      */
     public Organism(int x,int y, int size,Vivarium v, ArrayList<AreaType> avArea) {
         vivarium = v;
@@ -37,6 +38,13 @@ public abstract class Organism {
         this.size = size;
     }
 
+    /**
+     *
+     * @param x
+     * @param y
+     * @param v
+     * @param avArea
+     */
     public Organism(int x,int y, Vivarium v, ArrayList<AreaType> avArea) {
         this(x,y,50,v,avArea);
     }
@@ -59,8 +67,9 @@ public abstract class Organism {
         return position;
     }
 
-
-
+    /**
+     * @return the type of the area where the organism currently is
+     */
     public AreaType getCurrentAreaType() {
         AreaType CurrentAreaType = null;
         for(int i=0;i<vivarium.getTerrain().getAreasList().size();i++) {
@@ -72,6 +81,11 @@ public abstract class Organism {
         return CurrentAreaType;
     }
 
+    /**
+     *
+     * @param coords
+     * @return
+     */
     public Organism getOrganismAt(Coordinates coords) {
         Organism organismFound = null;
         for(Organism o : vivarium.getOrganisms()) {
