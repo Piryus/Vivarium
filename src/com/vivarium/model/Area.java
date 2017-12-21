@@ -44,7 +44,7 @@ public class Area {
 
     /**
      * Return an ArrayList of Area which surround the area (this)
-     * @param areaList to scan 
+     * @param areaList to scan
      * @return surroundAreasList
      */
     public ArrayList<Area> getSurroundingAreas(ArrayList<Area> areaList) {
