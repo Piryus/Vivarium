@@ -135,8 +135,9 @@ public class Vivarium {
         return prey;
     }
 
+
     /**
-     * Recherce la zone par source, pour trouver un partenaire (le premier qu'il trouve)
+     * Scanne la zone pour trouver un partenaire (le premier qu'il trouve)
      * Peut renvoyer null, faire attention
      * */
     public Animal scanOtherGender(Animal src)
@@ -187,7 +188,7 @@ public class Vivarium {
         }
         catch (NullPointerException e)
         {
-            System.out.println("Attention, aucun herbivore trouvée ! "+e.getMessage());
+            System.out.println("Attention, aucun herbivore trouvé ! "+e.getMessage());
         }
         try {
             if (a == 'c') {
@@ -215,11 +216,14 @@ public class Vivarium {
         }
         catch (NullPointerException e)
         {
-            System.out.println("Attention, aucun vegetal trouvée ! "+e.getMessage());
+            System.out.println("Attention, aucun vegetal trouvé ! "+e.getMessage());
         }
 
         return dispo;
     }
+
+
+
     /** *renvoie l'organisme de type a  (h pour herbivore, v pour vegetal, c pour carnivore)  le plus proche de
     * l'organisme src
      **/
