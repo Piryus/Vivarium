@@ -30,6 +30,7 @@ public abstract class Vegetal extends Organism {
     public boolean getEdible(){
         return isEdible;
     }
+
     public void setEdible(boolean b){
         this.isEdible=b;
     }
