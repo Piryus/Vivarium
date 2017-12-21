@@ -170,7 +170,7 @@ public class Vivarium {
         return other;
     }
 
-    
+
     /**
      * Scan les environs d'un Organism quelconque, à la recheche d'autre Organism et renvoie la list des organism de
      * cette classe
