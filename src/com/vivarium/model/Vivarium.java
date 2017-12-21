@@ -170,9 +170,10 @@ public class Vivarium {
         return other;
     }
 
+    
     /**
-     * Scan les environs d'un Organism quelconque, à la recheche d'autre Organism_s et renvoie la list des organism de
-     * cette class
+     * Scan les environs d'un Organism quelconque, à la recheche d'autre Organism et renvoie la list des organism de
+     * cette classe
      * */
     public  ArrayList<Organism> scan (Organism src, char a){
         ArrayList<Organism> dispo= new ArrayList<>();
