@@ -41,8 +41,8 @@ public class Main {
         window.setVisible(true);
 
         for (int i = 0; i < 5; i++){
-            vc.add(new FreshwaterFish(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, Sex.Female));
-            vc.add(new FreshwaterFish(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, Sex.Male));
+            vc.add(new Camel(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, Sex.Female));
+            vc.add(new Camel(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, Sex.Male));
         }
 
         for (int i = 0; i < 20; i++){

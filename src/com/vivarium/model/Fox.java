@@ -17,9 +17,5 @@ public class Fox extends Carnivore {
 
     }
 
-    @Override
-    public void evoluate(long dt) {
-
-    }
 
 }

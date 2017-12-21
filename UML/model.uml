@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.vivarium.model</OriginalElement>
+  <nodes>
+    <node x="1998.0" y="1143.5">com.vivarium.model.Cow</node>
+    <node x="1348.25" y="411.0">com.vivarium.model.Animal</node>
+    <node x="249.0" y="1143.5">com.vivarium.model.Fox</node>
+    <node x="1969.75" y="0.0">com.vivarium.model.Organism</node>
+    <node x="3605.6193452380953" y="954.5">com.vivarium.model.Tree</node>
+    <node x="1874.25" y="1323.0">com.vivarium.model.FreshwaterFish</node>
+    <node x="2679.6193452380953" y="954.5">com.vivarium.model.Cactus</node>
+    <node x="0.0" y="1143.5">com.vivarium.model.Dragon</node>
+    <node x="2061.6193452380953" y="932.0">com.vivarium.model.Herbivore</node>
+    <node x="3117.6193452380953" y="954.5">com.vivarium.model.Mushroom</node>
+    <node x="1047.0" y="1442.0">com.vivarium.model.Area</node>
+    <node x="477.0" y="1143.5">com.vivarium.model.Dog</node>
+    <node x="0.0" y="1442.0">com.vivarium.model.Vivarium</node>
+    <node x="3363.6193452380953" y="954.5">com.vivarium.model.Aubergine</node>
+    <node x="1619.25" y="1323.0">com.vivarium.model.Blowfish</node>
+    <node x="380.0" y="1442.0">com.vivarium.model.Coordinates</node>
+    <node x="829.0" y="1121.0">com.vivarium.model.Wolf</node>
+    <node x="1767.0" y="1155.0">com.vivarium.model.Fish</node>
+    <node x="723.0" y="1442.0">com.vivarium.model.Terrain</node>
+    <node x="638.0" y="932.0">com.vivarium.model.Carnivore</node>
+    <node x="1064.0" y="1088.0">com.vivarium.model.Eagle</node>
+    <node x="1302.0" y="1143.5">com.vivarium.model.Bear</node>
+    <node x="2720.0" y="1143.5">com.vivarium.model.Bouquetin</node>
+    <node x="1456.0" y="1442.0">com.vivarium.model.AreaType</node>
+    <node x="2232.0" y="1143.5">com.vivarium.model.Rabbit</node>
+    <node x="2476.0" y="1110.5">com.vivarium.model.Camel</node>
+    <node x="2902.6193452380953" y="954.5">com.vivarium.model.Grass</node>
+    <node x="3042.0" y="543.0">com.vivarium.model.Vegetal</node>
+    <node x="1693.0" y="1442.0">com.vivarium.model.Sex</node>
+    <node x="1535.0" y="1143.5">com.vivarium.model.Trex</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.vivarium.model.Fish" target="com.vivarium.model.Herbivore">
+      <point x="0.0" y="-25.5" />
+      <point x="1872.5" y="1058.0" />
+      <point x="2121.4193452380955" y="1058.0" />
+      <point x="-239.19999999999982" y="48.0" />
+    </edge>
+    <edge source="com.vivarium.model.Rabbit" target="com.vivarium.model.Herbivore">
+      <point x="0.0" y="-37.0" />
+      <point x="2344.0" y="1068.0" />
+      <point x="2360.6193452380953" y="1068.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+    <edge source="com.vivarium.model.Herbivore" target="com.vivarium.model.Animal">
+      <point x="0.0" y="-48.0" />
+      <point x="2360.6193452380953" y="912.0" />
+      <point x="1786.25" y="912.0" />
+      <point x="146.0" y="235.5" />
+    </edge>
+    <edge source="com.vivarium.model.Blowfish" target="com.vivarium.model.Fish">
+      <point x="0.0" y="-37.0" />
+      <point x="1736.75" y="1298.0" />
+      <point x="1819.75" y="1298.0" />
+      <point x="-52.75" y="25.5" />
+    </edge>
+    <edge source="com.vivarium.model.Fox" target="com.vivarium.model.Carnivore">
+      <point x="0.0" y="-37.0" />
+      <point x="353.0" y="1058.0" />
+      <point x="765.9285714285716" y="1058.0" />
+      <point x="-170.57142857142856" y="48.0" />
+    </edge>
+    <edge source="com.vivarium.model.Carnivore" target="com.vivarium.model.Animal">
+      <point x="0.0" y="-48.0" />
+      <point x="936.5" y="912.0" />
+      <point x="1494.25" y="912.0" />
+      <point x="-146.0" y="235.5" />
+    </edge>
+    <edge source="com.vivarium.model.FreshwaterFish" target="com.vivarium.model.Fish">
+      <point x="0.0" y="-37.0" />
+      <point x="2008.25" y="1298.0" />
+      <point x="1925.25" y="1298.0" />
+      <point x="52.75" y="25.5" />
+    </edge>
+    <edge source="com.vivarium.model.Animal" target="com.vivarium.model.Organism">
+      <point x="0.0" y="-235.5" />
+      <point x="1640.25" y="386.0" />
+      <point x="2059.0" y="386.0" />
+      <point x="-89.25" y="180.5" />
+    </edge>
+    <edge source="com.vivarium.model.Eagle" target="com.vivarium.model.Carnivore">
+      <point x="0.0" y="-92.5" />
+      <point x="1173.0" y="1068.0" />
+      <point x="1021.7857142857142" y="1068.0" />
+      <point x="85.28571428571422" y="48.0" />
+    </edge>
+    <edge source="com.vivarium.model.Cactus" target="com.vivarium.model.Vegetal">
+      <point x="0.0" y="-25.5" />
+      <point x="2781.1193452380953" y="902.0" />
+      <point x="3076.4" y="902.0" />
+      <point x="-137.5999999999999" y="103.5" />
+    </edge>
+    <edge source="com.vivarium.model.Dragon" target="com.vivarium.model.Carnivore">
+      <point x="0.0" y="-37.0" />
+      <point x="114.5" y="1048.0" />
+      <point x="680.6428571428571" y="1048.0" />
+      <point x="-255.8571428571429" y="48.0" />
+    </edge>
+    <edge source="com.vivarium.model.Grass" target="com.vivarium.model.Vegetal">
+      <point x="0.0" y="-25.5" />
+      <point x="3000.1193452380953" y="912.0" />
+      <point x="3145.2" y="912.0" />
+      <point x="-68.80000000000018" y="103.5" />
+    </edge>
+    <edge source="com.vivarium.model.Cow" target="com.vivarium.model.Herbivore">
+      <point x="0.0" y="-37.0" />
+      <point x="2105.0" y="1068.0" />
+      <point x="2241.0193452380954" y="1068.0" />
+      <point x="-119.59999999999991" y="48.0" />
+    </edge>
+    <edge source="com.vivarium.model.Mushroom" target="com.vivarium.model.Vegetal">
+      <point x="0.0" y="-25.5" />
+      <point x="3230.6193452380953" y="912.0" />
+      <point x="3214.0" y="912.0" />
+      <point x="0.0" y="103.5" />
+    </edge>
+    <edge source="com.vivarium.model.Bouquetin" target="com.vivarium.model.Herbivore">
+      <point x="0.0" y="-37.0" />
+      <point x="2842.5" y="1068.0" />
+      <point x="2599.8193452380956" y="1068.0" />
+      <point x="239.20000000000027" y="48.0" />
+    </edge>
+    <edge source="com.vivarium.model.Aubergine" target="com.vivarium.model.Vegetal">
+      <point x="0.0" y="-25.5" />
+      <point x="3474.6193452380953" y="912.0" />
+      <point x="3282.8" y="912.0" />
+      <point x="68.80000000000018" y="103.5" />
+    </edge>
+    <edge source="com.vivarium.model.Dog" target="com.vivarium.model.Carnivore">
+      <point x="0.0" y="-37.0" />
+      <point x="643.0" y="1068.0" />
+      <point x="851.2142857142858" y="1068.0" />
+      <point x="-85.28571428571433" y="48.0" />
+    </edge>
+    <edge source="com.vivarium.model.Tree" target="com.vivarium.model.Vegetal">
+      <point x="0.0" y="-25.5" />
+      <point x="3700.6193452380953" y="902.0" />
+      <point x="3351.6" y="902.0" />
+      <point x="137.5999999999999" y="103.5" />
+    </edge>
+    <edge source="com.vivarium.model.Bear" target="com.vivarium.model.Carnivore">
+      <point x="0.0" y="-37.0" />
+      <point x="1408.5" y="1058.0" />
+      <point x="1107.0714285714284" y="1058.0" />
+      <point x="170.57142857142844" y="48.0" />
+    </edge>
+    <edge source="com.vivarium.model.Wolf" target="com.vivarium.model.Carnivore">
+      <point x="0.0" y="-59.5" />
+      <point x="0.0" y="48.0" />
+    </edge>
+    <edge source="com.vivarium.model.Camel" target="com.vivarium.model.Herbivore">
+      <point x="0.0" y="-70.0" />
+      <point x="2588.0" y="1068.0" />
+      <point x="2480.2193452380952" y="1068.0" />
+      <point x="119.59999999999991" y="48.0" />
+    </edge>
+    <edge source="com.vivarium.model.Vegetal" target="com.vivarium.model.Organism">
+      <point x="0.0" y="-103.5" />
+      <point x="3214.0" y="386.0" />
+      <point x="2237.5" y="386.0" />
+      <point x="89.25" y="180.5" />
+    </edge>
+    <edge source="com.vivarium.model.Trex" target="com.vivarium.model.Carnivore">
+      <point x="0.0" y="-37.0" />
+      <point x="1641.0" y="1048.0" />
+      <point x="1192.357142857143" y="1048.0" />
+      <point x="255.8571428571429" y="48.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.32726298875200854" x="1898.9909983633388" y="903.5000000000001" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

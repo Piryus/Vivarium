@@ -9,38 +9,19 @@ public class Vivarium {
 
     private ArrayList<Organism> organisms;
     private Terrain terrain;
-    private HashMap<Integer, Long> lastCall;
-    private ArrayList<String> animalClasses = new ArrayList<>(Arrays.asList(new String[]{"class com.vivarium.model.Bear","class com.vivarium.model.Blowfish","class com.vivarium.model.Bouquetin","class com.vivarium.model.Camel","class com.vivarium.model.Cow","class com.vivarium.model.Dog","class com.vivarium.model.Dragon","class com.vivarium.model.Eagle","class com.vivarium.model.Fish","class com.vivarium.model.Fox","class com.vivarium.model.FreshwaterFish","class com.vivarium.model.Rabbit","class com.vivarium.model.Trex","class com.vivarium.model.Wolf"}));
-    private ArrayList<String> herbivoreClasses = new ArrayList<>(Arrays.asList(new String[]{"class com.vivarium.model.Bouquetin","class com.vivarium.model.Camel","class com.vivarium.model.Cow","class com.vivarium.model.Rabbit"}));
     /**
      * Default constructor
      */
     public Vivarium() {
         organisms = new ArrayList<>();
         terrain = new Terrain();
-        lastCall = new HashMap<>();
     }
 
-    /**
-     * 
-     */
-    /*
-    public void loop() {
-        long t;
-        for (Organism o: organisms)
-        {
-            t = System.currentTimeMillis();
-            o.evoluate(t-lastCall.get(o.getID()));
-            lastCall.replace(o.getID(),t);
-        }
-    }
-    */
     /**
      * @param o
      */
     public void add(Organism o) {
         organisms.add(o);
-        lastCall.put(o.getID(),System.currentTimeMillis());
     }
 
     /**
@@ -70,7 +51,7 @@ public class Vivarium {
         ArrayList<Animal> ret = new ArrayList<>();
         for (Organism o: getOrganisms())
         {
-            if(animalClasses.contains(o.getClass().toString()))
+            if(o instanceof Animal)
             {
                 ret.add((Animal)o);
             }
@@ -138,7 +119,7 @@ public class Vivarium {
             ArrayList<Animal> preys = new ArrayList<>();
             for (Animal a: getAnimals())
             {
-                if(herbivoreClasses.contains(a.getClass().toString()))
+                if (a instanceof Herbivore)
                 {
                     preys.add(a);
                 }
@@ -189,50 +170,63 @@ public class Vivarium {
     }
 
     /**
-     * Scan les environs d'un Organism quelconque, à la recheche d'autre Organism_s et renvoie la list des organism de cette class
+     * Scan les environs d'un Organism quelconque, à la recheche d'autre Organism_s et renvoie la list des organism de
+     * cette class
      * */
     public  ArrayList<Organism> scan (Organism src, char a){
-        Organism o= null;
-        ArrayList<Organism> dispo=null;
-        if (a=='h')
-        {
-            for(int j=0;j<(getOrganisms().size()); j++)
-            {
-                if (getOrganisms().get(j) instanceof Herbivore)
-                {
-                    dispo.add(getOrganisms().get(j));
+        ArrayList<Organism> dispo= new ArrayList<>();
+        try {
+            if (a == 'h') {
+                for (Animal an: getAnimals()) {
+                    if (an instanceof Herbivore) {
+                        dispo.add(an);
 
+                    }
                 }
             }
         }
-        if (a=='c')
+        catch (NullPointerException e)
         {
-            for(int j=0;j<(getOrganisms().size()); j++)
-            {
-                if (getOrganisms().get(j) instanceof Carnivore)
-                {
-                    dispo.add(getOrganisms().get(j));
+            System.out.println("Attention, aucun herbivore trouvée ! "+e.getMessage());
+        }
+        try {
+            if (a == 'c') {
+                for (Animal an: getAnimals()) {
+                    if (an instanceof Carnivore) {
+                        dispo.add(an);
 
+                    }
                 }
             }
         }
-        if (a=='v')
+        catch (NullPointerException e)
         {
-            for(int j=0;j<(getOrganisms().size()); j++)
-            {
-                if (getOrganisms().get(j) instanceof Vegetal)
-                {
-                    dispo.add(getOrganisms().get(j));
+            System.out.println("Attention, aucun carnivore trouvé ! "+e.getMessage());
+        }
+        try {
+            if (a == 'v') {
+                for (int j = 0; j < (getOrganisms().size()); j++) {
+                    if (getOrganisms().get(j) instanceof Vegetal) {
+                        dispo.add(getOrganisms().get(j));
 
+                    }
                 }
             }
+        }
+        catch (NullPointerException e)
+        {
+            System.out.println("Attention, aucun vegetal trouvée ! "+e.getMessage());
         }
 
         return dispo;
     }
+    /** *renvoie l'organisme de type a  (h pour herbivore, v pour vegetal, c pour carnivore)  le plus proche de
+    * l'organisme src
+     **/
     public  Organism getCloser (Organism src, char a) {
         ArrayList<Organism> dispo = scan(src,a);
         Organism o= null;
+        if (dispo.size()==0) return null ;
         o = dispo.get(0);
         for (int i = 1; i < dispo.size(); i++) {
             if (src.getPos().isCloser(dispo.get(i).getPos(), o.getPos())) {

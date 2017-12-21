@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class Rabbit extends Herbivore {
 
     /**
-     * Default constructor
+     *  constructor
      */
     public Rabbit(int posX,int posY,Vivarium v, Sex type) {
         super(posX, posY, v, 10, 0, 0.05f, 0.05f, type,
@@ -18,9 +18,6 @@ public class Rabbit extends Herbivore {
         currArea = AreaType.Plain;
     }
 
-    @Override
-    public void evoluate(long dt) {
 
-    }
 
 }

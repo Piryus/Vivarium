@@ -59,7 +59,7 @@ public abstract class Organism {
         return position;
     }
 
-    public abstract void evoluate (long dt);
+
 
     public AreaType getCurrentAreaType() {
         AreaType CurrentAreaType = null;
@@ -70,5 +70,19 @@ public abstract class Organism {
             }
         }
         return CurrentAreaType;
+    }
+
+    public Organism getOrganismAt(Coordinates coords) {
+        Organism organismFound = null;
+        for(Organism o : vivarium.getOrganisms()) {
+            if((coords.getX()>=o.getPos().getX()-20)&&(coords.getX()<=o.getPos().getX()+20)&&(coords.getY()>=o.getPos().getY()-20)&&(coords.getY()<=o.getPos().getY()+20)) {
+                organismFound = o;
+            }
+        }
+        return organismFound;
+    }
+
+    public ArrayList<AreaType> getAvailaibleArea() {
+        return availaibleArea;
     }
 }

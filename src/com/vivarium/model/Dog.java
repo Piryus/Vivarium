@@ -14,10 +14,6 @@ public class Dog extends Carnivore { // TODO
     }
 
 
-    @Override
-    public void evoluate(long dt)
-    {
 
-    }
 
 }

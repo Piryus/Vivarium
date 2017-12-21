@@ -34,16 +34,15 @@ public abstract class Vegetal extends Organism {
         this.isEdible=b;
     }
 
-    @Override
-    public void evoluate (long dt){
-        if (!isEdible){
-            timeSinceEaten+= dt;
-            if (timeSinceEaten > respawnTime) {
-                isEdible = true;
-                timeSinceEaten = 0;
-            }
-        }
+    public float getTimeSinceEaten() {
+        return timeSinceEaten;
     }
 
+    public int getRespawnTime() {
+        return respawnTime;
+    }
 
+    public void setTimeSinceEaten(float timeSinceEaten) {
+        this.timeSinceEaten = timeSinceEaten;
+    }
 }

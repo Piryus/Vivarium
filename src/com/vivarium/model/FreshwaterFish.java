@@ -12,9 +12,6 @@ public class FreshwaterFish extends Fish {
         super(posX,posY,v,type);
     }
 
-    @Override
-    public void evoluate(long dt) {
 
-    }
 
 }
