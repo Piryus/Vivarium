@@ -24,6 +24,7 @@ public class SidePanel extends JPanel{
 
         createSpawnAnimalPanel();
         createSpawnVegetalPanel();
+        createStatsPanel();
     }
 
     /**
@@ -41,7 +42,7 @@ public class SidePanel extends JPanel{
         // Create default insets
         Insets defaultInsets = new Insets(5,0,0,0);
 
-        // Create ComboBox to select organism to spawn
+        // Create ComboBox to select animal to spawn
         String[] animalStrings = {"Bear","Blowfish","Bouquetin","Camel","Cow","Dog","Dragon","Eagle","Fish","FreshwaterFish","Rabbit","Trex","Wolf"};
         createComboBox(spawnPanel,animalStrings,gbc,"Choice",listener,new Insets(5,0,0,5),0,0,1,1);
 
@@ -58,12 +59,53 @@ public class SidePanel extends JPanel{
 
     }
 
+    /**
+     * Create SpawnVegetalPanel inside the SidePanel
+     * This panel allows the user to spawn a desired vegetal
+     */
     private void createSpawnVegetalPanel() {
         JPanel spawnVegetalPanel = new JPanel(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.HORIZONTAL;
         spawnVegetalPanel.setBorder(BorderFactory.createTitledBorder("Spawn a vegetal"));
         add(spawnVegetalPanel);
+
+        // Create default insets
+        Insets defaultInsets = new Insets(5,0,0,0);
+
+        // Create ComboBox to select vegetal to spawn
+        String[] vegetalStrings = {"Aubergine","Cactus","Grass","Mushroom","Tree"};
+        createComboBox(spawnVegetalPanel,vegetalStrings, gbc,"VegetalChoice",listener,new Insets(5,0,0,5),0,0,1,1);
+
+        // Create spawn button
+        createButton(spawnVegetalPanel,"Spawn",gbc,"SpawnVegetal",listener,defaultInsets,1,0,1,1);
+    }
+
+    /**
+     * Create infoPanel inside the SidePanel
+     * This panel displays the organism's stats
+     */
+    private void createStatsPanel() {
+        JPanel infoPanel = new JPanel(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        infoPanel.setBorder(BorderFactory.createTitledBorder("Organism stats"));
+        add(infoPanel);
+
+        // Create default insets
+        Insets defaultInsets = new Insets(5,0,0,0);
+
+        // TODO Create health label
+        createLabel(infoPanel,"Health :",JLabel.CENTER,gbc,new Insets(5,0,0,5),0,0,1,1);
+        ImageIcon heart = new ImageIcon("resources/icons/heart.png");
+        JLabel healthLabel = new JLabel(heart,JLabel.CENTER);
+        gbc.insets = defaultInsets;
+        gbc.gridx=1;
+        infoPanel.add(healthLabel,gbc);
+        ImageIcon heartBW = new ImageIcon("resources/icons/heartBW.png");
+        JLabel healthLabel2 = new JLabel(heartBW,JLabel.CENTER);
+        gbc.gridx=2;
+        infoPanel.add(healthLabel2,gbc);
     }
 
     /**
@@ -169,5 +211,4 @@ public class SidePanel extends JPanel{
         gbc.gridy= gridy;
         panel.add(comboBox,gbc);
     }
-
 }
