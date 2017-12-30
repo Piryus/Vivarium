@@ -140,6 +140,9 @@ public class SidePanel extends JPanel{
         // Create speed stat
         createIconLabel(infoPanel,"resources/icons/speed.png",JLabel.CENTER,gbc,new Insets(5,0,0,5),0,3,1,1);
         createLabel(infoPanel,"100",JLabel.LEFT,gbc,defaultInsets,1,3,1,1);
+
+        // Create kill button
+        createIconButton(infoPanel,"resources/icons/skull.png", gbc, "Kill",listener,defaultInsets,0,4,2,1);
     }
 
     /**
@@ -155,10 +158,35 @@ public class SidePanel extends JPanel{
      * @param gridwidth the number of horizontal cell that the button should occupy
      * @param gridheight the number of vertical cell that the button should occupy
      */
-
     private static void createButton(JPanel panel, String text, GridBagConstraints gbc, String actionCommand, ActionListener listener, Insets insets, int gridx, int gridy, int gridwidth, int gridheight)
     {
         JButton button = new JButton(text);
+        button.setVerticalTextPosition(AbstractButton.CENTER);
+        button.setHorizontalTextPosition(AbstractButton.CENTER);
+        button.setActionCommand(actionCommand);
+        button.addActionListener(listener);
+        if(insets==null){
+            gbc.insets = new Insets(0,0,0,0);
+        }
+        else
+        {
+            gbc.insets = insets;
+        }
+        gbc.gridwidth=gridwidth;
+        gbc.gridheight=gridheight;
+        gbc.gridx = gridx;
+        gbc.gridy= gridy;
+        panel.add(button,gbc);
+    }
+
+    /**
+     * Generic method to create a button with an IconImage
+     * @see #createButton for params
+     * @param path
+     */
+    private static void createIconButton(JPanel panel, String path, GridBagConstraints gbc, String actionCommand, ActionListener listener, Insets insets, int gridx, int gridy, int gridwidth, int gridheight)
+    {
+        JButton button = new JButton(new ImageIcon(path));
         button.setVerticalTextPosition(AbstractButton.CENTER);
         button.setHorizontalTextPosition(AbstractButton.CENTER);
         button.setActionCommand(actionCommand);
