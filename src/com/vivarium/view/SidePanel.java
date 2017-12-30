@@ -22,9 +22,37 @@ public class SidePanel extends JPanel{
         // Create Listener for ActionEvents
         listener = new SidePanelActionListener(this, vc);
 
+        createSpawnPosPanel();
         createSpawnAnimalPanel();
         createSpawnVegetalPanel();
         createStatsPanel();
+    }
+
+    /**
+     * Create spawnPosPanel in the sidePanel
+     * This panel allows the user to set the coordinates in order to spawn organisms
+     */
+    private void createSpawnPosPanel() {
+        // Create spawnPosPanel general settings
+        JPanel spawnPosPanel = new JPanel(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        spawnPosPanel.setBorder(BorderFactory.createTitledBorder("Spawn position"));
+        add(spawnPosPanel);
+
+        // Create default insets
+        Insets defaultInsets = new Insets(5,0,0,0);
+
+        // Create X position field
+        createLabel(spawnPosPanel,"X :",JLabel.CENTER,gbc,defaultInsets,0,0,1,1);
+        createTextField(spawnPosPanel,6,gbc,null,listener,defaultInsets,1,0,1,1, false);
+
+        // Create Y position field
+        createLabel(spawnPosPanel,"Y :",JLabel.CENTER,gbc,defaultInsets,0,1,1,1);
+        createTextField(spawnPosPanel,6,gbc,null,listener,defaultInsets,1,1,1,1, false);
+
+        // Create the "set" button
+        createButton(spawnPosPanel,"Set",gbc,"Setting coords",listener,defaultInsets,0,2,2,1);
     }
 
     /**
@@ -52,7 +80,7 @@ public class SidePanel extends JPanel{
 
         // Create text field for organism's name
         createLabel(spawnPanel,"Name :",JLabel.CENTER,gbc,defaultInsets,0,1,1,1);
-        createTextField(spawnPanel,15,gbc,"NameUpdate",listener,defaultInsets,1,1,1,1);
+        createTextField(spawnPanel,15,gbc,"NameUpdate",listener,defaultInsets,1,1,1,1, true);
 
         // Create spawn button
         createButton(spawnPanel,"Spawn",gbc,"Spawn",listener,defaultInsets,0,2,2,1);
@@ -67,6 +95,8 @@ public class SidePanel extends JPanel{
         JPanel spawnVegetalPanel = new JPanel(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.weightx = 0.5;
+        gbc.weighty=0;
         spawnVegetalPanel.setBorder(BorderFactory.createTitledBorder("Spawn a vegetal"));
         add(spawnVegetalPanel);
 
@@ -95,17 +125,21 @@ public class SidePanel extends JPanel{
         // Create default insets
         Insets defaultInsets = new Insets(5,0,0,0);
 
-        // TODO Create health label
-        createLabel(infoPanel,"Health :",JLabel.CENTER,gbc,new Insets(5,0,0,5),0,0,1,1);
-        ImageIcon heart = new ImageIcon("resources/icons/heart.png");
-        JLabel healthLabel = new JLabel(heart,JLabel.CENTER);
-        gbc.insets = defaultInsets;
-        gbc.gridx=1;
-        infoPanel.add(healthLabel,gbc);
-        ImageIcon heartBW = new ImageIcon("resources/icons/heartBW.png");
-        JLabel healthLabel2 = new JLabel(heartBW,JLabel.CENTER);
-        gbc.gridx=2;
-        infoPanel.add(healthLabel2,gbc);
+        // Create text field for organism's name
+        createLabel(infoPanel,"Name :",JLabel.CENTER,gbc,new Insets(5,0,0,5),0,0,1,1);
+        createTextField(infoPanel,15,gbc,"StatNameUpdate",listener,defaultInsets,1,0,1,1, true);
+
+        // Create health stat
+        createIconLabel(infoPanel,"resources/icons/heart.png",JLabel.CENTER,gbc,new Insets(5,0,0,5),0,1,1,1);
+        createLabel(infoPanel,"100",JLabel.LEFT,gbc,defaultInsets,1,1,1,1);
+
+        // Create hunger stat
+        createIconLabel(infoPanel,"resources/icons/hunger.png",JLabel.CENTER,gbc,new Insets(5,0,0,5),0,2,1,1);
+        createLabel(infoPanel,"100",JLabel.LEFT,gbc,defaultInsets,1,2,1,1);
+
+        // Create speed stat
+        createIconLabel(infoPanel,"resources/icons/speed.png",JLabel.CENTER,gbc,new Insets(5,0,0,5),0,3,1,1);
+        createLabel(infoPanel,"100",JLabel.LEFT,gbc,defaultInsets,1,3,1,1);
     }
 
     /**
@@ -147,11 +181,13 @@ public class SidePanel extends JPanel{
      * Generic method to create a TextField
      * @see #createButton for params
      * @param columns the number of char that should fit in the field
+     * @param isEditable
      */
-    private static void createTextField(JPanel panel, int columns, GridBagConstraints gbc, String actionCommand, ActionListener listener, Insets insets, int gridx, int gridy, int gridwidth, int gridheight) {
+    private static void createTextField(JPanel panel, int columns, GridBagConstraints gbc, String actionCommand, ActionListener listener, Insets insets, int gridx, int gridy, int gridwidth, int gridheight, boolean isEditable) {
         JTextField textField = new JTextField(columns);
         textField.addActionListener(listener);
         textField.setActionCommand(actionCommand);
+        textField.setEditable(isEditable);
         if(insets==null){
             gbc.insets = new Insets(0,0,0,0);
         }
@@ -210,5 +246,48 @@ public class SidePanel extends JPanel{
         gbc.gridx = gridx;
         gbc.gridy= gridy;
         panel.add(comboBox,gbc);
+    }
+
+
+    /* Create a health bar for an animal, might be useful later ?
+    private static void createHealthBarFor(Animal animal, JPanel panel, GridBagConstraints gbc) {
+        int i;
+        ImageIcon heart = new ImageIcon("resources/icons/heart.png");
+        ImageIcon heartBW = new ImageIcon("resources/icons/heartBW.png");
+        Insets defaultInsets = new Insets(5,0,0,5);
+        for(i=0;i<animal.getHP()/10;i++)
+        {
+            JLabel icon = new JLabel(heart,JLabel.CENTER);
+            gbc.gridx = i+1;
+            gbc.insets = defaultInsets;
+            panel.add(icon,gbc);
+        }
+        for(; i<10; i++)
+        {
+            JLabel icon = new JLabel(heartBW,JLabel.CENTER);
+            gbc.gridx = i+1;
+            gbc.insets = defaultInsets;
+            panel.add(icon,gbc);
+        }
+    }*/
+
+    /**
+     * Generic method to create an icon label
+     * @param imagePath path to the image
+     * @see #createLabel for other params
+     */
+    private static void createIconLabel(JPanel panel, String imagePath, int horizontalAlignement, GridBagConstraints gbc, Insets insets, int gridx, int gridy, int gridwidth, int gridheight) {
+        JLabel label = new JLabel(new ImageIcon(imagePath), horizontalAlignement);
+        gbc.gridx = gridx;
+        gbc.gridy = gridy;
+        if(insets==null) {
+            gbc.insets = new Insets(0,0,0,0);
+        }
+        else {
+            gbc.insets = insets;
+        }
+        gbc.gridwidth = gridwidth;
+        gbc.gridheight = gridheight;
+        panel.add(label,gbc);
     }
 }
