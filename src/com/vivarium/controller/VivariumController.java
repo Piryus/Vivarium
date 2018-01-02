@@ -87,7 +87,7 @@ public class VivariumController {
 
 
 
-    public void evoluateH(Herbivore h,long dt) // methode expérimental a tester pour implémentation ultérieur dans les autres class
+    public void evoluateH(Herbivore h,long dt) 
     {
         h.setHunger(h.getHunger()+0.005f);
         Coordinates c0 = new Coordinates(0,0);
