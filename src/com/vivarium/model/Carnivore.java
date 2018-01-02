@@ -23,10 +23,15 @@ public class  Carnivore extends Animal
 		return false;
 	}
 
-	public void lookForFood(Carnivore predator)
+
+
+	/*
+	* Retourne à l'indice 0 le coefX à prendre, et à l'indice 1 le coefY
+	* */
+	public int[] lookForFood(Carnivore predator)
 	{
 		Animal prey = this.vivarium.scanForPrey(predator);
-
+		int[] ret = new int[2];
 		if(prey != null)
 		{
 			if(prey.getPos().getX()<this.getPos().getX())
@@ -65,14 +70,21 @@ public class  Carnivore extends Animal
 			else if (this.getPos().getY()-getSize()/2 <0){
 				coefY = 1;
 			}
+
 		}
 
+		ret[0] = this.coefX;
+		ret[1] = this.coefY;
+		return ret;
 	}
 
-	public void lookForMate(Carnivore c)
+	/*
+	* Retourne à l'indice 0 le coefX à prendre, et à l'indice 1 le coefY
+	* */
+	public int[] lookForMate(Carnivore c)
 	{
 		Animal mate = this.vivarium.scanOtherGender(c);
-
+		int[] ret = new int[2];
 		if(mate != null)
 		{
 			if(mate.getPos().getX()<this.getPos().getX())
@@ -114,6 +126,10 @@ public class  Carnivore extends Animal
 			}
 		}
 
+		ret[0] = this.coefX;
+		ret[1] = this.coefY;
+		return ret;
+
 	}
 
 
@@ -122,6 +138,8 @@ public class  Carnivore extends Animal
 		return getHunger()>=5;
 	}
 
+
+	// TODO : REGARDER CA DE PLUS PRES
 	public int getCoefX() {
 		return coefX;
 

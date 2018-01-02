@@ -22,10 +22,10 @@ public abstract class Organism {
 
     /**
      * Constructor with parameters
-     * @param x the abscissa of the organism's position
-     * @param y the ordinate of the organism's position
-     * @param size the organism's size
-     * @param v the vivarium in which the organism will evolve
+     * @param x abscissa of the organism's position
+     * @param y ordinate of the organism's position
+     * @param size organism's size
+     * @param v vivarium in which the organism will evolve
      * @param avArea ?? //TODO Comment
      */
     public Organism(int x,int y, int size,Vivarium v, ArrayList<AreaType> avArea) {
@@ -81,20 +81,7 @@ public abstract class Organism {
         return CurrentAreaType;
     }
 
-    /**
-     *
-     * @param coords
-     * @return
-     */
-    public Organism getOrganismAt(Coordinates coords) {
-        Organism organismFound = null;
-        for(Organism o : vivarium.getOrganisms()) {
-            if((coords.getX()>=o.getPos().getX()-20)&&(coords.getX()<=o.getPos().getX()+20)&&(coords.getY()>=o.getPos().getY()-20)&&(coords.getY()<=o.getPos().getY()+20)) {
-                organismFound = o;
-            }
-        }
-        return organismFound;
-    }
+
 
     public ArrayList<AreaType> getAvailaibleArea() {
         return availaibleArea;

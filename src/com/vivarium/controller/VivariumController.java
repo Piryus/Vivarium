@@ -39,18 +39,6 @@ public class VivariumController {
 
     public synchronized void loop(){
         long t;
-        /*
-        for (Organism o: vivarium.getOrganisms()) {
-            t = System.currentTimeMillis();
-            if (o instanceof Animal) {
-                if (((Animal) o).getHP() == 0) {
-                    delete(o);
-                }
-            }
-            o.evoluate(t - lastCall.get(o.getID()));
-            lastCall.replace(o.getID(), t);
-        }*/
-
         for (int i = vivarium.getOrganisms().size()-1;i>=0;i--){
             t = System.currentTimeMillis();
             Organism o = vivarium.getOrganisms().get(i);
@@ -89,7 +77,7 @@ public class VivariumController {
 
     public void evoluateH(Herbivore h,long dt) 
     {
-        h.setHunger(h.getHunger()+0.005f);
+        h.setHunger(h.getHunger()+0.001f);
         Coordinates c0 = new Coordinates(0,0);
         Coordinates c=h.getCoordDanger(100);
         AreaType area = h.getCurrentAreaType();
@@ -111,22 +99,41 @@ public class VivariumController {
         }
     }
     public void evoluateC(Carnivore c,long dt)
-    {   c.move(dt * c.getSpeed() * c.getCoefX(), dt * c.getSpeed() * c.getCoefY());
+    {
+        int coefX=1; int coefY =1;
+        int[] coefs = new int[2];
 
         AreaType area = c.getCurrentAreaType();
-        if(!c.getAvailaibleArea().contains(area)) c.setHP(c.getHP()-c.getVitality()*dt);
-        if(c.getHunger()>= 10) c.setHP(c.getHP()-c.getVitality()*dt);
-        if(c.getHunger()<=4) c.setHP(c.getHP()+c.getVitality()*dt);
+        if(!c.getAvailaibleArea().contains(area))
+        {
+            c.setHP(c.getHP()-c.getVitality()*dt);
+        }
+        if(c.getHunger()>= 10)
+        {
+            c.setHP(c.getHP()-c.getVitality()*dt);
+        }
+        if(c.getHunger()<=4)
+        {
+            c.setHP(c.getHP()+c.getVitality()*dt);
+        }
+
+
         if(c.isHungry())
         {
-
-            c.lookForFood(c);
+            coefs  = c.lookForFood(c);
+            coefX = coefs[0];
+            coefY = coefs[1];
         }
         else
         {
-            c.lookForMate(c);
+            coefs  = c.lookForMate(c);
+            coefX = coefs[0];
+            coefY = coefs[1];
         }
         c.setHunger(c.getHunger()+(0.005f * dt ));
+        // TODO : REGARDER CA DE PLUS PRÊT -> On devrait recalculer les coefs je pense.
+        c.move(dt * c.getSpeed() * coefX, dt * c.getSpeed() * coefY);
+
     }
     public void evoluateV (Vegetal v ,long dt){
         if (!v.getEdible()){

@@ -1,0 +1,10 @@
+Ce diagramme de séquence représente le fonctionnement global du jeu.
+
+Premièrement, il y a une phase d'initialisation où sont créés la fenêtre de jeu, le Vivarium (modèle),  le VivariumController, et le VivariumRenderer (en réalité, on créé un GamePanel, qui lui créé le VivariumRenderer, et ce gamePanel est ajouté à la fenêtre (Frame) du jeu). Certains éléments ne sont pas représentés ici, tel que le remplissage du VivariumController (et donc du Vivarium) par des Organismes, ou encore la création du panneau latéral qui permet l’interaction avec les Organismes du Vivarium.
+
+Ensuite, on entre dans la boucle de jeu. On commence par appeler la fonction loop du VivariumController, dont le but est de récupérer chaque Organisme, de le retirer du vivarium s'il est mort (et de l'ajouter a la liste des Organismes détruits), ou bien de le faire évoluer
+grâce à la méthode evoluate. Cette méthode prend en paramètre le temps qui s'est écoulé depuis la dernière fois où l'organisme a évolué. Cela permet une évolution uniforme de tous les organismes, et leur permet, par exemple, de garder une vitesse constante tout au long de l’exécution du programme.
+
+Une fois que le VivariumController a mis à jour le modèle, c'est au tour de la vue d'être mise à jour. Pour cela, on vérifie d'abord si il n'y a pas de nouveaux organismes à ajouter ou à détruire. Ces listes d'organismes peuvent être trouvées à l'aide des méthodes getNewOrganisms(), et getOldOrganisms() de VivariumController. Il reste alors a redessiner chaque OrganismView avec draw.
+
+A la fin de chaque boucle de jeu, nous avons rajouté un délais pour soulager le processeur.
