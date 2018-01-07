@@ -2,6 +2,8 @@ package com.vivarium.model;
 import java.lang.reflect.Array;
 import java.util.*;
 
+import static java.lang.Math.abs;
+
 /**
  * 
  */
@@ -67,7 +69,8 @@ public class Vivarium {
     {
         for(Organism o :getOrganisms())
         {
-            if(o.getPos().getX() == posX && o.getPos().getY() == posY)
+            //if(o.getPos().getX() == posX && o.getPos().getY() == posY)
+            if (abs(o.getPos().getX() - posX) <= o.getSize() && abs(o.getPos().getY() - posY) <= o.getSize())
             {
                 return o;
             }

@@ -2,30 +2,39 @@ package com.vivarium.view;
 
 import com.vivarium.controller.SidePanelActionListener;
 import com.vivarium.controller.VivariumController;
+import com.vivarium.model.Animal;
+import com.vivarium.model.Organism;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
 
 public class SidePanel extends JPanel{
 
     private SidePanelActionListener listener;
     private VivariumController vc;
+    private Organism focus;
+    private HashMap<String, JLabel> dictLabel;
+    private JTextField focusName;
+
 
     public SidePanel(VivariumController vc) {
         super();
         this.vc = vc;
-
+        focus = null;
         //setLayout(new GridLayout(2,1));
         setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
 
         // Create Listener for ActionEvents
         listener = new SidePanelActionListener(this, vc);
-
+        dictLabel = new HashMap<>();
         createSpawnPosPanel();
         createSpawnAnimalPanel();
         createSpawnVegetalPanel();
         createStatsPanel();
+
+
     }
 
     /**
@@ -44,11 +53,11 @@ public class SidePanel extends JPanel{
         Insets defaultInsets = new Insets(5,0,0,0);
 
         // Create X position field
-        createLabel(spawnPosPanel,"X :",JLabel.CENTER,gbc,defaultInsets,0,0,1,1);
+        createLabel(spawnPosPanel, "SpawnPosX","X :",JLabel.CENTER,gbc,defaultInsets,0,0,1,1);
         createTextField(spawnPosPanel,6,gbc,null,listener,defaultInsets,1,0,1,1, false);
 
         // Create Y position field
-        createLabel(spawnPosPanel,"Y :",JLabel.CENTER,gbc,defaultInsets,0,1,1,1);
+        createLabel(spawnPosPanel,"SpawnPosY","Y :",JLabel.CENTER,gbc,defaultInsets,0,1,1,1);
         createTextField(spawnPosPanel,6,gbc,null,listener,defaultInsets,1,1,1,1, false);
 
         // Create the "set" button
@@ -79,7 +88,7 @@ public class SidePanel extends JPanel{
         createComboBox(spawnPanel,animalSexStrings, gbc,"Sex",listener,defaultInsets,1,0,1,1);
 
         // Create text field for organism's name
-        createLabel(spawnPanel,"Name :",JLabel.CENTER,gbc,defaultInsets,0,1,1,1);
+        createLabel(spawnPanel,"SpawnnameFocus","Name :",JLabel.CENTER,gbc,defaultInsets,0,1,1,1);
         createTextField(spawnPanel,15,gbc,"NameUpdate",listener,defaultInsets,1,1,1,1, true);
 
         // Create spawn button
@@ -126,23 +135,57 @@ public class SidePanel extends JPanel{
         Insets defaultInsets = new Insets(5,0,0,0);
 
         // Create text field for organism's name
-        createLabel(infoPanel,"Name :",JLabel.CENTER,gbc,new Insets(5,0,0,5),0,0,1,1);
-        createTextField(infoPanel,15,gbc,"StatNameUpdate",listener,defaultInsets,1,0,1,1, true);
+        createLabel(infoPanel,"infoName","Name :",JLabel.CENTER,gbc,new Insets(5,0,0,5),0,0,1,1);
+        //createTextField(infoPanel,15,gbc,"StatNameUpdate",listener,defaultInsets,1,0,1,1, true);
+        //private static void createTextField(JPanel panel, int columns, GridBagConstraints gbc, String actionCommand, ActionListener listener, Insets insets, int gridx, int gridy, int gridwidth, int gridheight, boolean isEditable) {
+        focusName = new JTextField(15);
+        focusName.addActionListener(listener);
+        focusName.setActionCommand("StatNameUpdate");
+        focusName.setEditable(true);
+        gbc.insets = defaultInsets;
+        gbc.gridx=1;
+        gbc.gridy=0;
+        gbc.gridwidth=1;
+        gbc.gridheight=1;
+        infoPanel.add(focusName,gbc);
+
+
 
         // Create health stat
         createIconLabel(infoPanel,"resources/icons/heart.png",JLabel.CENTER,gbc,new Insets(5,0,0,5),0,1,1,1);
-        createLabel(infoPanel,"100",JLabel.LEFT,gbc,defaultInsets,1,1,1,1);
+        createLabel(infoPanel,"infoHealth","100",JLabel.LEFT,gbc,defaultInsets,1,1,1,1);
 
         // Create hunger stat
         createIconLabel(infoPanel,"resources/icons/hunger.png",JLabel.CENTER,gbc,new Insets(5,0,0,5),0,2,1,1);
-        createLabel(infoPanel,"100",JLabel.LEFT,gbc,defaultInsets,1,2,1,1);
+        createLabel(infoPanel,"infoHunger","100",JLabel.LEFT,gbc,defaultInsets,1,2,1,1);
 
         // Create speed stat
         createIconLabel(infoPanel,"resources/icons/speed.png",JLabel.CENTER,gbc,new Insets(5,0,0,5),0,3,1,1);
-        createLabel(infoPanel,"100",JLabel.LEFT,gbc,defaultInsets,1,3,1,1);
+        createLabel(infoPanel,"infoSpeed","100",JLabel.LEFT,gbc,defaultInsets,1,3,1,1);
 
         // Create kill button
         createIconButton(infoPanel,"resources/icons/skull.png", gbc, "Kill",listener,defaultInsets,0,4,2,1);
+    }
+
+    void setFocus(Organism focus){
+        if (focus != null){
+            this.focus = focus;
+
+            this.focusName.setText(focus.getName());
+
+            if (focus instanceof Animal){
+                dictLabel.get("infoHealth").setText(Float.toString(((Animal)focus).getHP()));
+                dictLabel.get("infoHunger").setText(Float.toString(((Animal)focus).getHunger()));
+                dictLabel.get("infoSpeed").setText(Float.toString(((Animal)focus).getSpeed()));
+            }
+            else{
+                dictLabel.get("infoHealth").setText("NaN");
+                dictLabel.get("infoHunger").setText("NaN");
+                dictLabel.get("infoSpeed").setText("NaN");
+            }
+
+        }
+
     }
 
     /**
@@ -236,8 +279,9 @@ public class SidePanel extends JPanel{
      * @param text the label text
      * @param horizontalAlignement how should the text behave (centered horizontally, etc)
      */
-    private static void createLabel(JPanel panel, String text, int horizontalAlignement, GridBagConstraints gbc, Insets insets, int gridx, int gridy, int gridwidth, int gridheight) {
+    private void createLabel(JPanel panel, String name, String text, int horizontalAlignement, GridBagConstraints gbc, Insets insets, int gridx, int gridy, int gridwidth, int gridheight) {
         JLabel label = new JLabel(text, horizontalAlignement);
+        dictLabel.put(name, label);
         gbc.gridx = gridx;
         gbc.gridy = gridy;
         if(insets==null) {
@@ -318,4 +362,6 @@ public class SidePanel extends JPanel{
         gbc.gridheight = gridheight;
         panel.add(label,gbc);
     }
+
+
 }

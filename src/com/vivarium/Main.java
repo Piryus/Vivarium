@@ -31,9 +31,9 @@ public class Main {
         VivariumController vc = new VivariumController(vivarium);
         Random ran = new Random();
 
-
-        GamePanel gp = new GamePanel(vc);
         SidePanel sidePanel = new SidePanel(vc);
+        GamePanel gp = new GamePanel(vc, sidePanel);
+
         JScrollPane sp = new JScrollPane(gp,ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         window.add(sp, BorderLayout.CENTER);
         window.add(sidePanel,BorderLayout.EAST);

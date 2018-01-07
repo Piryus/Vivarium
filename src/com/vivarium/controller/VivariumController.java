@@ -144,4 +144,8 @@ public class VivariumController {
             }
         }
     }
+
+    public synchronized Organism getOrganismAtPos(double posX, double posY){
+        return vivarium.getOrganismAtPos(posX,posY);
+    }
 }

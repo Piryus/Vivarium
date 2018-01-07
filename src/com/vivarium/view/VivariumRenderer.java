@@ -5,10 +5,12 @@ import com.vivarium.model.Organism;
 import com.vivarium.model.Vivarium;
 
 import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.function.Predicate;
 
-public class VivariumRenderer implements Renderer {
+public class VivariumRenderer implements Renderer{
 
     private VivariumController vivarium;
     private TerrainView terrainView;
@@ -26,11 +28,11 @@ public class VivariumRenderer implements Renderer {
     public void render(Graphics g) {
         /* Render terrain */
         this.terrainView.draw(g);
-        for (Organism o : vivarium.getNewOrganisms()){
+        for (Organism o : vivarium.getNewOrganisms()) {
             organismView.add(new OrganismView(o));
         }
 
-        for (Organism o : vivarium.getOldOrganisms()){
+        for (Organism o : vivarium.getOldOrganisms()) {
             Predicate<OrganismView> test = new Predicate<OrganismView>() {
                 @Override
                 public boolean test(OrganismView ov) {
@@ -40,7 +42,7 @@ public class VivariumRenderer implements Renderer {
             organismView.removeIf(test);
         }
         vivarium.clearOldNew();
-        for(int i=0;i<this.organismView.size();i++) {
+        for (int i = 0; i < this.organismView.size(); i++) {
             organismView.get(i).draw(g);
         }
     }
