@@ -55,12 +55,14 @@ public class SidePanel extends JPanel{
         Insets defaultInsets = new Insets(5,0,0,0);
 
         // Create X position field
-        createLabel(spawnPosPanel, "SpawnPosX","X :",JLabel.CENTER,gbc,defaultInsets,0,0,1,1);
+        createLabel(spawnPosPanel, "SpawnPosX_","X :",JLabel.CENTER,gbc,defaultInsets,0,0,1,1);
         createTextField(spawnPosPanel,"SpawnPosX",6,gbc,null,listener,defaultInsets,1,0,1,1, false);
+        dictText.get("SpawnPosX").setText("0");
 
         // Create Y position field
-        createLabel(spawnPosPanel,"SpawnPosY","Y :",JLabel.CENTER,gbc,defaultInsets,0,1,1,1);
+        createLabel(spawnPosPanel,"SpawnPosY_","Y :",JLabel.CENTER,gbc,defaultInsets,0,1,1,1);
         createTextField(spawnPosPanel,"SpawnPosY",6,gbc,null,listener,defaultInsets,1,1,1,1, false);
+        dictText.get("SpawnPosY").setText("0");
 
         // Create the "set" button
         //createButton(spawnPosPanel,"Set",gbc,"Setting coords",listener,defaultInsets,0,2,2,1);
@@ -181,6 +183,14 @@ public class SidePanel extends JPanel{
     public void setSpawnPos(int x, int y){
         dictText.get("SpawnPosX").setText(Integer.toString(x));
         dictText.get("SpawnPosY").setText(Integer.toString(y));
+    }
+
+    public int getSpawnPosX(){
+        return Integer.parseInt(dictText.get("SpawnPosX").getText());
+    }
+
+    public int getSpawnPosY(){
+        return Integer.parseInt(dictText.get("SpawnPosY").getText());
     }
 
     /**

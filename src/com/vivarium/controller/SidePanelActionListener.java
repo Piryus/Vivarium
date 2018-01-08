@@ -44,7 +44,7 @@ public class SidePanelActionListener implements ActionListener {
             try {
                 Class organism = Class.forName("com.vivarium.model."+AnimalNameComboBox);
                 Constructor constructor = organism.getConstructor(int.class,int.class,Vivarium.class,Sex.class);
-                vc.add((Organism)constructor.newInstance(new Object[]{100,100,vc.getVivarium(), AnimalSexComboBox}));
+                vc.add((Organism)constructor.newInstance(new Object[]{sidePanel.getSpawnPosX(),sidePanel.getSpawnPosY(),vc.getVivarium(), AnimalSexComboBox}));
             } catch (ClassNotFoundException e1) {
                 e1.printStackTrace();
             } catch (NoSuchMethodException e1) {
