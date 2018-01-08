@@ -50,7 +50,13 @@ public class SidePanelActionListener implements ActionListener {
 
         // If the user clicks on the animal spawn button
         if("Spawn".equals(e.getActionCommand())) {
-            Organism o = OrganismFactory.AnimalFactory(AnimalNameComboBox,sidePanel.getSpawnPosX(),sidePanel.getSpawnPosY(),vc.getVivarium(), AnimalSexComboBox);
+            Organism o = null;
+            try{
+                o = OrganismFactory.AnimalFactory(AnimalNameComboBox,sidePanel.getSpawnPosX(),sidePanel.getSpawnPosY(),vc.getVivarium(), AnimalSexComboBox);
+            } catch (Exception e1) {
+                e1.printStackTrace();
+            }
+
             String newName = sidePanel.getNewAnimalName();
             if (!newName.equals(""))
                 o.setName(newName);
@@ -61,7 +67,12 @@ public class SidePanelActionListener implements ActionListener {
 
         // If the user clicks on the vegetal spawn button
         if("SpawnVegetal".equals(e.getActionCommand())) {
-            Organism o = OrganismFactory.VegetalFactory(AnimalNameComboBox,sidePanel.getSpawnPosX(),sidePanel.getSpawnPosY(),vc.getVivarium());
+            Organism o = null;
+            try {
+                o = OrganismFactory.VegetalFactory(VegetalNameComboBox,sidePanel.getSpawnPosX(),sidePanel.getSpawnPosY(),vc.getVivarium());
+            } catch (Exception e1) {
+                e1.printStackTrace();
+            }
             String newName = sidePanel.getNewVegetalName();
             if(!newName.equals(""))
                 o.setName(newName);

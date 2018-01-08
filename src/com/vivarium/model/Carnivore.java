@@ -106,7 +106,12 @@ public abstract class Carnivore extends Animal
 
 			this.hunger += 5;
 			if (type == Sex.Female)
-				OrganismFactory.AnimalFactory(this.getSpecie(),(int)this.getPos().getX(), (int)this.getPos().getY(), vivarium,Sex.getRandom());
+				try{
+					OrganismFactory.AnimalFactory(this.getSpecie(),(int)this.getPos().getX(), (int)this.getPos().getY(), vivarium,Sex.getRandom());
+				} catch(Exception e){
+					e.printStackTrace();
+				}
+
 		}
 		else
 		{

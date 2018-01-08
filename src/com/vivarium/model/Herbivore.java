@@ -120,7 +120,13 @@ public abstract class Herbivore extends Animal {
                 //System.out.print("se reproduit \n");
                 this.hunger += 5;
                 if (type == Sex.Female)
-                    OrganismFactory.AnimalFactory(this.getSpecie(),(int)this.getPos().getX(), (int)this.getPos().getY(), vivarium,Sex.getRandom());
+                    try{
+                        OrganismFactory.AnimalFactory(this.getSpecie(),(int)this.getPos().getX(), (int)this.getPos().getY(), vivarium,Sex.getRandom());
+                    }
+                    catch (Exception e){
+                        e.printStackTrace();
+                    }
+
             }
             if (mate.getPos().getX() < this.getPos().getX()) {
                 coefX = -1;
