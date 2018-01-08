@@ -102,10 +102,10 @@ public class Vivarium {
             if(predator.getPos().isCloser(a.getPos(),rep))
             {
                 rep = a.getPos();
+                prey = a;
             }
         }
-
-        prey = (Animal)getOrganismAtPos(rep.getX(),rep.getY());
+        //prey = (Animal)getOrganismAtPos(rep.getX(),rep.getY());
         return prey;
 
     }

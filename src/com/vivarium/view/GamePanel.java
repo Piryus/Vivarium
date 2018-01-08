@@ -26,6 +26,7 @@ public class GamePanel extends JPanel{
                 Organism o = vivarium.getOrganismAtPos(e.getX(), e.getY());
                 if (o != null)
                     sp.setFocus(o);
+                sp.setSpawnPos(e.getX(),e.getY());
             }
         });
     }

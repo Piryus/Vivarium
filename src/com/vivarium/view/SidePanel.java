@@ -16,6 +16,7 @@ public class SidePanel extends JPanel{
     private VivariumController vc;
     private Organism focus;
     private HashMap<String, JLabel> dictLabel;
+    private HashMap<String, JTextField> dictText;
     private JTextField focusName;
 
 
@@ -29,6 +30,7 @@ public class SidePanel extends JPanel{
         // Create Listener for ActionEvents
         listener = new SidePanelActionListener(this, vc);
         dictLabel = new HashMap<>();
+        dictText = new HashMap<>();
         createSpawnPosPanel();
         createSpawnAnimalPanel();
         createSpawnVegetalPanel();
@@ -54,14 +56,14 @@ public class SidePanel extends JPanel{
 
         // Create X position field
         createLabel(spawnPosPanel, "SpawnPosX","X :",JLabel.CENTER,gbc,defaultInsets,0,0,1,1);
-        createTextField(spawnPosPanel,6,gbc,null,listener,defaultInsets,1,0,1,1, false);
+        createTextField(spawnPosPanel,"SpawnPosX",6,gbc,null,listener,defaultInsets,1,0,1,1, false);
 
         // Create Y position field
         createLabel(spawnPosPanel,"SpawnPosY","Y :",JLabel.CENTER,gbc,defaultInsets,0,1,1,1);
-        createTextField(spawnPosPanel,6,gbc,null,listener,defaultInsets,1,1,1,1, false);
+        createTextField(spawnPosPanel,"SpawnPosY",6,gbc,null,listener,defaultInsets,1,1,1,1, false);
 
         // Create the "set" button
-        createButton(spawnPosPanel,"Set",gbc,"Setting coords",listener,defaultInsets,0,2,2,1);
+        //createButton(spawnPosPanel,"Set",gbc,"Setting coords",listener,defaultInsets,0,2,2,1);
     }
 
     /**
@@ -89,7 +91,7 @@ public class SidePanel extends JPanel{
 
         // Create text field for organism's name
         createLabel(spawnPanel,"SpawnnameFocus","Name :",JLabel.CENTER,gbc,defaultInsets,0,1,1,1);
-        createTextField(spawnPanel,15,gbc,"NameUpdate",listener,defaultInsets,1,1,1,1, true);
+        createTextField(spawnPanel,"NameUpdate",15,gbc,"NameUpdate",listener,defaultInsets,1,1,1,1, true);
 
         // Create spawn button
         createButton(spawnPanel,"Spawn",gbc,"Spawn",listener,defaultInsets,0,2,2,1);
@@ -136,19 +138,7 @@ public class SidePanel extends JPanel{
 
         // Create text field for organism's name
         createLabel(infoPanel,"infoName","Name :",JLabel.CENTER,gbc,new Insets(5,0,0,5),0,0,1,1);
-        //createTextField(infoPanel,15,gbc,"StatNameUpdate",listener,defaultInsets,1,0,1,1, true);
-        //private static void createTextField(JPanel panel, int columns, GridBagConstraints gbc, String actionCommand, ActionListener listener, Insets insets, int gridx, int gridy, int gridwidth, int gridheight, boolean isEditable) {
-        focusName = new JTextField(15);
-        focusName.addActionListener(listener);
-        focusName.setActionCommand("StatNameUpdate");
-        focusName.setEditable(true);
-        gbc.insets = defaultInsets;
-        gbc.gridx=1;
-        gbc.gridy=0;
-        gbc.gridwidth=1;
-        gbc.gridheight=1;
-        infoPanel.add(focusName,gbc);
-
+        createTextField(infoPanel,"StatNameUpdate",15,gbc,"StatNameUpdate",listener,defaultInsets,1,0,1,1, true);
 
 
         // Create health stat
@@ -167,11 +157,11 @@ public class SidePanel extends JPanel{
         createIconButton(infoPanel,"resources/icons/skull.png", gbc, "Kill",listener,defaultInsets,0,4,2,1);
     }
 
-    void setFocus(Organism focus){
+    public void setFocus(Organism focus){
         if (focus != null){
             this.focus = focus;
 
-            this.focusName.setText(focus.getName());
+            dictText.get("StatNameUpdate").setText(focus.getName());
 
             if (focus instanceof Animal){
                 dictLabel.get("infoHealth").setText(Float.toString(((Animal)focus).getHP()));
@@ -186,6 +176,11 @@ public class SidePanel extends JPanel{
 
         }
 
+    }
+
+    public void setSpawnPos(int x, int y){
+        dictText.get("SpawnPosX").setText(Integer.toString(x));
+        dictText.get("SpawnPosY").setText(Integer.toString(y));
     }
 
     /**
@@ -254,8 +249,9 @@ public class SidePanel extends JPanel{
      * @param columns the number of char that should fit in the field
      * @param isEditable
      */
-    private static void createTextField(JPanel panel, int columns, GridBagConstraints gbc, String actionCommand, ActionListener listener, Insets insets, int gridx, int gridy, int gridwidth, int gridheight, boolean isEditable) {
+    private void createTextField(JPanel panel, String name, int columns, GridBagConstraints gbc, String actionCommand, ActionListener listener, Insets insets, int gridx, int gridy, int gridwidth, int gridheight, boolean isEditable) {
         JTextField textField = new JTextField(columns);
+        dictText.put(name,textField);
         textField.addActionListener(listener);
         textField.setActionCommand(actionCommand);
         textField.setEditable(isEditable);
