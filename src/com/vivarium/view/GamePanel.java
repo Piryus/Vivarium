@@ -11,11 +11,19 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+/**
+ * GamePanel class is essential to the game, it is the window's area in which the terrain and the organisms are displayed
+ */
 public class GamePanel extends JPanel{
 
     private VivariumRenderer vivariumRenderer;
     private SidePanel sp;
 
+    /**
+     * The GamePanel constructor
+     * @param vivarium
+     * @param sp the sidePanel, necessary to display organisms' stats
+     */
     public GamePanel(VivariumController vivarium, SidePanel sp) {
         vivariumRenderer = new VivariumRenderer(vivarium);
         this.sp = sp;
@@ -31,15 +39,23 @@ public class GamePanel extends JPanel{
         });
     }
 
+    /**
+     * Calls the vivarium renderer to display the terrain and the organisms
+     * @param g the Graphics object
+     */
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         vivariumRenderer.render(g);
     }
 
+    /**
+     * A simple but very important function that returns the desired size of the GamePanel, thus the terrain's size
+     * @return a Dimension object, containing gamePanel's width and height
+     */
     @Override
     public Dimension getPreferredSize() {
-        return new Dimension(5000,5000); // TODO dynamic
+        return new Dimension(5000,5000);
     }
 
 }
