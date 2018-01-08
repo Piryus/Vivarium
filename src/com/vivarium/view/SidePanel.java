@@ -188,6 +188,10 @@ public class SidePanel extends JPanel{
         return  dictText.get("NameUpdate").getText();
     }
 
+    public String getFocusName(){
+        return dictText.get("StatNameUpdate").getText();
+    }
+
     public void setSpawnPos(int x, int y){
         dictText.get("SpawnPosX").setText(Integer.toString(x));
         dictText.get("SpawnPosY").setText(Integer.toString(y));

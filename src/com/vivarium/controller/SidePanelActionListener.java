@@ -69,5 +69,9 @@ public class SidePanelActionListener implements ActionListener {
             }
         }
 
+        if ("StatNameUpdate".equals(e.getActionCommand())){
+            sidePanel.getFocus().setName(sidePanel.getFocusName());
+        }
+
     }
 }
