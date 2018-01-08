@@ -28,29 +28,36 @@ public class SidePanelActionListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
+        // If the user changes the animal in the side panel's appropriate combo box, gets the animal name
         if("Choice".equals(e.getActionCommand())) {
             JComboBox cb = (JComboBox)e.getSource();
             AnimalNameComboBox = (String)cb.getSelectedItem();
         }
 
+        // If the user changes the vegetal in the side panel's appropriate combo box, gets the vegetal name
         if("VegetalChoice".equals(e.getActionCommand())) {
             JComboBox cb = (JComboBox)e.getSource();
             VegetalNameComboBox = (String)cb.getSelectedItem();
         }
 
+        // If the user changes the animal's sex in the side panel's appropriate combo box, gets the sex
         if("Sex".equals(e.getActionCommand())) {
             JComboBox cb = (JComboBox)e.getSource();
-            // TODO Less dirty code
             if("Male".equals(cb.getSelectedItem())) {
                 AnimalSexComboBox = Sex.Male;
             }
             else AnimalSexComboBox = Sex.Female;
         }
 
+        // If the user clicks on the animal spawn button
         if("Spawn".equals(e.getActionCommand())) {
+            // We create a new instance of an animal class from an animal's string
             try {
+                // Gets the class name from the string selected in the animal's combo box
                 Class organism = Class.forName("com.vivarium.model."+AnimalNameComboBox);
+                // Gets the constructor for this class
                 Constructor constructor = organism.getConstructor(int.class,int.class,Vivarium.class,Sex.class);
+                // And finally creates a new instance of the animal
                 Organism o = (Organism)constructor.newInstance(new Object[]{sidePanel.getSpawnPosX(),sidePanel.getSpawnPosY(),vc.getVivarium(), AnimalSexComboBox});
                 String newName = sidePanel.getNewName();
                 if (!newName.equals(""))
@@ -70,6 +77,7 @@ public class SidePanelActionListener implements ActionListener {
             }
         }
 
+        // If the user clicks on the vegetal spawn button
         if("SpawnVegetal".equals(e.getActionCommand())) {
             try {
                 Class vegetal = Class.forName("com.vivarium.model."+VegetalNameComboBox);
@@ -90,8 +98,11 @@ public class SidePanelActionListener implements ActionListener {
             }
         }
 
+        // If the user clicks on the kill button
         if ("Kill".equals(e.getActionCommand())){
+            // Checks whether the focus is on an organism or not
             if (sidePanel.getFocus() != null){
+                // If it is, delete this animal from the vivarium
                 vc.delete(sidePanel.getFocus());
             }
         }
