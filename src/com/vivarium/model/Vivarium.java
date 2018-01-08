@@ -70,7 +70,7 @@ public class Vivarium {
         for(Organism o :getOrganisms())
         {
             //if(o.getPos().getX() == posX && o.getPos().getY() == posY)
-            if (abs(o.getPos().getX() - posX) <= o.getSize() && abs(o.getPos().getY() - posY) <= o.getSize())
+            if (abs(o.getPos().getX() - posX) <= o.getSize()/2 && abs(o.getPos().getY() - posY) <= o.getSize()/2)
             {
                 return o;
             }

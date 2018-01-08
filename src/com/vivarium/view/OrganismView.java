@@ -1,6 +1,7 @@
 package com.vivarium.view;
 
 import com.vivarium.model.Organism;
+import com.vivarium.model.Vegetal;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -28,7 +29,15 @@ public class OrganismView {
     }
 
     public void draw(Graphics g) {
-        g.drawImage(icon,(int)this.organism.getPos().getX()-iconSize/2,(int)this.organism.getPos().getY()-iconSize/2,iconSize, iconSize,null);
+        if (organism instanceof Vegetal){
+            if (((Vegetal) organism).getEdible()){
+                g.drawImage(icon,(int)this.organism.getPos().getX()-iconSize/2,(int)this.organism.getPos().getY()-iconSize/2,iconSize, iconSize,null);
+            }
+        }
+        else{
+            g.drawImage(icon,(int)this.organism.getPos().getX()-iconSize/2,(int)this.organism.getPos().getY()-iconSize/2,iconSize, iconSize,null);
+        }
+
     }
 
     public Organism getOrganism() {
