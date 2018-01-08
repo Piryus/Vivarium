@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class AreaView {
 
-    private BufferedImage texture; // TODO Load 4 images for the whole terrain
+    private BufferedImage texture;
     private Area area;
 
     public AreaView(Area area) {
