@@ -112,18 +112,20 @@ public abstract class Herbivore extends Animal {
 
     /**
      * Méthode qui gere la recherche  d' animaux de la meme espèce mais d'un autre sexe dans un but de reproduction
+     * @return un nouveau animal si la recherche est fructueuse
      **/
-    public void lookForMate(long dt) {
+    public Animal lookForMate(long dt) {
+        Animal petit = null;
         double coefX = 0;
         double coefY = 0;
         Animal mate = this.vivarium.scanOtherGender(this);
         if (mate != null) {
             if (abs(mate.getPos().getX()-this.getPos().getX())<2 && abs(mate.getPos().getY()-this.getPos().getY())<2) {
                 System.out.print("se reproduit \n");
-                this.hunger += 3;
+                this.hunger += 4;
                 if (type == Sex.Female)
                     try{
-                        OrganismFactory.AnimalFactory("Dragon",(int)this.getPos().getX(), (int)this.getPos().getY(), vivarium,Sex.getRandom());
+                        petit = OrganismFactory.AnimalFactory(getSpecie(),(int)this.getPos().getX(), (int)this.getPos().getY(), vivarium,Sex.getRandom());
                     }
                     catch (Exception e){
                         e.printStackTrace();
@@ -169,6 +171,7 @@ public abstract class Herbivore extends Animal {
         if (coefX != 0 & coefY != 0) {
             this.move(dt * getSpeed() * coefX, dt * getSpeed() * coefY);
         }
+        return petit;
     }
 
 

@@ -30,10 +30,10 @@ public abstract class Carnivore extends Animal
 	/*
 	* Retourne à l'indice 0 le coefX à prendre, et à l'indice 1 le coefY
 	* */
-	public int[] lookForFood(Carnivore predator)
+	public void lookForFood(long dt)
 	{
-		Animal prey = this.vivarium.scanForPrey(predator);
-		int[] ret = new int[2];
+		Animal prey = this.vivarium.scanForPrey(this);
+		//int[] ret = new int[2];
 		if(prey != null)
 		{
 			if(prey.getPos().getX()<this.getPos().getX())
@@ -75,17 +75,19 @@ public abstract class Carnivore extends Animal
 
 		}
 
-		ret[0] = this.coefX;
-		ret[1] = this.coefY;
-		return ret;
+		//ret[0] = this.coefX;
+		//ret[1] = this.coefY;
+		move(dt * getSpeed() * coefX, dt * getSpeed() * coefY);
+		//return ret;
 	}
 
 	/*
 	* Retourne à l'indice 0 le coefX à prendre, et à l'indice 1 le coefY
 	* */
-	public int[] lookForMate(Carnivore c)
+	public Animal lookForMate(long dt)
 	{
-		Animal mate = this.vivarium.scanOtherGender(c);
+		Animal petit = null;
+		Animal mate = this.vivarium.scanOtherGender(this);
 		int[] ret = new int[2];
 		if(mate != null)
 		{
@@ -107,10 +109,10 @@ public abstract class Carnivore extends Animal
 			}
 			if (abs(mate.getPos().getX()-this.getPos().getX())<2 && abs(mate.getPos().getY()-this.getPos().getY())<2) {
 				System.out.println("euh... c'est pas un peu beaucoup là ???");
-				this.hunger += 3;
+				this.hunger += 4;
 				if (type == Sex.Female)
 					try {
-						OrganismFactory.AnimalFactory(this.getSpecie(), (int) this.getPos().getX(), (int) this.getPos().getY(), vivarium, Sex.getRandom());
+						petit = OrganismFactory.AnimalFactory(getSpecie(), (int) this.getPos().getX(), (int) this.getPos().getY(), vivarium, Sex.getRandom());
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
@@ -136,10 +138,11 @@ public abstract class Carnivore extends Animal
 			}
 		}
 
-		ret[0] = this.coefX;
-		ret[1] = this.coefY;
-		return ret;
-
+		//ret[0] = this.coefX;
+		//ret[1] = this.coefY;
+		//return ret;
+		move(dt * getSpeed() * coefX, dt * getSpeed() * coefY);
+		return petit;
 	}
 
 
