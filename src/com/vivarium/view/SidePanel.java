@@ -91,7 +91,7 @@ public class SidePanel extends JPanel{
         String[] animalSexStrings = {"Male","Female"};
         createComboBox(spawnPanel,animalSexStrings, gbc,"Sex",listener,defaultInsets,1,0,1,1);
 
-        // Create text field for organism's name
+        // Create text field for animal's name
         createLabel(spawnPanel,"SpawnnameFocus","Name :",JLabel.CENTER,gbc,defaultInsets,0,1,1,1);
         createTextField(spawnPanel,"NameUpdate",15,gbc,"NameUpdate",listener,defaultInsets,1,1,1,1, true);
 
@@ -118,10 +118,14 @@ public class SidePanel extends JPanel{
 
         // Create ComboBox to select vegetal to spawn
         String[] vegetalStrings = {"Aubergine","Cactus","Grass","Mushroom","Tree"};
-        createComboBox(spawnVegetalPanel,vegetalStrings, gbc,"VegetalChoice",listener,new Insets(5,0,0,5),0,0,1,1);
+        createComboBox(spawnVegetalPanel,vegetalStrings, gbc,"VegetalChoice",listener,new Insets(5,0,0,5),0,0,2,1);
+
+        // Create text field for animal's name
+        createLabel(spawnVegetalPanel,"VegetalSpawnnameFocus","Name :",JLabel.CENTER,gbc,defaultInsets,0,1,1,1);
+        createTextField(spawnVegetalPanel,"VegetalNameUpdate",15,gbc,"VegetalNameUpdate",listener,defaultInsets,1,1,1,1, true);
 
         // Create spawn button
-        createButton(spawnVegetalPanel,"Spawn",gbc,"SpawnVegetal",listener,defaultInsets,1,0,1,1);
+        createButton(spawnVegetalPanel,"Spawn",gbc,"SpawnVegetal",listener,defaultInsets,0,2,2,1);
     }
 
     /**
@@ -141,7 +145,6 @@ public class SidePanel extends JPanel{
         // Create text field for organism's name
         createLabel(infoPanel,"infoName","Name :",JLabel.CENTER,gbc,new Insets(5,0,0,5),0,0,1,1);
         createTextField(infoPanel,"StatNameUpdate",15,gbc,"StatNameUpdate",listener,defaultInsets,1,0,1,1, true);
-
 
         // Create health stat
         createIconLabel(infoPanel,"resources/icons/heart.png",JLabel.CENTER,gbc,new Insets(5,0,0,5),0,1,1,1);
@@ -184,8 +187,12 @@ public class SidePanel extends JPanel{
         return focus;
     }
 
-    public String getNewName(){
+    public String getNewAnimalName(){
         return  dictText.get("NameUpdate").getText();
+    }
+
+    public String getNewVegetalName(){
+        return  dictText.get("VegetalNameUpdate").getText();
     }
 
     public String getFocusName(){

@@ -9,7 +9,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 
 public class SidePanelActionListener implements ActionListener {
 
@@ -59,7 +58,7 @@ public class SidePanelActionListener implements ActionListener {
                 Constructor constructor = organism.getConstructor(int.class,int.class,Vivarium.class,Sex.class);
                 // And finally creates a new instance of the animal
                 Organism o = (Organism)constructor.newInstance(new Object[]{sidePanel.getSpawnPosX(),sidePanel.getSpawnPosY(),vc.getVivarium(), AnimalSexComboBox});
-                String newName = sidePanel.getNewName();
+                String newName = sidePanel.getNewAnimalName();
                 if (!newName.equals(""))
                     o.setName(newName);
                 sidePanel.setFocus(o);
@@ -83,6 +82,9 @@ public class SidePanelActionListener implements ActionListener {
                 Class vegetal = Class.forName("com.vivarium.model."+VegetalNameComboBox);
                 Constructor constructor = vegetal.getConstructor(int.class,int.class,Vivarium.class);
                 Organism o = (Organism)constructor.newInstance(new Object[]{sidePanel.getSpawnPosX(),sidePanel.getSpawnPosY(),vc.getVivarium()});
+                String newName = sidePanel.getNewVegetalName();
+                if(!newName.equals(""))
+                    o.setName(newName);
                 sidePanel.setFocus(o);
                 vc.add(o);
             } catch (ClassNotFoundException e1) {
