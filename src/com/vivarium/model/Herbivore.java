@@ -88,8 +88,10 @@ public abstract class Herbivore extends Animal {
             } else {
                 coefY = 1;
             }
-            if (this.getPos().equals(prey.getPos())) {
-                this.eat((Vegetal) prey);
+            if (abs(prey.getPos().getX()-this.getPos().getX())<2 && abs(prey.getPos().getY()-this.getPos().getY())<2) {
+
+                this.eat((Vegetal)prey);
+                this.setHunger(this.hunger-2.0f);
             }
         } else {
             if (this.getPos().getX() + getSize() / 2 > vivarium.getTerrain().getWidth()) {

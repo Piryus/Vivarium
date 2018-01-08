@@ -41,20 +41,29 @@ public class Main {
         window.setVisible(true);
 
         // spawn des chameaux
-        for (int i = 0; i < 50; i++){
+        for (int i = 0; i < 25; i++){
             vc.add(new Camel(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, Sex.Female));
             vc.add(new Camel(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, Sex.Male));
         }
 
-        // spawn des cactus et aubergines
-        for (int i = 0; i < 75; i++){
+        // spawn des cactus, aubergines et autres plantes
+        for (int i = 0; i < 50; i++){
             vc.add(new Aubergine(ran.nextInt(vivarium.getTerrain().getWidth()),ran.nextInt(vivarium.getTerrain().getHeight()), vivarium));
+
+            vc.add(new Mushroom(ran.nextInt(vivarium.getTerrain().getWidth()),ran.nextInt(vivarium.getTerrain().getHeight()), vivarium));
+
+
+            vc.add(new Tree(ran.nextInt(vivarium.getTerrain().getWidth()),ran.nextInt(vivarium.getTerrain().getHeight()), vivarium));
+
+            vc.add(new Grass(ran.nextInt(vivarium.getTerrain().getWidth()),ran.nextInt(vivarium.getTerrain().getHeight()), vivarium));
             Area randomAreaDesert = vivarium.getTerrain().getRandomAreaOfType(AreaType.Desert);
             vc.add(new Cactus((int)randomAreaDesert.getCoords().getX()+40,(int)randomAreaDesert.getCoords().getY()+40, vivarium));
         }
 
+
+
         // spawn des "bouquetins"
-        for (int i=0; i < 150; i++) {
+        for (int i=0; i < 60; i++) {
 
             Sex sex;
             if(i%2==0)
@@ -66,6 +75,19 @@ public class Main {
                 sex= Sex.Female;
             }
            vc.add(new Bouquetin(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, sex));
+        }
+        for (int i=0; i < 10; i++) {
+
+            Sex sex;
+            if(i%2==0)
+            {
+                sex = Sex.Male;
+            }
+            else
+            {
+                sex= Sex.Female;
+            }
+            vc.add(new Rabbit(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, sex));
         }
 
         // Spawn des aigles
@@ -84,8 +106,125 @@ public class Main {
         }
 
         //Spawn des loups
-        for(int i = 0; i<40;i++)
-        {}
+        for(int i = 0; i<10;i++)
+        {
+            Sex sex;
+            if(i%2==0)
+            {
+                sex = Sex.Male;
+            }
+            else
+            {
+                sex= Sex.Female;
+            }
+            vc.add(new Wolf(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()),vivarium,sex));
+        }
+
+        // Who let the dogs out ?
+        for(int i = 0; i<10;i++)
+        {
+            Sex sex;
+            if(i%2==0)
+            {
+                sex = Sex.Male;
+            }
+            else
+            {
+                sex= Sex.Female;
+            }
+            vc.add(new Dog(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()),vivarium,sex));
+        }
+
+        for(int i = 0;i<10;i++)
+        {
+
+            Sex sex;
+            if(i%2==0)
+            {
+                sex = Sex.Male;
+            }
+            else
+            {
+                sex= Sex.Female;
+            }
+            vc.add(new Dragon(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, sex));
+        }
+
+        for(int i = 0;i<10;i++)
+        {
+
+            Sex sex;
+            if(i%2==0)
+            {
+                sex = Sex.Male;
+            }
+            else
+            {
+                sex= Sex.Female;
+            }
+            vc.add(new Bear(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, sex));
+        }
+
+        for(int i = 0;i<20;i++)
+        {
+
+            Sex sex;
+            if(i%2==0)
+            {
+                sex = Sex.Male;
+            }
+            else
+            {
+                sex= Sex.Female;
+            }
+            vc.add(new Cow(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, sex));
+        }
+
+        for(int i = 0;i<10;i++)
+        {
+
+            Sex sex;
+            if(i%2==0)
+            {
+                sex = Sex.Male;
+            }
+            else
+            {
+                sex= Sex.Female;
+            }
+            vc.add(new Fox(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, sex));
+        }
+
+        for(int i = 0;i<10;i++)
+        {
+
+            Sex sex;
+            if(i%2==0)
+            {
+                sex = Sex.Male;
+            }
+            else
+            {
+                sex= Sex.Female;
+            }
+            vc.add(new Bear(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, sex));
+        }
+
+        for(int i = 0;i<4;i++)
+        {
+
+            Sex sex;
+            if(i%2==0)
+            {
+                sex = Sex.Male;
+            }
+            else
+            {
+                sex= Sex.Female;
+            }
+            vc.add(new Trex(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, sex));
+        }
+
 
         while (true){
             vc.loop();

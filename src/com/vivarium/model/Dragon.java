@@ -10,7 +10,7 @@ public class Dragon extends Carnivore {
 
     public Dragon(int posX,int posY,Vivarium v, Sex type) {
 
-        super(posX, posY, v, 1200, 0, 0.01f, 0.07f, type,
+        super(posX, posY, v, 1200, 0, 0.03f, 0.07f, type,
                 new ArrayList<>(Arrays.asList(new AreaType[]{AreaType.Mountain, AreaType.Plain, AreaType.Desert,AreaType.Water})),
                 new ArrayList<>(Arrays.asList(new AreaType[]{})));
         currArea = AreaType.Plain;

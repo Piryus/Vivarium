@@ -22,7 +22,8 @@ public abstract class Carnivore extends Animal
 			other.setHP(0);
 			return  true;
 		}
-		this.setHunger(this.hunger-5);
+		this.setHunger(this.hunger-4);
+		this.setHP(this.getHP()+5);
 		return false;
 	}
 
@@ -53,10 +54,10 @@ public abstract class Carnivore extends Animal
 			{
 				coefY=1;
 			}
-			if(this.getPos().equals(prey.getPos()))
-			{
+			if (abs(prey.getPos().getX()-this.getPos().getX())<4 && abs(prey.getPos().getY()-this.getPos().getY())<4) {
+
 				this.eat((Herbivore)prey);
-				this.setHunger(this.hunger-5.0f);
+				this.setHunger(this.hunger-4.0f);
 			}
 		}
 		else
@@ -109,7 +110,7 @@ public abstract class Carnivore extends Animal
 				coefY=1;
 			}
 			if (abs(mate.getPos().getX()-this.getPos().getX())<2 && abs(mate.getPos().getY()-this.getPos().getY())<2) {
-				System.out.println("euh... c'est pas un peu beaucoup là ???");
+				//System.out.println("euh... c'est pas un peu beaucoup là ???");
 				this.hunger += 4;
 				if (type == Sex.Female)
 					try {
