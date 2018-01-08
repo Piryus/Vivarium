@@ -2,6 +2,8 @@ package com.vivarium.model;
 
 import java.util.ArrayList;
 
+import static java.lang.Math.abs;
+
 /**
  * 
  */
@@ -109,19 +111,19 @@ public abstract class Herbivore extends Animal {
     }
 
     /**
-     * Méthode qui gere la recherche  d' animeux de la meme espéce mais d'un autre sex dans un but de reproduction
+     * Méthode qui gere la recherche  d' animaux de la meme espèce mais d'un autre sexe dans un but de reproduction
      **/
     public void lookForMate(long dt) {
         double coefX = 0;
         double coefY = 0;
         Animal mate = this.vivarium.scanOtherGender(this);
         if (mate != null) {
-            if (mate.getPos().getX() == this.getPos().getX() && mate.getPos().getY() == this.getPos().getY()) {
-                //System.out.print("se reproduit \n");
-                this.hunger += 5;
+            if (abs(mate.getPos().getX()-this.getPos().getX())<2 && abs(mate.getPos().getY()-this.getPos().getY())<2) {
+                System.out.print("se reproduit \n");
+                this.hunger += 3;
                 if (type == Sex.Female)
                     try{
-                        OrganismFactory.AnimalFactory(this.getSpecie(),(int)this.getPos().getX(), (int)this.getPos().getY(), vivarium,Sex.getRandom());
+                        OrganismFactory.AnimalFactory("Dragon",(int)this.getPos().getX(), (int)this.getPos().getY(), vivarium,Sex.getRandom());
                     }
                     catch (Exception e){
                         e.printStackTrace();
@@ -143,6 +145,7 @@ public abstract class Herbivore extends Animal {
         }
         else
         {
+            //System.out.println("je suis seul.e au monde :'(");
             if (this.getPos().getX()+getSize()/2> vivarium.getTerrain().getWidth() )
             {
                 coefX = -1;

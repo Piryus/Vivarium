@@ -2,6 +2,8 @@ package com.vivarium.model;
 
 import java.util.ArrayList;
 
+import static java.lang.Math.abs;
+
 public abstract class Carnivore extends Animal
 {
 
@@ -103,15 +105,16 @@ public abstract class Carnivore extends Animal
 			{
 				coefY=1;
 			}
-
-			this.hunger += 5;
-			if (type == Sex.Female)
-				try{
-					OrganismFactory.AnimalFactory(this.getSpecie(),(int)this.getPos().getX(), (int)this.getPos().getY(), vivarium,Sex.getRandom());
-				} catch(Exception e){
-					e.printStackTrace();
-				}
-
+			if (abs(mate.getPos().getX()-this.getPos().getX())<2 && abs(mate.getPos().getY()-this.getPos().getY())<2) {
+				System.out.println("euh... c'est pas un peu beaucoup là ???");
+				this.hunger += 3;
+				if (type == Sex.Female)
+					try {
+						OrganismFactory.AnimalFactory(this.getSpecie(), (int) this.getPos().getX(), (int) this.getPos().getY(), vivarium, Sex.getRandom());
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+			}
 		}
 		else
 		{

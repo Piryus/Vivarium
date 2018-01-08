@@ -166,10 +166,11 @@ public class Vivarium {
             if(src.getPos().isCloser(mate.getPos(),rep))
             {
                 rep = mate.getPos();
+                other = mate;
             }
         }
 
-        other = (Animal) getOrganismAtPos(rep.getX(),rep.getY());
+        //other = (Animal) getOrganismAtPos(rep.getX(),rep.getY());
         return other;
     }
 

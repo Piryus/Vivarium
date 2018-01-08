@@ -85,15 +85,17 @@ public class VivariumController {
         if(h.getHunger()>= 10) h.setHP(h.getHP()-h.getVitality()*dt);
         if(h.getHunger()<=4) h.setHP(h.getHP()+h.getVitality()*dt);
 
+        // si danger
         if (c.getX() != c0.getX() || c.getY() != c0.getY() ){
             h.move(dt*h.getSpeed()*c.getX(),dt*h.getSpeed()*c.getY());
             return;
         }
+        // si faim
         if(h.isHungry())
         {
           h.lookForFood(dt);
         }
-        else
+        else //sinon
         {
             h.lookForMate(dt);
         }
