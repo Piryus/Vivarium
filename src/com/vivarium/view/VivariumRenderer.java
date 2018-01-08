@@ -28,9 +28,12 @@ public class VivariumRenderer implements Renderer{
     public void render(Graphics g) {
         /* Render terrain */
         this.terrainView.draw(g);
-        for (Organism o : vivarium.getNewOrganisms()) {
-            organismView.add(new OrganismView(o));
+        synchronized(vivarium) {
+            for (Organism o : vivarium.getNewOrganisms()) {
+                organismView.add(new OrganismView(o));
+            }
         }
+
 
         for (Organism o : vivarium.getOldOrganisms()) {
             Predicate<OrganismView> test = new Predicate<OrganismView>() {
