@@ -9,12 +9,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 
 public class SidePanelActionListener implements ActionListener {
 
     private SidePanel sidePanel;
     private VivariumController vc;
     private String AnimalNameComboBox = "Bear";
+    private String VegetalNameComboBox = "Aubergine";
     private Sex AnimalSexComboBox = Sex.Male;
 
     public SidePanelActionListener(SidePanel sidePanel, VivariumController vc)
@@ -29,6 +31,11 @@ public class SidePanelActionListener implements ActionListener {
         if("Choice".equals(e.getActionCommand())) {
             JComboBox cb = (JComboBox)e.getSource();
             AnimalNameComboBox = (String)cb.getSelectedItem();
+        }
+
+        if("VegetalChoice".equals(e.getActionCommand())) {
+            JComboBox cb = (JComboBox)e.getSource();
+            VegetalNameComboBox = (String)cb.getSelectedItem();
         }
 
         if("Sex".equals(e.getActionCommand())) {
@@ -48,6 +55,26 @@ public class SidePanelActionListener implements ActionListener {
                 String newName = sidePanel.getNewName();
                 if (!newName.equals(""))
                     o.setName(newName);
+                sidePanel.setFocus(o);
+                vc.add(o);
+            } catch (ClassNotFoundException e1) {
+                e1.printStackTrace();
+            } catch (NoSuchMethodException e1) {
+                e1.printStackTrace();
+            } catch (IllegalAccessException e1) {
+                e1.printStackTrace();
+            } catch (InstantiationException e1) {
+                e1.printStackTrace();
+            } catch (InvocationTargetException e1) {
+                e1.printStackTrace();
+            }
+        }
+
+        if("SpawnVegetal".equals(e.getActionCommand())) {
+            try {
+                Class vegetal = Class.forName("com.vivarium.model."+VegetalNameComboBox);
+                Constructor constructor = vegetal.getConstructor(int.class,int.class,Vivarium.class);
+                Organism o = (Organism)constructor.newInstance(new Object[]{sidePanel.getSpawnPosX(),sidePanel.getSpawnPosY(),vc.getVivarium()});
                 sidePanel.setFocus(o);
                 vc.add(o);
             } catch (ClassNotFoundException e1) {
