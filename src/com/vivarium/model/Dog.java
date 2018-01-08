@@ -1,19 +1,23 @@
 package com.vivarium.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * 
  */
-public class Dog extends Carnivore { // TODO
-    public Dog(int posX,int posY,Vivarium v, float health, float hunger, float vitality,float speed, Sex type)
-    {
+public class Dog extends Carnivore {
 
-        super(posX,posY,v,health,hunger,vitality,speed, type, null, null);
-        this.currArea = AreaType.Plain;
+    public Dog(int posX,int posY,Vivarium v, Sex type) {
+
+        super(posX, posY, v, 5, 0, 0.01f, 0.03f, type,
+                new ArrayList<>(Arrays.asList(new AreaType[]{AreaType.Mountain, AreaType.Plain, AreaType.Desert})),
+                new ArrayList<>(Arrays.asList(new AreaType[]{AreaType.Mountain, AreaType.Desert})));
+        currArea = AreaType.Plain;
     }
 
-
-
-
+    @Override
+    public String getSpecie() {
+        return "Dog";
+    }
 }

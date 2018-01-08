@@ -17,6 +17,8 @@ public class Dragon extends Carnivore {
     }
 
 
-
-
+    @Override
+    public String getSpecie() {
+        return "Dragon";
+    }
 }

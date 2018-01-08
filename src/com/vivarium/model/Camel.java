@@ -19,5 +19,8 @@ public class Camel extends Herbivore {
     }
 
 
-
+    @Override
+    public String getSpecie() {
+        return "Camel";
+    }
 }

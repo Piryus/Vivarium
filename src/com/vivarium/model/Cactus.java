@@ -17,4 +17,8 @@ public class Cactus extends Vegetal {
                 10000);
     }
 
+    @Override
+    public String getSpecie() {
+        return "Cactus";
+    }
 }

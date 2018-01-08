@@ -84,7 +84,7 @@ public class SidePanel extends JPanel{
         Insets defaultInsets = new Insets(5,0,0,0);
 
         // Create ComboBox to select animal to spawn
-        String[] animalStrings = {"Bear","Blowfish","Bouquetin","Camel","Cow","Dog","Dragon","Eagle","Fish","FreshwaterFish","Rabbit","Trex","Wolf"};
+        String[] animalStrings = {"Bear","Blowfish","Bouquetin","Camel","Cow","Dog","Dragon","Eagle","FreshwaterFish","Rabbit","Trex","Wolf"};
         createComboBox(spawnPanel,animalStrings,gbc,"Choice",listener,new Insets(5,0,0,5),0,0,1,1);
 
         // Create ComboBox to select sex

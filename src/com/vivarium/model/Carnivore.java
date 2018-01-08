@@ -2,7 +2,7 @@ package com.vivarium.model;
 
 import java.util.ArrayList;
 
-public class  Carnivore extends Animal
+public abstract class Carnivore extends Animal
 {
 
 
@@ -104,7 +104,9 @@ public class  Carnivore extends Animal
 				coefY=1;
 			}
 
-			// todo : accouplement
+			this.hunger += 5;
+			if (type == Sex.Female)
+				OrganismFactory.AnimalFactory(this.getSpecie(),(int)this.getPos().getX(), (int)this.getPos().getY(), vivarium,Sex.getRandom());
 		}
 		else
 		{

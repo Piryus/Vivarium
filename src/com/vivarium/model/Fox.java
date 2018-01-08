@@ -18,4 +18,8 @@ public class Fox extends Carnivore {
     }
 
 
+    @Override
+    public String getSpecie() {
+        return "Fox";
+    }
 }

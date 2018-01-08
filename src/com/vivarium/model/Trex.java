@@ -18,5 +18,8 @@ public class Trex extends Carnivore {
     }
 
 
-
+    @Override
+    public String getSpecie() {
+        return "Trex";
+    }
 }

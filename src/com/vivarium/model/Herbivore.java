@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * 
  */
-public class Herbivore extends Animal {
+public abstract class Herbivore extends Animal {
 
     /**
      * Default constructor
@@ -117,8 +117,11 @@ public class Herbivore extends Animal {
         Animal mate = this.vivarium.scanOtherGender(this);
         if (mate != null) {
             if (mate.getPos().getX() == this.getPos().getX() && mate.getPos().getY() == this.getPos().getY()) {
-                System.out.print("se reproduit \n");
-            }// todo : accouplement
+                //System.out.print("se reproduit \n");
+                this.hunger += 5;
+                if (type == Sex.Female)
+                    OrganismFactory.AnimalFactory(this.getSpecie(),(int)this.getPos().getX(), (int)this.getPos().getY(), vivarium,Sex.getRandom());
+            }
             if (mate.getPos().getX() < this.getPos().getX()) {
                 coefX = -1;
             } else {

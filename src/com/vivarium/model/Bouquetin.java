@@ -19,5 +19,8 @@ public class Bouquetin extends Herbivore {
     }
 
 
-
+    @Override
+    public String getSpecie() {
+        return "Bouquetin";
+    }
 }

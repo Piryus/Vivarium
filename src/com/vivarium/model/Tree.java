@@ -17,4 +17,8 @@ public class Tree extends Vegetal {
                 10000);
     }
 
+    @Override
+    public String getSpecie() {
+        return "Tree";
+    }
 }

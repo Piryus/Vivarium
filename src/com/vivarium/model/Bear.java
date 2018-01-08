@@ -16,4 +16,9 @@ public class Bear extends Carnivore {
                 new ArrayList<>(Arrays.asList(new AreaType[]{AreaType.Mountain})));
         currArea = AreaType.Mountain;
     }
+
+    @Override
+    public String getSpecie() {
+        return "Bear";
+    }
 }

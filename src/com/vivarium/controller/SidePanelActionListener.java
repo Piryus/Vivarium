@@ -51,30 +51,12 @@ public class SidePanelActionListener implements ActionListener {
 
         // If the user clicks on the animal spawn button
         if("Spawn".equals(e.getActionCommand())) {
-            // We create a new instance of an animal class from an animal's string
-            try {
-                // Gets the class name from the string selected in the animal's combo box
-                Class organism = Class.forName("com.vivarium.model."+AnimalNameComboBox);
-                // Gets the constructor for this class
-                Constructor constructor = organism.getConstructor(int.class,int.class,Vivarium.class,Sex.class);
-                // And finally creates a new instance of the animal
-                Organism o = (Organism)constructor.newInstance(new Object[]{sidePanel.getSpawnPosX(),sidePanel.getSpawnPosY(),vc.getVivarium(), AnimalSexComboBox});
-                String newName = sidePanel.getNewName();
-                if (!newName.equals(""))
-                    o.setName(newName);
-                sidePanel.setFocus(o);
-                vc.add(o);
-            } catch (ClassNotFoundException e1) {
-                e1.printStackTrace();
-            } catch (NoSuchMethodException e1) {
-                e1.printStackTrace();
-            } catch (IllegalAccessException e1) {
-                e1.printStackTrace();
-            } catch (InstantiationException e1) {
-                e1.printStackTrace();
-            } catch (InvocationTargetException e1) {
-                e1.printStackTrace();
-            }
+            Organism o = OrganismFactory.AnimalFactory(AnimalNameComboBox,sidePanel.getSpawnPosX(),sidePanel.getSpawnPosY(),vc.getVivarium(), AnimalSexComboBox);
+            String newName = sidePanel.getNewName();
+            if (!newName.equals(""))
+                o.setName(newName);
+            sidePanel.setFocus(o);
+            vc.add(o);
         }
 
         // If the user clicks on the vegetal spawn button

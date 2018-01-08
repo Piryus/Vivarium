@@ -6,7 +6,7 @@ import java.util.Arrays;
 /**
  * 
  */
-public class Cow extends Herbivore { //TODO
+public class Cow extends Herbivore {
 
     /**
      * Default constructor
@@ -19,5 +19,8 @@ public class Cow extends Herbivore { //TODO
     }
 
 
-
+    @Override
+    public String getSpecie() {
+        return "Cow";
+    }
 }

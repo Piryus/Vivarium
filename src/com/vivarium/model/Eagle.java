@@ -20,5 +20,8 @@ public class Eagle extends Carnivore
     }
 
 
-
+    @Override
+    public String getSpecie() {
+        return "Eagle";
+    }
 }

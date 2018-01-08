@@ -13,5 +13,8 @@ public class FreshwaterFish extends Fish {
     }
 
 
-
+    @Override
+    public String getSpecie() {
+        return "FreshwaterFish";
+    }
 }

@@ -17,4 +17,8 @@ public class Grass extends Vegetal {
                 10000);
     }
 
+    @Override
+    public String getSpecie() {
+        return "Grass";
+    }
 }

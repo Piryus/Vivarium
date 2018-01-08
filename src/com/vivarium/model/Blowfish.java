@@ -13,5 +13,8 @@ public class Blowfish extends Fish {
     }
 
 
-
+    @Override
+    public String getSpecie() {
+        return "Bloxfish";
+    }
 }

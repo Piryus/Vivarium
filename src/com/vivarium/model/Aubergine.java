@@ -16,4 +16,9 @@ public class Aubergine extends Vegetal {
                 new ArrayList<>(Arrays.asList(new AreaType[]{ AreaType.Plain})),
                 10000);
     }
+
+    @Override
+    public String getSpecie() {
+        return "Aubgergine";
+    }
 }

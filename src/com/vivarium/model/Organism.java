@@ -90,6 +90,7 @@ public abstract class Organism {
     }
 
 
+    public abstract String getSpecie();
 
     public ArrayList<AreaType> getAvailaibleArea() {
         return availaibleArea;

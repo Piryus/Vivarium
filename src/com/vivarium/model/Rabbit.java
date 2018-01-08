@@ -19,5 +19,8 @@ public class Rabbit extends Herbivore {
     }
 
 
-
+    @Override
+    public String getSpecie() {
+        return "Rabbit";
+    }
 }
