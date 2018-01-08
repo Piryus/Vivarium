@@ -40,22 +40,52 @@ public class Main {
         window.pack();
         window.setVisible(true);
 
-        for (int i = 0; i < 5; i++){
+        // spawn des chameaux
+        for (int i = 0; i < 50; i++){
             vc.add(new Camel(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, Sex.Female));
             vc.add(new Camel(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, Sex.Male));
         }
 
-        for (int i = 0; i < 20; i++){
+        // spawn des cactus et aubergines
+        for (int i = 0; i < 75; i++){
             vc.add(new Aubergine(ran.nextInt(vivarium.getTerrain().getWidth()),ran.nextInt(vivarium.getTerrain().getHeight()), vivarium));
             Area randomAreaDesert = vivarium.getTerrain().getRandomAreaOfType(AreaType.Desert);
             vc.add(new Cactus((int)randomAreaDesert.getCoords().getX()+40,(int)randomAreaDesert.getCoords().getY()+40, vivarium));
         }
 
-        for (int i=0; i < 40; i++) {
+        // spawn des "bouquetins"
+        for (int i=0; i < 150; i++) {
 
-           vc.add(new Bouquetin(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, Sex.Male));
+            Sex sex;
+            if(i%2==0)
+            {
+                sex = Sex.Male;
+            }
+            else
+            {
+                sex= Sex.Female;
+            }
+           vc.add(new Bouquetin(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, sex));
         }
 
+        // Spawn des aigles
+        for (int i = 0;i<24;i++)
+        {
+            Sex sex;
+            if(i%2==0)
+            {
+                sex = Sex.Male;
+            }
+            else
+            {
+                sex= Sex.Female;
+            }
+            vc.add(new Eagle(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()),vivarium,sex));
+        }
+
+        //Spawn des loups
+        for(int i = 0; i<40;i++)
+        {}
 
         while (true){
             vc.loop();

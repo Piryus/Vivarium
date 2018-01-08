@@ -22,6 +22,7 @@ public abstract class Carnivore extends Animal
 			other.setHP(0);
 			return  true;
 		}
+		this.setHunger(this.hunger-5);
 		return false;
 	}
 
