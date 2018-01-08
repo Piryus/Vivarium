@@ -9,7 +9,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 
 public class SidePanelActionListener implements ActionListener {
 
@@ -52,32 +51,22 @@ public class SidePanelActionListener implements ActionListener {
         // If the user clicks on the animal spawn button
         if("Spawn".equals(e.getActionCommand())) {
             Organism o = OrganismFactory.AnimalFactory(AnimalNameComboBox,sidePanel.getSpawnPosX(),sidePanel.getSpawnPosY(),vc.getVivarium(), AnimalSexComboBox);
-            String newName = sidePanel.getNewName();
+            String newName = sidePanel.getNewAnimalName();
             if (!newName.equals(""))
                 o.setName(newName);
             sidePanel.setFocus(o);
             vc.add(o);
+
         }
 
         // If the user clicks on the vegetal spawn button
         if("SpawnVegetal".equals(e.getActionCommand())) {
-            try {
-                Class vegetal = Class.forName("com.vivarium.model."+VegetalNameComboBox);
-                Constructor constructor = vegetal.getConstructor(int.class,int.class,Vivarium.class);
-                Organism o = (Organism)constructor.newInstance(new Object[]{sidePanel.getSpawnPosX(),sidePanel.getSpawnPosY(),vc.getVivarium()});
-                sidePanel.setFocus(o);
-                vc.add(o);
-            } catch (ClassNotFoundException e1) {
-                e1.printStackTrace();
-            } catch (NoSuchMethodException e1) {
-                e1.printStackTrace();
-            } catch (IllegalAccessException e1) {
-                e1.printStackTrace();
-            } catch (InstantiationException e1) {
-                e1.printStackTrace();
-            } catch (InvocationTargetException e1) {
-                e1.printStackTrace();
-            }
+            Organism o = OrganismFactory.VegetalFactory(AnimalNameComboBox,sidePanel.getSpawnPosX(),sidePanel.getSpawnPosY(),vc.getVivarium());
+            String newName = sidePanel.getNewVegetalName();
+            if(!newName.equals(""))
+                o.setName(newName);
+            sidePanel.setFocus(o);
+            vc.add(o);
         }
 
         // If the user clicks on the kill button
