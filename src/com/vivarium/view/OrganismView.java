@@ -8,6 +8,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 
 public class OrganismView {
 
@@ -31,6 +32,8 @@ public class OrganismView {
      */
     private void assignIcon() {
         try {
+            //InputStream
+            //icon = ImageIO.read(getClass().getResourceAsStream("/organisms/"+organism.getClass().getSimpleName()+".png"));
             icon = ImageIO.read(new File("resources/organisms/"+organism.getClass().getSimpleName()+".png"));
         } catch (IOException e) {
             e.printStackTrace();

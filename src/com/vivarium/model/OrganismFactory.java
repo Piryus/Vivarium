@@ -1,9 +1,20 @@
 package com.vivarium.model;
 
+/**
+ * Permet de construire n'importe quel organism
+ */
 public class OrganismFactory {
-    //private static List<String> animalSpecies = Arrays.asList("Bear","Blowfish","Bouquetin","Camel","Cow","Dog","Dragon","Eagle","Fish","FreshwaterFish","Rabbit","Trex","Wolf");
-    //private static List<String> vegetalSpecies = Arrays.asList("Aubergine","Cactus","Grass","Mushroom","Tree");
 
+    /**
+     * Permet de construire un aninmal
+     * @param specie String représentant l'espèce de l'animal à créer
+     * @param x coordonnée en x du point de départ de l'animal
+     * @param y coordonnée en y du point de départ de l'animal
+     * @param v le Vivarium dans lequel est stcoké l'animal
+     * @param s le sexe de l'animal
+     * @return l'animal
+     * @throws Exception si specie ne représente pas une espèce d'animal
+     */
     public static Animal AnimalFactory(String specie, int x, int y, Vivarium v, Sex s) throws Exception{
         Animal a = null;
         switch(specie){
@@ -24,7 +35,15 @@ public class OrganismFactory {
         return a;
     }
 
-
+    /**
+     * Permet de construire un Vegetal
+     * @param specie String représentant l'espèce du vegetal à créer
+     * @param x point de départ du végétal
+     * @param y point de départ du végétal
+     * @param v vivarium contenant le végétal
+     * @return le végétal
+     * @throws Exception si specie n'est pas valide
+     */
     public static Vegetal VegetalFactory(String specie, int x, int y, Vivarium v) throws  Exception{
         Vegetal jocaste = null;
         switch (specie){

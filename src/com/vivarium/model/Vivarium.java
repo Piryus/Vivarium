@@ -20,6 +20,7 @@ public class Vivarium {
     }
 
     /**
+     * Permet d'ajouter un organism au vivarium
      * @param o
      */
     public void add(Organism o) {
@@ -27,6 +28,7 @@ public class Vivarium {
     }
 
     /**
+     * Permet de supprimer un organism du vivarium
      * @param o
      */
     public void delete(Organism o) {

@@ -22,20 +22,29 @@ public abstract class Fish extends Herbivore {
         coefY = -1;
     }
 
+    /**
+     * Permet au poisson de bouger
+     * @param dt
+     */
     public void move(long dt){
         AreaType a = getAreaType( new Coordinates(this.getPos().getX()+dt * 2*getSpeed() * coefX, this.getPos().getY()) );
         if (a != AreaType.Water){
             coefX*= -1;
-            System.out.println(a);
+            //System.out.println(a);
         }
         a = getAreaType( new Coordinates(this.getPos().getX(), this.getPos().getY()+dt * 2*getSpeed() * coefY));
         if ( a != AreaType.Water){
             coefY*= -1;
-            System.out.println(a);
+            //System.out.println(a);
         }
         move(dt * getSpeed() * coefX, dt * getSpeed() * coefY);
     }
 
+    /**
+     * permet de déterminer dans quelle Area se situe une coordonnée. Utilisé pour empêcher que les Fish sortent de l'eau
+     * @param c
+     * @return
+     */
     private AreaType getAreaType(Coordinates c) {
         AreaType CurrentAreaType = AreaType.Water;
         for(int i=0;i<vivarium.getTerrain().getAreasList().size();i++) {
