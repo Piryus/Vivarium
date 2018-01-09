@@ -49,12 +49,8 @@ public class Main {
         // spawn des cactus, aubergines et autres plantes
         for (int i = 0; i < 50; i++) {
             vc.add(new Aubergine(ran.nextInt(vivarium.getTerrain().getWidth()), ran.nextInt(vivarium.getTerrain().getHeight()), vivarium));
-
             vc.add(new Mushroom(ran.nextInt(vivarium.getTerrain().getWidth()), ran.nextInt(vivarium.getTerrain().getHeight()), vivarium));
-
-
             vc.add(new Tree(ran.nextInt(vivarium.getTerrain().getWidth()), ran.nextInt(vivarium.getTerrain().getHeight()), vivarium));
-
             vc.add(new Grass(ran.nextInt(vivarium.getTerrain().getWidth()), ran.nextInt(vivarium.getTerrain().getHeight()), vivarium));
             Area randomAreaDesert = vivarium.getTerrain().getRandomAreaOfType(AreaType.Desert);
             vc.add(new Cactus((int) randomAreaDesert.getCoords().getX() + 40, (int) randomAreaDesert.getCoords().getY() + 40, vivarium));
