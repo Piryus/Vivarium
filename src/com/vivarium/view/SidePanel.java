@@ -166,6 +166,10 @@ public class SidePanel extends JPanel{
         createIconButton(infoPanel,"resources/icons/skull.png", gbc, "Kill",listener,defaultInsets,0,5,2,1);
     }
 
+    /**
+     *
+     * @param Organism dont les informations seront affiché dans le sidePanel
+     */
     public void setFocus(Organism focus){
         if (focus != null){
             this.focus = focus;
