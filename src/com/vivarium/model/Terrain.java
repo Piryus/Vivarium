@@ -7,7 +7,7 @@ public class Terrain {
     private final int width=3000;
     private final int height=3000;
     private ArrayList<Area> areasList;
-    private int[][] map = {
+    /*private int[][] map = {
             {0,0,0,0,1,1,1,1,2,2,2,2,2,1,1,1,3,3,3,1,2,3,3,3,3},
             {0,0,0,0,1,1,1,1,2,2,2,2,2,1,1,1,3,3,3,1,2,3,3,3,3},
             {0,0,0,0,1,1,1,1,2,2,2,2,2,1,1,1,3,3,3,1,2,3,3,3,3},
@@ -34,7 +34,7 @@ public class Terrain {
             {0,0,0,0,1,1,1,1,2,2,2,2,2,1,1,1,3,3,3,1,2,3,3,3,3},
             {0,0,0,0,1,1,1,1,2,2,2,2,2,1,1,1,3,3,3,1,2,3,3,3,3},
             {0,0,0,0,1,1,1,1,2,2,2,2,2,1,1,1,3,3,3,1,2,3,3,3,3}
-    };
+    };*/
 
     /**
      * Default Constructor, initialize areasList, call generateAreas();
@@ -110,7 +110,7 @@ public class Terrain {
      * 0 = Moutain ; 1 = Plain ; 2 = Water ; 3 = Desert
      * UNUSED for the moment, will be used to create custom map
      */
-    private void generateAreasFromMap() {
+    /*private void generateAreasFromMap() {
         AreaType areaType = null;
         for(int i=0;i<25;i++) {
             for(int j=0;j<25;j++) {
@@ -131,7 +131,7 @@ public class Terrain {
                 areasList.add(new Area(areaType,new Coordinates(i*areaSize,j*areaSize)));
             }
         }
-    }
+    }*/
 
 
     /**
