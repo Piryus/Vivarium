@@ -30,12 +30,12 @@ public abstract class Fish extends Herbivore {
         AreaType a = getAreaType( new Coordinates(this.getPos().getX()+dt * 2*getSpeed() * coefX, this.getPos().getY()) );
         if (a != AreaType.Water){
             coefX*= -1;
-            System.out.println(a);
+            //System.out.println(a);
         }
         a = getAreaType( new Coordinates(this.getPos().getX(), this.getPos().getY()+dt * 2*getSpeed() * coefY));
         if ( a != AreaType.Water){
             coefY*= -1;
-            System.out.println(a);
+            //System.out.println(a);
         }
         move(dt * getSpeed() * coefX, dt * getSpeed() * coefY);
     }
