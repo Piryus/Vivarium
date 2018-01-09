@@ -178,6 +178,12 @@ public class Main {
             vc.add(new Trex(ran.nextInt(vc.getTerrain().getWidth()), ran.nextInt(vc.getTerrain().getHeight()), vivarium, sex));
         }
 
+        // Spawn fish
+        for(int i = 0; i < 10; i++) {
+            Area randomAreaDesert = vivarium.getTerrain().getRandomAreaOfType(AreaType.Water);
+            vc.add(new FreshwaterFish((int) randomAreaDesert.getCoords().getX() + 40 , (int) randomAreaDesert.getCoords().getY() + 40, vivarium, Sex.getRandom()));
+
+        }
 
         while (true) {
             vc.loop();
