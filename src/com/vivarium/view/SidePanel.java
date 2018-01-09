@@ -148,19 +148,19 @@ public class SidePanel extends JPanel{
 
         // Create health stat
         createIconLabel(infoPanel,"resources/icons/heart.png",JLabel.CENTER,gbc,new Insets(5,0,0,5),0,1,1,1);
-        createLabel(infoPanel,"infoHealth","100",JLabel.LEFT,gbc,defaultInsets,1,1,1,1);
+        createLabel(infoPanel,"infoHealth","-",JLabel.LEFT,gbc,defaultInsets,1,1,1,1);
 
         // Create hunger stat
         createIconLabel(infoPanel,"resources/icons/hunger.png",JLabel.CENTER,gbc,new Insets(5,0,0,5),0,2,1,1);
-        createLabel(infoPanel,"infoHunger","100",JLabel.LEFT,gbc,defaultInsets,1,2,1,1);
+        createLabel(infoPanel,"infoHunger","-",JLabel.LEFT,gbc,defaultInsets,1,2,1,1);
 
         // Create speed stat
         createIconLabel(infoPanel,"resources/icons/speed.png",JLabel.CENTER,gbc,new Insets(5,0,0,5),0,3,1,1);
-        createLabel(infoPanel,"infoSpeed","100",JLabel.LEFT,gbc,defaultInsets,1,3,1,1);
+        createLabel(infoPanel,"infoSpeed","-",JLabel.LEFT,gbc,defaultInsets,1,3,1,1);
 
         // Create sex stat
         createIconLabel(infoPanel, "resources/icons/gender.png", JLabel.CENTER, gbc, new Insets(5,0,0,5), 0, 4, 1,1);
-        createLabel(infoPanel, "infoGender", "NaN", JLabel.LEFT, gbc, defaultInsets, 1,4,1,1);
+        createLabel(infoPanel, "infoGender", "-", JLabel.LEFT, gbc, defaultInsets, 1,4,1,1);
 
         // Create kill button
         createIconButton(infoPanel,"resources/icons/skull.png", gbc, "Kill",listener,defaultInsets,0,5,2,1);
