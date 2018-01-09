@@ -158,8 +158,12 @@ public class SidePanel extends JPanel{
         createIconLabel(infoPanel,"resources/icons/speed.png",JLabel.CENTER,gbc,new Insets(5,0,0,5),0,3,1,1);
         createLabel(infoPanel,"infoSpeed","100",JLabel.LEFT,gbc,defaultInsets,1,3,1,1);
 
+        // Create sex stat
+        createIconLabel(infoPanel, "resources/icons/gender.png", JLabel.CENTER, gbc, new Insets(5,0,0,5), 0, 4, 1,1);
+        createLabel(infoPanel, "infoGender", "NaN", JLabel.LEFT, gbc, defaultInsets, 1,4,1,1);
+
         // Create kill button
-        createIconButton(infoPanel,"resources/icons/skull.png", gbc, "Kill",listener,defaultInsets,0,4,2,1);
+        createIconButton(infoPanel,"resources/icons/skull.png", gbc, "Kill",listener,defaultInsets,0,5,2,1);
     }
 
     public void setFocus(Organism focus){
@@ -172,11 +176,13 @@ public class SidePanel extends JPanel{
                 dictLabel.get("infoHealth").setText(Float.toString(((Animal)focus).getHP()));
                 dictLabel.get("infoHunger").setText(Float.toString(((Animal)focus).getHunger()));
                 dictLabel.get("infoSpeed").setText(Float.toString(((Animal)focus).getSpeed()));
+                dictLabel.get("infoGender").setText(((Animal) focus).getType().toString());
             }
             else{
                 dictLabel.get("infoHealth").setText("NaN");
                 dictLabel.get("infoHunger").setText("NaN");
                 dictLabel.get("infoSpeed").setText("NaN");
+                dictLabel.get("infoGender").setText("NaN");
             }
 
         }
