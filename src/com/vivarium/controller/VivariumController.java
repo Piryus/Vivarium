@@ -47,7 +47,8 @@ public class VivariumController {
                     delete(o);
                 }
             }
-            if (o instanceof Herbivore) evoluateH((Herbivore)o,t - lastCall.get(o.getID()));
+            if (o instanceof Fish) evoluateF((Fish)o,t - lastCall.get(o.getID()));
+            else if (o instanceof Herbivore) evoluateH((Herbivore)o,t - lastCall.get(o.getID()));
             else if (o instanceof Carnivore) evoluateC((Carnivore) o,t - lastCall.get(o.getID()));
             else if (o instanceof Vegetal) evoluateV((Vegetal) o,t - lastCall.get(o.getID()));
             lastCall.replace(o.getID(), t);
@@ -151,6 +152,13 @@ public class VivariumController {
                 v.setTimeSinceEaten(0);
             }
         }
+    }
+
+    public void evoluateF (Fish f, long dt){
+        AreaType area = f.getCurrentAreaType();
+        if (area != null)
+            if(!area.equals(AreaType.Water)) f.setHP(f.getHP()-f.getVitality()*dt);
+                f.move(dt);
     }
 
     public synchronized Organism getOrganismAtPos(double posX, double posY){

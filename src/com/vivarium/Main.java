@@ -39,7 +39,7 @@ public class Main {
         window.add(sidePanel,BorderLayout.EAST);
         window.pack();
         window.setVisible(true);
-
+        
         // spawn des chameaux
         for (int i = 0; i < 25; i++){
             vc.add(new Camel(ran.nextInt(vc.getTerrain().getWidth()),ran.nextInt(vc.getTerrain().getHeight()), vivarium, Sex.Female));

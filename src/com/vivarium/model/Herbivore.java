@@ -123,7 +123,7 @@ public abstract class Herbivore extends Animal {
         Animal mate = this.vivarium.scanOtherGender(this);
         if (mate != null) {
             if (abs(mate.getPos().getX()-this.getPos().getX())<2 && abs(mate.getPos().getY()-this.getPos().getY())<2) {
-                System.out.print("se reproduit \n");
+                //System.out.print("se reproduit \n");
                 this.hunger += 4;
                 if (type == Sex.Female)
                     try{

@@ -4,8 +4,8 @@ import java.util.*;
 import static com.vivarium.model.Area.areaSize;
 
 public class Terrain {
-    private final int width=5000;
-    private final int height=5000;
+    private final int width=3000;
+    private final int height=3000;
     private ArrayList<Area> areasList;
     private int[][] map = {
             {0,0,0,0,1,1,1,1,2,2,2,2,2,1,1,1,3,3,3,1,2,3,3,3,3},
