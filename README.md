@@ -4,8 +4,8 @@ Vivarium is a game in which the player can populate a world with different organ
 
 ## Screenshots
 
-![Alt text](docs/images/Screenshot 1.png?raw=true)
-![Alt text](docs/images/Screenshot 2.png?raw=true)
+![Alt text](docs/images/Screenshot1.png?raw=true)
+![Alt text](docs/images/Screenshot2.png?raw=true)
 
 ## Authors
 
